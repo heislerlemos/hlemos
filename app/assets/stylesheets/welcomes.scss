@@ -10,6 +10,28 @@
 }
 
 
+/* News Letter */
+
+#newsletter {
+	padding: 15px;
+	color: #ffffff;
+	background: black;
+}
+
+#newsletter h1 {
+	float: center;
+}
+
+#newsletter form {
+	float: center;
+	margin-top: 15px;
+}
+
+#newsletter input[type='email'] {
+	height: 25px;
+	width: 450px;
+}
+
 /**Show Case **/
 
 
@@ -30,4 +52,40 @@
 #showcase p{
 	font-size: 20px;
 
+}
+
+
+
+/* Boxes */
+
+#boxes {
+	margin-top: 20px;
+}
+
+#boxes .box {
+	float: left;
+	text-align: center;
+	width: 30%;
+	padding: 10px;	
+}
+
+#box .box img {
+	width: 90px;
+
+}
+
+
+body {
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+    /**font: 15px/1,5 Arial, Helvetica,sans-serif;**/
+} 	
+
+footer {
+	padding: 5px;
+	margin-top: 5px;
+	color: white;
+	background-color: black;
+  text-align: center;
 }
