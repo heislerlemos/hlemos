@@ -1,10 +1,7 @@
-class WelcomesController < ApplicationController
+class SubscribersController < ApplicationController
   def index
-  	 #@welcome = Welcome.all
-  	 @subscriber =  Subscriber.new
   end
-
-  def create 
+    def create 
   	@subscriber = Subscriber.new(subscriber_params)
   	if @subscriber.save
   		cookies[:saved_lead] = true
@@ -13,9 +10,9 @@ class WelcomesController < ApplicationController
    		redirect_to root_path, notice: "Failed save"
    end
 end
-
 	private 
 	def subscriber_params
 		params.require(:subscriber).permit(:name, :email, :source)
 	end
+
 end

@@ -61,9 +61,26 @@
 
 		</div>
 	</section>
+  <% if cookies[:saved_subscriber] %>
+  Thanks for signing up !
+  <% else %>
+    <section id="newsletter">
+          <div class="container">
 
+      <h1>Subscribe to our newsletter</h1>
+  <%= form_for @subscriber do |f| %>
+    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.email_field :email, placeholder: "Email" %>
+    <%= f.select :source, ["Search Engine", "Social Media", "Word of Mouth", "Other"], prompt: "How did you hear about us?" %>
+    <%= f.submit "Create", class: "button is-success is-small" %>
+  </div>
+      </section>
+
+    <% end %>
+  <% end %>
+<!---  
 	<section id="newsletter">
-		<div class="container">
+		<div class="container"> 
 			<h1>Subscribe to our newsletter</h1>
 			<form>
 				<input type="email" placeholder="Enter Email....">
@@ -72,6 +89,8 @@
 			</form>
 		</div>
 	</section>
+-->
+
       <section class="hero is-primary">
         <div class="hero-body">
           <div class="container">
