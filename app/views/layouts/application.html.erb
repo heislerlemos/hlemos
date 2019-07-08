@@ -12,9 +12,19 @@
   </head>
 
   <body>
+        <% flash.each do  |key, notice |%>
+
+       <div class='alert alert-<%= key %> alert-dismissible'><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <div class="notification is-primary">
+
+            <%= notice %>
+        </div>    
+
+            <% end %>
+
+
     <%= yield %>
     <% if notice %>
-    <%= notice %>
     <% end %>
   </body>
 </html>
