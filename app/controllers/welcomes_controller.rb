@@ -2,6 +2,7 @@ class WelcomesController < ApplicationController
   def index
   	 #@welcome = Welcome.all
   	 @subscriber =  Subscriber.new
+     @ahoy = Ahoy::Visit.count
   end
 
   def create 
