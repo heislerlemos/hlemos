@@ -71,7 +71,7 @@
   <%= form_for @subscriber do |f| %>
     <%= f.text_field :name, placeholder: "Name" %>
     <%= f.email_field :email, placeholder: "Email" %>
-    <%= f.select :source, ["Search Engine", "Social Media", "Word of Mouth", "Other"], prompt: "How did you hear about us?" %>
+    <%= f.select :source, ["Search Engine", "Social Media", "Word of Mouth", "Other"], prompt: "How did you hear about me ? " %>
     <%= f.submit "Create", class: "button is-success is-small" %>
   </div>
       </section>
@@ -134,11 +134,11 @@
 			</div>
 			</div>
 			<div class="card">
-				<%= link_to image_tag("emanuel.png"), root_path %>
+				<%= link_to image_tag("turma.png"), root_path %>
 				<div id="container1">
                   <center>  
 
-				<a href="https://emanuelstore.herokuapp.com/">Emmanuel - Store App</a>
+				<a href="http://turma.herokuapp.com/chats/show">Turma - Chat App</a>
               </center>
 
 			</div>
