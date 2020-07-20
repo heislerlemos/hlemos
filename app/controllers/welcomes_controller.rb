@@ -3,6 +3,11 @@ class WelcomesController < ApplicationController
   	 #@welcome = Welcome.all
   	 @subscriber =  Subscriber.new
      @ahoy = Ahoy::Visit.count
+     #covid count
+     @statistics = Covid19::GlobalStatistics.retrieve
+     @angolastat =  Covid19::GlobalStatistics.by(country: 'ao')
+
+
   end
 
   def create 

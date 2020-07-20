@@ -221,11 +221,32 @@
       
 	<footer>
 		 <center>
+      <h5 style="color: lightgreen; font-size: 20px;"><small> Together agains the covid-19 </small></h5>
+
+        <br>
+          <small style="color: black">
+        <div class="container is-fullhd">
+  <div class="notification">
+
+        <%= @statistics %>
+
+          </div>
+      </div>
+      <br>
+      <br>
+        <div class="container is-fullhd">
+  <div class="notification">
+          <%= @angolastat %>
+
+               </div>
+      </div>
+    </small>
+      <br>
 <figure class="image is-96x96">
 	<%= image_tag("29663061_1521314127980563_8678170385192627763_o.jpg", class: "is-rounded") %>
 </figure>
 		<small>  You got 
-      <h1 style="color: lightgreen; font-size: 25px; "><%= @ahoy %></h1> 
+      <h1 style="color: lightgreen; font-size: 25px; "><%= @ahoy %> </h1> 
       Visits on this website  </smal>
       <br>
       <div class="is-size-7"> Made with ruby on rails and bulma  Copyright &copy; 2019 | Contact heisler.lemos@gmail.com - +244 934 659 342</div>
