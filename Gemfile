@@ -17,7 +17,7 @@ gem 'ahoy_matey'
 #gem 'covid19-rb'
 gem 'covid19-rb', require: 'covid19', git: 'https://github.com/viccarrasco/covid19-rb' 
 #gem 'covid19-rb', require: 'covid19'
-gem 'json', '~> 1.8', '>= 1.8.3'
+#gem 'json', '~> 1.8', '>= 1.8.3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem 'bulma-rails', '~> 0.7.5'
