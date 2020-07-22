@@ -12,40 +12,20 @@
   </head>
 
   <body>
-<% flash.each do |key, notice| %>
-  <% if key === "notice" %>
-           <div class='alert alert-<%= key %> alert-dismissible'><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <ul>
-        <li><%= notice %></li>
-      </ul>
-    </div>
-  <% end %>
-  <% if key == "alert" %>
-    <div class="notification is-warning is-marginless is-radiusless flash" data-controller="notification-dismissal">
-      <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <ul>
-        <li><%= notice %></li>
-      </ul>
-    </div>
-  <% end %>
-  <% if key == "success" %>
-    <div class="notification is-success is-marginless is-radiusless flash" data-controller="notification-dismissal">
-      <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <ul>
-        <li><%= notice %></li>
-      </ul>
-    </div>
-  <% end %>
-  <% if key == "error" %>
-    <div class="notification is-danger is-radiusless flash" data-controller="notification-dismissal">
-      <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <ul>
-        <li><%= notice %></li>  
-      </ul>
-    </div>
-  <% end %>
-<% end %>
+            <% flash.each do  |key, notice |%>
+
+       <div class='alert alert-<%= key %> alert-dismissible'><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <div class="notification is-primary">
+
+            <%= notice %>
+        </div>    
+
+            <% end %>
+
+    <%= yield%>
+    <% if notic e %>
+    <% end %>
+
     <%= yield%>
 
 

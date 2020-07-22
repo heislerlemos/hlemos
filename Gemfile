@@ -16,6 +16,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'ahoy_matey'
 #gem 'covid19-rb'
+gem 'yarn', '~> 0.1.1'
 #gem 'covid19-rb', require: 'covid19'
 #gem 'json', '~> 1.8', '>= 1.8.3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
