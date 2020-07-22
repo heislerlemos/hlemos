@@ -15,3 +15,16 @@
 @import "bulma";
 @import "font-awesome";
 @import "welcomes"
+
+.flash {
+  border-top: 1px solid white;
+  margin-bottom: 0px !important;
+  :nth-child(1) {
+    margin-top: 10px !important;
+  }
+}
+
+.home-flash {
+  position: fixed;
+  width: 100%;
+}

@@ -4,8 +4,8 @@ class WelcomesController < ApplicationController
   	 @subscriber =  Subscriber.new
      @ahoy = Ahoy::Visit.count
      #covid count
-     @statistics = Covid19::GlobalStatistics.retrieve
-     @angolastat =  Covid19::GlobalStatistics.by(country: 'ao')
+     #@statistics = Covid19::GlobalStatistics.retrieve
+     #@angolastat =  Covid19::GlobalStatistics.by(country: 'ao')
 
 
   end
