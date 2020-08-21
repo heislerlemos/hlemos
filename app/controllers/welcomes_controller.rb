@@ -8,9 +8,8 @@ class WelcomesController < ApplicationController
      @ahoy = Ahoy::Visit.count
      #covid count
 
-    #response = HTTParty.get('http://api.thevirustracker.com')
+    response = HTTParty.get('http://api.thevirustracker.com')
     # Teste access 
-    response = HTTParty.get('https://storify.com/api')
 
     puts "At the moment covid server is #{response.code}"
     
