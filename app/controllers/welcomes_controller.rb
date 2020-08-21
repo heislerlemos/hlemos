@@ -7,6 +7,7 @@ class WelcomesController < ApplicationController
   	 @subscriber =  Subscriber.new
      @ahoy = Ahoy::Visit.count
      #covid count
+=begin    
     response = HTTParty.get('http://api.thevirustracker.com')
 
     puts response.code
@@ -19,6 +20,7 @@ class WelcomesController < ApplicationController
    else 
     puts "no info covid at the moment" , notice: "At the moment we cannot have covid 19 info please try again later ."
   end
+=end  
 end
 
   
