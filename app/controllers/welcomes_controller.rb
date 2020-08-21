@@ -10,7 +10,7 @@ class WelcomesController < ApplicationController
 
     response = HTTParty.get('http://api.thevirustracker.com')
 
-    puts response.code
+    puts "At the moment covid server is #{response.code}"
     
     if response.code != 522
 
