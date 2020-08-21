@@ -8,7 +8,6 @@
 	height: 50%;
 	margin: auto;
 	overflow: hidden;
-
 }
 
 hr {
@@ -21,6 +20,7 @@ hr {
 	padding: 15px;
 	color: #ffffff;
 	background: black;
+
 }
 
 #newsletter h1 {
@@ -41,12 +41,14 @@ hr {
 
 
 #showcase {
-	min-height: 400px; 
+	min-height: 400px;	
 	background:url('pexels-krivec-ales-547117');
 	background-repeat: no-repeat;
     background-size: auto;
 	text-align: center;
-	color: white;	
+	color: white;		
+	  background-position: 30% 12%;
+
 }
 
 
@@ -187,3 +189,5 @@ flip-card {
   color: white;
   transform: rotateY(180deg);
 }
+
+

@@ -57,11 +57,11 @@
 	</header>
 	<section id="showcase">
 		<div class="container">
-			<h1>[Heisler] How can i help you ? </h1>
+			<h1 class="is-family-primary ">[Heisler] How can i help you ? </h1>
       <hr>
-      <h2> Call:  +244 934-659-342</h2>
+      <h2> +244 934-659-342</h2>
       <hr>
-      <h2>Email:  heisler.lemos@gmail.com</h2>
+      <h2 > heisler.lemos@gmail.com</h2>
 
 		</div>
 	</section>
@@ -69,14 +69,18 @@
   Thanks for signing up !
   <% else %>
     <section id="newsletter">
-          <div class="container">
 
-      <h1>Subscribe to my newsletter</h1>
+<div align="center">
+        <h1>Agenda a sua marcação aqui | Schedule your apointment here </h1>
+
   <%= form_for @subscriber do |f| %>
-    <%= f.text_field :name, placeholder: "Name" %>
-    <%= f.email_field :email, placeholder: "Email" %>
-    <%= f.select :source, ["Search Engine", "Social Media", "Word of Mouth", "Other"], prompt: "How did you hear about me ? " %>
-    <%= f.submit "Create", class: "button is-success is-small" %>
+    <%= f.text_field :name, placeholder: "O seu nome " , class: "control"%>
+    <%= f.email_field :email, placeholder: "O seu endereço de email", class: "control" %>
+    <hr>
+    <%= f.select :source, ["Vizinhos", "Redes Sociais", "Empresas", "Agencia"], prompt: "Como ouviste acerca de mim ? " , class: "has-dropdown" %>
+        <hr>
+
+    <%= f.submit "Create", class: "button is-primary" %>
   </div>
       </section>
 
