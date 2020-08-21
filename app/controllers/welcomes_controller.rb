@@ -29,9 +29,9 @@ end
   	@subscriber = Subscriber.new(subscriber_params)
   	if @subscriber.save
   		cookies[:saved_lead] = true
-  		redirect_to root_path,  notice: "Saved Sucessfully"
+  		redirect_to root_path,  notice: "Gravado com sucesso"
    	else
-   		redirect_to root_path, notice: "Failed save"
+   		redirect_to root_path, notice: "Falhou na gravação por favor tente de novo"
    end
 end
 
