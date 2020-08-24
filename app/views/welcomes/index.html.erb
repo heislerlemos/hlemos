@@ -57,12 +57,9 @@
 	</header>
 	<section id="showcase">
 		<div class="container">
-			<h1 class="is-family-primary " style="color: #e2e2e2;">[Heisler] How can i help you ? </h1>
       <hr>
-      <h2> +244 934-659-342</h2>
       <hr>
-      <h2 > heisler.lemos@gmail.com</h2>
-
+			<h1 class="is-family-primary " style="  font-weight: bold; ">[Heisler] How can i help you ? </h1>
 		</div>
 	</section>
   <% if cookies[:saved_subscriber] %>
@@ -81,7 +78,7 @@
     <%= f.select :source, ["Vizinhos", "Redes Sociais", "Negocio", "Agencia"], prompt: "Como ouviste acerca de mim ? " , class: "has-dropdown" %>
         <hr>
 
-    <%= f.submit "Create", class: "button is-primary" %>
+    <%= f.submit "Enviar", class: "button is-primary" %>
   </div>
       </section>
 
@@ -360,11 +357,12 @@ Dvr & nvr application configuration
 <figure class="image is-96x96">
 	<%= image_tag("avataaars.png", class: "is-rounded") %>
 </figure>
-		<small>  You got 
+		<small>  You are the
       <h1 style="color: lightgreen; font-size: 25px; "><%= @ahoy %> </h1> 
-      Visits on this website  </smal>
-      <br>
-      <div class="is-size-7"> Made with ruby on rails and bulma  Copyright Heisler Lemos &copy; 2020 </div>
+      visitor on my page, get in contact with me  </smal>
+      <h2> +244 934-659-342</h2>      
+      <h2 > heisler.lemos@gmail.com</h2>
+      <div class="is-size-7"> Made with ruby on rails and bulma copyright Heisler Lemos &copy; 2020 </div>
 		      </center>
 	</footer>
 </body>
