@@ -12,7 +12,7 @@ class SubscribersController < ApplicationController
 end
 	private 
 	def subscriber_params
-		params.require(:subscriber).permit(:name, :email, :source)
+		params.require(:subscriber).permit(:name, :email, :source, :number)
 	end
 
 end

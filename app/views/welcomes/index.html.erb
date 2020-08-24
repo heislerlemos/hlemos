@@ -75,6 +75,7 @@
 
   <%= form_for @subscriber do |f| %>
     <%= f.text_field :name, placeholder: "O seu nome " , class: "control"%>
+    <%= f.number_field :number, placeholder: "Insira o seu numero de telefone", class: "control" %>
     <%= f.email_field :email, placeholder: "O seu endereço de email", class: "control" %>
     <hr>
     <%= f.select :source, ["Vizinhos", "Redes Sociais", "Empresas", "Agencia"], prompt: "Como ouviste acerca de mim ? " , class: "has-dropdown" %>
