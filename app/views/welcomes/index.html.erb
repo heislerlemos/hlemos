@@ -74,11 +74,11 @@
         <h1>Agenda a sua marcação aqui | Schedule your apointment here </h1>
 
   <%= form_for @subscriber do |f| %>
-    <%= f.text_field :name, placeholder: "O seu nome " , class: "control"%>
-    <%= f.number_field :number, placeholder: "Insira o seu numero de telefone", class: "control" %>
-    <%= f.email_field :email, placeholder: "O seu endereço de email", class: "control" %>
+    <%= f.text_field :name, placeholder: "Insira o seu nome " , class: "control"%>
+    <%= f.number_field :number, placeholder: "Insira o seu número de telefone", class: "control" %>
+    <%= f.email_field :email, placeholder: "Insira o seu endereço de email", class: "control" %>
     <hr>
-    <%= f.select :source, ["Vizinhos", "Redes Sociais", "Empresas", "Agencia"], prompt: "Como ouviste acerca de mim ? " , class: "has-dropdown" %>
+    <%= f.select :source, ["Vizinhos", "Redes Sociais", "Negocio", "Agencia"], prompt: "Como ouviste acerca de mim ? " , class: "has-dropdown" %>
         <hr>
 
     <%= f.submit "Create", class: "button is-primary" %>
