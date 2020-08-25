@@ -191,3 +191,44 @@ flip-card {
 }
 
 
+/**  Making responsive **/
+
+
+
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+    h1 { color: white;
+    }
+
+   .navbar-brand {
+   	  max-width: 100%;
+  background: #43cea2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   }
+
+   .navbar-brand a {
+		width: 40%;
+		height: 40%;
+	   }
+
+	.navbar-item a {
+  width: 50%;
+  border: 3px solid lightblue;
+  padding: 10px;
+  left: 25%;
+	}	   
+
+	#showcase {
+		background: lightgreen;
+		background-image: url("computer-pc-svgrepo-com.svg");
+background-repeat: no-repeat;
+		  background-position: 45% 15%;
+
+	}
+
+	#showcase h1 {
+		color: transparent;
+	}
+}

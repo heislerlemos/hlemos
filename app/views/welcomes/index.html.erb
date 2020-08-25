@@ -1,24 +1,29 @@
   <% content_for(:title, "About") %>
 <%= stylesheet_link_tag "welcomes", :media => "all" %>
 
+
 <html>
+  
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
 <head>
 	<title>[Heisler] </title>
 <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+
 	<header>
-			<nav class="navbar is-dark">
+
+      <nav class="navbar is-dark">
 
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
       <%= link_to image_tag("logo_website.png", :alt => "logo", :size => "152x128"), root_path %>
     </a>
-    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+ 
   </div>
 
   <div id="navbarExampleTransparentExample" class="navbar-menu">
@@ -33,11 +38,8 @@
      
       </div> -->
     </div>
-
     <div class="navbar-end">
       <div class="navbar-item">
-        <div class="field is-grouped">
-          <p class="control">
             <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="https://github.com/heislerlemos?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
               <span class="icon">
               	<%= fa_icon "github-alt" %>
@@ -47,11 +49,9 @@
                 Github
               </span>
             </a>
-          </p>
-
-        </div>
       </div>
     </div>
+  </div>
   </div>
 </nav>
 	</header>
@@ -329,7 +329,7 @@ Dvr & nvr application configuration
 	<br>
      <br>
       <br>
-      
+      </body>
 	<footer>
 
 		 <center>
