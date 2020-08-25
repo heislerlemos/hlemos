@@ -221,14 +221,21 @@ background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, F
 	}	   
 
 	#showcase {
-		background: lightgreen;
-		background-image: url("computer-pc-svgrepo-com.svg");
+		background: lightblue;
+background-image: linear-gradient(45deg, #B2A2CD 25%, #5F5370 25%, #5F5370 50%, #B2A2CD 50%, #B2A2CD 75%, #5F5370 75%, #5F5370 100%);
 background-repeat: no-repeat;
 		  background-position: 45% 15%;
 
 	}
 
 	#showcase h1 {
+		color: white;
+		padding: 5px;
+		top: 50px;
+	}
+
+	#project-web {
 		color: transparent;
+
 	}
 }
