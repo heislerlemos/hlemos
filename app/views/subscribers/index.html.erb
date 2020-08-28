@@ -1,2 +1,64 @@
-<h1>Subscribers#index</h1>
-<p>Find me in app/views/subscribers/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agenda</title>
+</head>
+<body>
+
+<section class="hero is-info is-large">
+  <div class="hero-body">
+
+<div class="container">
+    <%= form_for @subscriber do |f| %>
+
+<div class="field">
+	  <label class="label">Nome</label>
+	    <div class="control has-icons-left has-icons-right">
+    <%= f.text_field :name, placeholder: "Insira o seu nome " , class: "input is-primary"%>
+       <span class="icon is-small is-left">
+                    	<%= fa_icon "user" %>
+    </span>
+
+</div>
+</div>	
+
+
+
+<div class="field">
+		  <label class="label">Numero</label>
+	    <div class="control has-icons-left has-icons-right">
+
+ <%= f.number_field :number, placeholder: "Insira o seu número de telefone", class: "input is-primary" %>
+        <span class="icon is-small is-left">
+      		<%= fa_icon "phone" %>
+        </span>
+  
+</div>
+</div>
+
+<div class="field">
+			  <label class="label">Email</label>
+	    <div class="control has-icons-left has-icons-right">
+
+    <%= f.email_field :email, placeholder: "Insira o seu endereço de email", class: "input is-primary" %>
+            <span class="icon is-small is-left">
+      		<%= fa_icon "envelope" %>
+        </span>
+       
+</div>
+
+<div class="field">
+					  <label class="label">Feedback</label>
+    <%= f.select :source, ["Vizinhos", "Redes Sociais", "Negocio", "Agencia"], prompt: "Como ouviste acerca de mim ? "  %>
+   </div>
+
+
+<div class="field is-grouped">
+     <%= f.submit "Enviar", class: "button is-primary" %>
+</div>
+ <% end %>
+</div>
+ </div>
+</section>
+</body>
+</html>

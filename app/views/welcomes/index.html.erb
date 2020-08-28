@@ -10,51 +10,12 @@
 
 <head>
 	<title>[Heisler] </title>
-<link rel="stylesheet" href="./css/style.css">
 </head>
+
 
 <body>
 
-	<header>
-
-      <nav class="navbar is-dark">
-
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <%= link_to image_tag("logo_website.png", :alt => "logo", :size => "152x128"), root_path %>
-    </a>
- 
-  </div>
-
-  <div id="navbarExampleTransparentExample" class="navbar-menu">
-   <!-- <div class="navbar-start">
-      <a class="navbar-item" href="'welcomes#index">
-        Home
-      </a>-->
-  <!---    <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="abouts/index">
-          About
-        </a>
-     
-      </div> -->
-    </div>
-    <div class="navbar-end">
-      <div class="navbar-item">
-            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="https://github.com/heislerlemos?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
-              <span class="icon">
-              	<%= fa_icon "github-alt" %>
-
-              </span>
-              <span>
-                Github
-              </span>
-            </a>
-      </div>
-    </div>
-  </div>
-  </div>
-</nav>
-	</header>
+	
 	<section id="showcase">
 		<div class="container">
       <hr>
@@ -68,21 +29,8 @@
     <section id="newsletter">
 
 <div align="center">
-        <h1>Agenda a sua marcação aqui | Schedule your apointment here </h1>
 <img src="https://img.icons8.com/clouds/100/000000/business-contact.png"/>
-  <%= form_for @subscriber do |f| %>
-    <%= f.text_field :name, placeholder: "Insira o seu nome " , class: "control"%>
-    <%= f.number_field :number, placeholder: "Insira o seu número de telefone", class: "control" %>
-    <%= f.email_field :email, placeholder: "Insira o seu endereço de email", class: "control" %>
-    <hr>
-    <%= f.select :source, ["Vizinhos", "Redes Sociais", "Negocio", "Agencia"], prompt: "Como ouviste acerca de mim ? " , class: "has-dropdown" %>
-        <hr>
 
-    <%= f.submit "Enviar", class: "button is-primary" %>
-  </div>
-      </section>
-
-    <% end %>
   <% end %>
 
       <section class="hero is-dark">
@@ -295,8 +243,7 @@ Dvr & nvr application configuration
       </section>
       <br>
       <br>
-         <br>
-      <br>
+  
       
       
     <div class="block">
@@ -327,43 +274,9 @@ Dvr & nvr application configuration
  
     
 	<br>
-     <br>
-      <br>
+
       </body>
-	<footer>
 
-		 <center>
-      <h5 style="color: lightgreen; font-size: 20px;"><small> Together against the Covid-19 </small></h5>
-            <img src="https://img.icons8.com/clouds/100/000000/coronavirus.png"/>
-
-
-        <br>
-          <small style="color: black">
-        <div class="container is-fullhd">
-  <div class="notification">
-       <%=  @statistics %>
-          </div>
-      </div>
-      <br>
-      <br>
-        <div class="container is-fullhd">
-  <div class="notification">
-      <%= @angolastat %>
-        </div>
-      </div>
-    </small>
-
-      <br>
-<figure class="image is-96x96">
-	<%= image_tag("avataaars.png", class: "is-rounded") %>
-</figure>
-		<small>  You are the
-      <h1 style="color: lightgreen; font-size: 25px; "><%= @ahoy %> </h1> 
-      visitor on my page, get in contact with me  </smal>
-      <h2> +244 934-659-342</h2>      
-      <h2 > heisler.lemos@gmail.com</h2>
-      <div class="is-size-7"> Made with ruby on rails and bulma copyright Heisler Lemos &copy; 2020 </div>
-		      </center>
-	</footer>
 </body>
+
 </html>	

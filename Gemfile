@@ -18,7 +18,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'ahoy_matey'
 #gem 'covid19-rb'
-gem 'yarn', '~> 0.1.1'
+#gem 'yarn', '~> 0.1.1'
  gem 'unicorn'
 
 #gem 'covid19-rb', require: 'covid19'
@@ -28,7 +28,7 @@ gem 'yarn', '~> 0.1.1'
 gem 'bulma-rails', '~> 0.7.5'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

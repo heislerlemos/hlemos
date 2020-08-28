@@ -1,0 +1,43 @@
+   <header>
+
+      <nav class="navbar  is-dark">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <%= link_to image_tag("logo_website.png", :alt => "logo", :size => "152x128"), root_path %>
+    </a>
+ 
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu" >
+      <div class="navbar-item" >
+            <% 80.times do  %>
+              &nbsp; 
+             <% end %>
+            <a class="button is-rounded"  href="https://github.com/heislerlemos" >
+              <span class="icon">
+                <%= fa_icon "github-alt" %>
+
+              </span>
+              <span>
+                Github
+              </span>
+            </a>
+             <% 5.times do  %>
+              &nbsp; 
+             <% end %>
+              <%= link_to "Agenda",   subscribers_path , class: "button is-rounded" %>
+              <% 5.times do  %>
+              &nbsp; 
+             <% end %>
+              <%= link_to "Casa",   root_path , class: "button is-rounded" %>
+
+
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+</nav>
+  </header>
