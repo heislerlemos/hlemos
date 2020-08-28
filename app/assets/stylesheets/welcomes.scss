@@ -196,9 +196,6 @@ flip-card {
 
    .navbar-brand {
    	  max-width: 100%;
-  background: #43cea2;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
    }
 
@@ -209,23 +206,21 @@ background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, F
 
 	.navbar-item a {
   width: 50%;
-  border: 3px solid lightblue;
   padding: 10px;
   left: 25%;
 	}	   
 
 	#showcase {
-		background: lightblue;
-background-image: linear-gradient(45deg, #B2A2CD 25%, #5F5370 25%, #5F5370 50%, #B2A2CD 50%, #B2A2CD 75%, #5F5370 75%, #5F5370 100%);
-background-repeat: no-repeat;
-		  background-position: 45% 15%;
+	  background-position: 60% 22%;
+
 
 	}
 
 	#showcase h1 {
-		color: white;
+		color: black;
 		padding: 5px;
 		top: 50px;
+
 	}
 
 	#project-web {
