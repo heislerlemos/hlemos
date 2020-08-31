@@ -194,15 +194,17 @@ flip-card {
     h1 { color: white;
     }
 
+
    .navbar-brand {
    	  max-width: 100%;
 
    }
 
-   .navbar-brand a {
-		width: 40%;
-		height: 40%;
-	   }
+ 	.tile {
+ 		width:100%;
+ margin-right:auto;
+  margin-left:auto;
+ 	}
 
 	.navbar-item a {
   width: 50%;
@@ -210,14 +212,9 @@ flip-card {
   left: 25%;
 	}	   
 
-	#showcase {
-	  background-position: 60% 22%;
-
-
-	}
-
+	
 	#showcase h1 {
-		color: black;
+		color: white;
 		padding: 5px;
 		top: 50px;
 
@@ -226,5 +223,18 @@ flip-card {
 	#project-web {
 		color: transparent;
 
-	}
+	}	
+
+		.hero{
+			width:90%;
+ margin-right:auto;
+  margin-left:auto;
+		}
+
+	 .card {
+width:90%;
+ margin-right:auto;
+  margin-left:auto;
+    }
 }
+
