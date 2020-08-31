@@ -42,7 +42,7 @@
 </div>
 </div>
 
-<div class="field">
+<div class="field" >
 			  <label class="label">Email</label>
 	    <div class="control has-icons-left has-icons-right">
 
@@ -54,8 +54,15 @@
 </div>
 
 <div class="field">
+
 					  <label class="label">Feedback</label>
-    <%= f.select :source, ["Vizinhos", "Redes Sociais", "Negocio", "Agencia"], prompt: "Como ouviste acerca de mim ? "  %>
+            <div class="select is-primary ">
+
+    <%= f.select :source, ["Vizinhos", "Redes Sociais", "Negocio", "Agencia"], prompt: "Como ouviste acerca de mim ? "   %>
+
+  </div>
+
+  </div>
    </div>
 
 
