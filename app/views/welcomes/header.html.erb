@@ -1,49 +1,104 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+  
+</script>
+
    <header>
-
-      <nav class="navbar is-dark">
-
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
-      <%= link_to image_tag("logo_website.png", :alt => "logo", :size => "152x128"), root_path %>
+            <%= link_to image_tag("logo_website.png", :alt => "logo", :size => "152x128"), root_path %>
+
     </a>
- 
 
-  <div class="navbar-menu" >
-      <div class="navbar-item" >
-             <% 2.times do  %>
-              &nbsp; 
-             <% end %>
 
-              <%= link_to  subscribers_path, :class => "button is-light is-active" do %>
-                <span id="span"><%= fa_icon "address-card" %> Agenda&nbsp;</span> 
+  </div>
 
-              <% end %>
-           
-              <% 5.times do  %>
-              &nbsp; 
-             <% end %>
-              <%= link_to root_path , class: "button is-light is-active" do %>
-               <span id="span"><%= fa_icon "home" %> Casa &nbsp;</span> 
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+         <%= link_to "Casa", root_path , class: "navbar-item" %>
+        <%= link_to "Agenda", subscribers_path, class: "navbar-item" %>
 
-              <% end %>
-                       <% 130.times do  %>
-              &nbsp; 
-             <% end %>
-            <a class="button is-info is-light"  href="https://github.com/heislerlemos" >
+      <div class="navbar-item has-dropdown is-hoverable">
+
+<!---
+        <a class="navbar-link">
+          Mais
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Jobs
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      -->
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+             <a class="button is-primary is-light"  href="https://github.com/heislerlemos" >
+              <span class="icon">
+                <%= fa_icon "whatsapp" %>
+
+              </span>
+            </a>
+          <a class="button is-light is-light"  href="https://github.com/heislerlemos" >
               <span class="icon">
                 <%= fa_icon "github" %>
 
               </span>
-              <span>
-                Github
+            </a>
+              <a class="button is-info is-light"  href="https://www.linkedin.com/in/wesley-lemos-48b638aa/" >
+              <span class="icon">
+                <%= fa_icon "linkedin" %>
+
               </span>
             </a>
+               <a class="button is-info is-light"  href="https://www.facebook.com/wesley.lemos.33" >
+              <span class="icon">
+                <%= fa_icon "facebook" %>
 
+              </span>
+            </a>
+        </div>
       </div>
-
     </div>
-
-  </div>
-  </div>
   </div>
 </nav>
 
