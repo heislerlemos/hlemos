@@ -2,6 +2,18 @@
 <%= stylesheet_link_tag "welcomes", :media => "all" %>
 
 
+<script>
+  function scrolldiv(elemento) { 
+  var elem = document.getElementById(elemento); 
+  elem.scrollIntoView(); 
+  } 
+
+
+
+</script>
+
+
+
 <html>
   
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -15,9 +27,22 @@
 
 <body>
 
-	
+
+
+
+
+ 
 	<section id="showcase">
-		
+
+<div id="subir">
+
+<button onclick="scrolldiv('descer')" >
+Fim da pagina
+
+</button> 
+
+
+</div>
     <div class="container">
       <hr>
       <hr>
@@ -32,6 +57,7 @@
 <div align="center">
 
   <% end %>
+
 
       <section class="hero is-light">
         <div class="hero-body">
@@ -166,7 +192,7 @@ Video vigilancia dvr & nvr configuração
   </div>
 </div>
       <br>
-<div id="project-web">
+
 
       <section class="hero is-light">
         <div class="hero-body">
@@ -175,6 +201,8 @@ Video vigilancia dvr & nvr configuração
           </div>
         </div>
       </section>
+
+
 
 	<section id="boxes">
 		<div class="container">
@@ -309,6 +337,12 @@ Video vigilancia dvr & nvr configuração
   </div>
 
 <br>
+
+    <div id="descer" align="center"> 
+  <button onclick="scrolldiv('subir')">Inicio da pagina</button> 
+
+
+            </div> 
 </body>
 
 </html>	
