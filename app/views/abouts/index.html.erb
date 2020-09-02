@@ -1,80 +1,50 @@
-<% content_for(:title, "about") %>
-
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<meta name="description" content="Afford and professional web design">
-	<meta name="keywords" content="web design, affordable web design prefer">
-	<meta name="author" content="wesley">
-	<title>Hlemos</title>
-</head>
-<body>
-	<header>
-		<div class="container">
-			<div id="branding">
-			<h1><span class="highlight"> Heisler </span>Web Portofolio !</h1>
-		</div>
-		<nav>
-			<ul>
-				<li class="current"><%= link_to "Home", root_path %></li>
-				<li><%= link_to "About", 'abouts/index' %></li>
-			</ul>	
-		</nav>
-		</div>	
-	</header>
-				<div class="columns">
-  <div class="column">
-    First column
-  </div>
-  <div class="column">
-    Second column
-  </div>
-  <div class="column">
-    Third column
-  </div>
-  <div class="column">
-    Fourth column
-  </div>
+  <head>
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 500px;  /* The height is 400 pixels */
+        width: 50%;  /* The width is the width of the web page */
+       }
+
+       #progression {
+float: right;
+   bottom: 10px;
+  right: 80px;
+    position: sticky;
+  top: 0;
+       }
+
+
+    </style>
+  </head>
+  <body>
+    <!--The div element for the map -->
+    <div id="progression">
+      <img src="https://img.icons8.com/clouds/100/000000/hammer.png"/ style="float:right;" >
+<progress class="progress is-warning" value="75" max="100">75%</progress>
+<div class="has-text-centered is-family-primary has-text-weight-bold"> 
+      Pagina em manutenção
+</div>
 </div>
 
-	<section id="newsletter">
-		<div class="container">
-			<h1>Subscribe to my newsletter</h1>
-			<form>
-				<input type="email" placeholder="Enter Email....">
-				<button type="submit " class="button_1">Subscribe</button>
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy_W6tCIX6-UQw_CXqdQIgupjqdz0KQ00&callback=initMap">
+    </script>
+  </body>
 
-			</form>
-		</div>
-	</section>
-
-   <div class="block">
-	<section id="main">
-		<div class="container">
-			      <div class="columns">
-
-		
-
-
-
-			<div class="dark">	
-				<h3> What i do </h3>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-		</div>
-	</section>
-</div>
-		<br>
-		<br>	
-    </div>
-	<footer>
-		<p> Site Web Design Copyright &copy; 2019</p>
-	</footer>
-</body>
 </html>
