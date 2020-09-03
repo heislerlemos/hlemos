@@ -232,11 +232,7 @@ flip-card {
   margin-left:auto;
 		}
 
-	 .card {
-width:90%;
- margin-right:auto;
-  margin-left:auto;
-    }
+
 
   #showcase{
   display: none;
@@ -257,8 +253,35 @@ width:90%;
 
 @media screen and (max-width: 1280px) {
 
-.title is-4{
-    font-size: 10px;
+html {
+  font-size: 12px;
+}
 
-  }
+.title.is-4 {
+    font-size: 1.0rem;
+}
+}
+
+
+
+
+@media screen and (max-width: 1440px) {
+html {
+  font-size: 12px;
+}
+
+.title.is-4 {
+    font-size: 1.0rem;
+}
+}
+
+
+@media screen and (max-width: 800px) {
+html {
+  font-size: 6px;
+}
+
+.title.is-4 {
+    font-size: 1.0rem;
+}
 }
