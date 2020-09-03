@@ -62,11 +62,9 @@ hr {
 /* Boxes */
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 30%;
-  	float: left;
-  		margin: 10px ;
+  width: 15%;
+  		margin: 3% ;
 
 
 
@@ -91,7 +89,7 @@ hr {
 }
 
 #boxes .box {
-	float: left;
+	
 	text-align: center;
 	width: 30%;
 	padding: 10px;
@@ -130,7 +128,11 @@ footer {
 	color: white;
 	background-color: #370D32;
   text-align: center;
+
+ 
 }
+
+
 
 
 #main-col {

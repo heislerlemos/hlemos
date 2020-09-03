@@ -1,37 +1,70 @@
 
 
-   <footer>
 
-     <center>
-      <h5 style="color: lightgreen; font-size: 20px;"><small> Juntos contra o covid-19 </small></h5>
-            <img src="https://img.icons8.com/clouds/100/000000/coronavirus.png"/>
-
-
-        <br>
-          <small style="color: black">
-        <div class="container is-fullhd">
-  <div class="notification">
-       <%=  @statistics %>
-          </div>
-      </div>
-      <br>
-        <div class="container is-fullhd">
-  <div class="notification">
-      <%= @angolastat %>
+<footer class="footer" >
+  <div class="columns">    
+    <div class="column">     
+     <div class="col-sm-3">
+                <h5>Começe</h5>
+                <ul>
+                    <li>Casa</li>
+                    <li>Agenda</li>
+                    <li>Informações Gerais</li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </small>
+         <div class="column">     
+            <div class="col-sm-3">
+                <h5>Sobre nos</h5>
+                <ul>
+                    <li>Informação da Compania</a></li>
+                    <li>Entre em contacto</a></li>
+                    <li>Avalie</a></li>
+                </ul> 	
+            </div>
+        </div>
 
-   
+                 <div class="column">     
+<center>
 <figure class="image is-96x96">
   <%= image_tag("avataaars.png", class: "is-rounded") %>
 </figure>
-    <small>  Tu és o 
-      <h1 style="color: lightgreen; font-size: 25px; "><%= @ahoy  %> </h1> 
-      visitante na pagina , entra em contacto comigo </small>
-      <h2> +244 934-659-342</h2>      
-      <h2 > heisler.lemos@gmail.com</h2>
-      <div class="is-size-7"> Heisler Lemos &copy; ruby-2.7.0 2020 </div>
+      <div class="is-size-4"><%= @ahoy %>
+       Visitas na pagina 
+
+        </div>
+      <div class="is-size-7"> Heisler Jorge de Lemos Stlano &copy; ruby-2.7.0 2020 </div>
           </center>
-  </footer>
-  
+
+        </div>
+                 <div class="column">     
+
+            <div class="col-sm-3">
+                <h5>Apoio</h5>
+                <ul>
+                    <li>FAQ</li>
+                    <li>Help desk</li>
+                    <li>Forums</li>
+                </ul>
+            </div>
+        </div>
+         <div class="column">     
+
+    <div class="second-bar">
+       <div class="container">
+            <h2 class="logo"> Heisler inc </h2>
+            <div class="social-icons">
+                <div class="icon"><i class="fa fa-twitter"></i></div>
+                  <div class="icon"><i class="fa fa-facebook"></i></div>
+                    <div class="icon"><i class="fa fa-google-plus"></i></div>
+            </div>
+   </div>
+</div>
+</div>
+    
+
+
+    </div>
+
+  </div>
+</footer>

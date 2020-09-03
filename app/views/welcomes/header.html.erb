@@ -42,6 +42,32 @@
     <div class="navbar-start">
          <%= link_to "Casa", root_path , class: "navbar-item" %>
         <%= link_to "Agenda", subscribers_path, class: "navbar-item" %>
+            <div class="navbar-item has-dropdown is-hoverable">
+
+
+        <a class="navbar-link">
+          Serviços
+        </a>
+
+            <div class="navbar-dropdown">
+
+        <%= link_to "Websites", websites_index_path, class: "navbar-item" %>
+                <%= link_to "Sistemas", sistemas_index_path, class: "navbar-item" %>
+
+                <%= link_to "Aulas", aulas_index_path, class: "navbar-item" %>
+                <%= link_to "Suporte", suportes_index_path, class: "navbar-item" %>
+              <%= link_to "Redes", redes_index_path, class: "navbar-item" %>
+
+
+
+  
+        </div>
+
+        
+    
+
+              </div>
+
 
       <div class="navbar-item has-dropdown is-hoverable">
 
@@ -51,24 +77,17 @@
         </a>
 
         <div class="navbar-dropdown">
-                 <%= link_to "Mapa", abouts_index_path, class: "navbar-item" %>
+                        <%= link_to "Sobre Nos",  informations_index_path, class: "navbar-item" %>
 
-       <!--   
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
-          --->
+         <%= link_to"Covid-19", virus_index_path, class: "navbar-item" %>
+        <%= link_to "Mapa", abouts_index_path, class: "navbar-item" %>
+
         </div>
     
       </div>
-    </div>
+
+
+            </div>
 
     <div class="navbar-end">
       <div class="navbar-item">

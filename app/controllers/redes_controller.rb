@@ -1,0 +1,2 @@
+class RedesController < ApplicationController
+end
