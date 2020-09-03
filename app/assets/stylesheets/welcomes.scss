@@ -35,14 +35,13 @@ hr {
 
 
 #showcase {
-	min-height: 400px;	
 	background:url('illustration-wallpaper');
-	background-repeat: no-repeat;
-    background-size: auto;
-	text-align: center;
-	color: white;		
-	  background-position: 30% 12%;
 
+
+	background-repeat: no-repeat;
+	text-align: center;
+
+   background-position: center left ; 
 }
 
 
@@ -254,3 +253,12 @@ width:90%;
 
 }
 
+
+
+@media screen and (max-width: 1280px) {
+
+.title is-4{
+    font-size: 10px;
+
+  }
+}

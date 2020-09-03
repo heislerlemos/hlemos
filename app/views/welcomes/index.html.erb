@@ -15,48 +15,51 @@
 
 
 <html>
+
+<head>
   
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
 
-<head>
-	<title>[Heisler] </title>
 
+	<title>[Heisler] </title>
+</head>
 
 <body>
+    <div class="mobile">
+    <div class="desktop">
+  <section id="showcase">
 
+    <br>
+  <br>
+  <br>
+  <br>  
+
+      <h1 class="is-family-primary is-title " style="color: black; text-align: center;" > Como lhe podemos ajudar ? </h1>
+
+  
+<button onclick="scrolldiv('descer')" style="background-color: Transparent; border: none;" >
+<img src="https://img.icons8.com/clouds/50/000000/down.png"/>
+
+</button> 
+  <br>
+  <br>  
+  <br>
+ 
+  <br>
+
+<div id="subir">
+
+
+</div>
+    
+  </section>
 
 
 
 
  
-	<section id="showcase">
-
-<div id="subir">
-
-<button onclick="scrolldiv('descer')" style="background-color: Transparent; border: none;" >
-<img src="https://img.icons8.com/clouds/50/000000/down.png"/>
-
-</button> 
-
-
-</div>
-    <div class="container">
-      <hr>
-      <hr>
-			<h1 class="is-family-primary " style="font-weight: bold; ">[Heisler] Como lhe podemos ajudar ? </h1>
-		</div>
-	</section>
-  <% if cookies[:saved_subscriber] %>
-  Thanks for signing up !
-  <% else %>
-    <section id="newsletter">
-
-<div align="center">
-
-  <% end %>
-
 
       <section class="hero is-light">
         <div class="hero-body">
@@ -293,7 +296,7 @@
     </figure>
   </div>
   <div class="card-content">
-    <div class="media">
+    <div class="media"> 
       <div class="media-left">
         <figure class="image is-48x48">
          <%= image_tag("https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraightStrand&accessoriesType=Prescription02&hairColor=BrownDark&facialHairType=Blank&clotheType=ShirtScoopNeck&clotheColor=Blue03&eyeType=Default&eyebrowType=SadConcerned&mouthType=Twinkle&skinColor=Brown'", class: "is-rounded") %>
@@ -325,6 +328,8 @@
 
 
             </div> 
+          </div>
+        </div>
 </body>
 
 </html>	
