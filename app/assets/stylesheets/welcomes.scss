@@ -253,9 +253,7 @@ flip-card {
 
 @media screen and (max-width: 1280px) {
 
-html {
-  font-size: 12px;
-}
+
 
 .title.is-4 {
     font-size: 1.0rem;
@@ -277,11 +275,42 @@ html {
 
 
 @media screen and (max-width: 800px) {
-html {
-  font-size: 6px;
-}
+
 
 .title.is-4 {
     font-size: 1.0rem;
 }
 }
+
+@media screen and (max-width: 1600px) {
+
+
+.title.is-4 {
+    font-size: 1.0rem;
+}
+}
+
+
+@media screen and (max-width: 360px) {
+
+
+.columns {
+  display: none;
+}
+}
+
+
+
+@media screen and (max-width: 768px) {
+.columns{
+display: none;   
+}
+
+.subtitle.is-6 {
+  font-size: 0.5rem;
+}
+  .title.is-4 {
+    font-size: 0.5rem;
+}
+}
+
