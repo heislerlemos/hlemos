@@ -1,0 +1,11 @@
+<%= form_with(model: [ @blog, @blog.comentarios.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :comentariador %><br>
+    <%= form.text_field :comentariador %>
+  </p>
+  <p>
+    <%= form.label :corpo%><br>
+    <%= form.text_area :corpo %>
+  </p>
+
+<% end %>

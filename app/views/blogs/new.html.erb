@@ -1,0 +1,54 @@
+<body>
+<br>
+<div class="container">
+<h1 class="title is-1">
+	Insira as novidades tecnologicas.
+</h1>
+
+
+
+<%= form_with scope: :blog, url: blogs_path, local: true do |f| %>
+<div class="field">
+
+<%= f.label :titulo , class: "label"%>
+</div>
+
+<div class="field">
+<%= f.text_field :titulo, placeholder: "Insira o seu titulo do artigo " ,style: "width:50%;" , class: "input"%>
+<div>
+
+<div class="field">
+
+<%= f.label :texto , class: "label" %>
+</div>
+
+<div class="field">
+<%= f.text_area :texto ,  placeholder: "Insira o artigo", class: "textarea" , cols: "30", rows: "10" %>
+</div>
+<div class="field">
+<%= link_to 'Back', blogs_path, class: "button is-secondary" %>
+<%= f.submit "Guardar o artigo", class: "button is-primary" %>
+</div>
+
+
+<% end %>
+</div>
+</div>
+</div>
+
+  <% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@blog.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @blog.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</body>
+
+

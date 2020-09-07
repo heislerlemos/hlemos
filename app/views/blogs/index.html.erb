@@ -1,0 +1,41 @@
+
+
+
+
+
+<div class=" table is-hoverable " style="display: grid;
+  justify-content: space-around;">
+    <table class="table">
+    <% @blogs.each do |f| %>
+
+<thead>
+  <tr>
+    <th> Titulo  </th>
+    <th>Texto </th>
+  </tr>
+
+</thead>
+<tbody>
+  <tr>
+    <th><%= f.titulo%></th>
+  </tr>
+
+</tbody>
+
+<tfoot>
+   <tr>
+  <th> <%= link_to "Ver", blog_path(f)%></th>
+  <th> <%= link_to 'Novo', new_blog_path %></th>
+   <th><%= link_to 'Edit', edit_blog_path(f) %></th>
+    <th><%= link_to 'Destroy', blog_path(f),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></th>
+</tr>
+  </tfoot>
+
+<% end %>
+
+ 
+
+          </table>
+</div>

@@ -1,0 +1,29 @@
+
+
+
+<body>
+	<div class="container">
+  <section class="section">
+    <div class="container">
+      <h1 class="title">    	 
+       <%= @blog.titulo%>
+</h1>
+      <h2 class="subtitle">
+             <%= @blog.texto%>
+
+      </h2>
+    </div>
+  </section>
+
+
+<h2>Comments</h2>
+<%= render @blog.comentarios %>
+ 
+<h2>Add a comment:</h2>
+
+<%=render 'comentarios/form' %>
+ 
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
+</div>
+ </body>
