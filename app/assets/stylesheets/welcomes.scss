@@ -306,6 +306,11 @@ html {
 display: none;   
 }
 
+
+.media-left {
+  
+  display: none;
+}
 .subtitle.is-6 {
   font-size: 0.5rem;
 }
@@ -316,21 +321,24 @@ display: none;
 
 
 
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 1068px) {
 .columns{
 display: none;   
 }
-.image is-48x48 {
-  width: 10px;
-  height: 10px;
 
+.media-left {
+  
+  display: none;
 }
+
+
 .subtitle.is-6 {
   font-size: 0.5rem;
 }
   .title.is-4 {
     font-size: 0.7rem;
 }
+
 }
 
 
