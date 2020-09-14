@@ -1,18 +1,34 @@
-<% @blog.comentarios.each do |comment| %>
+<% @blog.comentarios.each do |comentario| %>
 
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.comentariador %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.corpo %>
-</p>
+	<div class="columns ">
+<div class="card">
+  <div class="card-content">
+    <p>
+    <strong>Comentador </strong><small><%= comentario.comentariador  %></small>
 
-<p>
-  <%= link_to 'Apagar', [comment.blog, comment],
+      </p>
+
+    <p>
+
+    <strong> Comentario </strong><small> <%= comentario.corpo %></small>
+ </p>
+   </div>
+
+   <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+      	  <%= link_to 'Apagar', [comentario.blog, comentario],
                method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+               data: { confirm: 'Are you sure?' }, class: "button is-danger is-small"  %>
+
+      </span>
+    </p>
+   
+  </footer>
+
+</div>
+
+</div>
+
 <% end %>
+
