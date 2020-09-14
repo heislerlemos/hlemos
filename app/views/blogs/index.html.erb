@@ -1,9 +1,6 @@
 
 <br>
 <br>
-<br>
-<br>
-<br>
 <div class="container">
 <h1 class="title is-1"> Blog</h1>
 <h1 class="subtitle is-1">Atualize-se sobre as  novas tecnologias</h1>
@@ -11,44 +8,45 @@
   <%= link_to "Casa", root_path , class: "button" %>
    <%= link_to 'Administrador', new_blog_path, class: "button is-primary is-selected"%>
 </div>
+ </div>
+<div  class="columns is-mobile is-multiline is-centered" >    
+
+<% @blogs.each do |f| %>
+
+    
 
 
-<div class=" table is-hoverable " style="display: grid;
-  justify-content: space-around;">
-    <table class="table">
-    <% @blogs.each do |f| %>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title"> 
+      <%= f.titulo%>
+      </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+              <%= fa_icon "angle-down" %>
 
-<thead>
-  <tr>
-    <th> Titulo  </th>
-    <th>Texto </th>
-  </tr>
-
-</thead>
-<tbody>
-  <tr>
-    <th><%= f.titulo%></th>
-  </tr>
-
-</tbody>
-
-<tfoot>
-   <tr>
-  <th> <%= link_to "Ver", blog_path(f)%></th>
-   <th><%= link_to 'Edit', edit_blog_path(f) %></th>
-    <th><%= link_to 'Destroy', blog_path(f),
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content" >
+      <div  align="center" >
+       
+       <%= truncate( f.texto, :length => 100, :separator => ' ') %>
+     </div>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a><%= link_to "Ver", blog_path(f), class: "card-footer-item"%></a>
+    <a  ><%= link_to 'Editar', edit_blog_path(f), class: "card-footer-item" %></a>
+    <a ><%= link_to 'Apagar', blog_path(f),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></th>
-</tr>
-  </tfoot>
-
+              data: { confirm: 'Are you sure?' } , class: "card-footer-item"%></a>
+  </footer>
+</div>
 <% end %>
+ </div>
 
- 
-
-          </table>
-</div>
-</div>
 
  <br>
  <br>

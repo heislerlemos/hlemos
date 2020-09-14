@@ -1,17 +1,21 @@
 <body>
 	<div class="container">
-  <section class="section">
+<section class="hero is-medium is-info is-bold">
+  <div class="hero-body">
     <div class="container">
-      <h1 class="title">    	 
+      <h1 class="title">
        <%= @blog.titulo%>
-</h1>
+      </h1>
       <h2 class="subtitle">
              <%= @blog.texto%>
-
       </h2>
     </div>
-  </section>
+  </div>
+</section>
 
+<br>
+<br>
+<br>
 <div class="title">
 Comentarios
 </div>
@@ -20,8 +24,9 @@ Comentarios
 
 <%=render 'comentarios/comentario' %>
 
- 
-<h2>Adicionar</h2>
+<div class="title">
+Adicionar Comentarios
+</div>
 
 <%=render 'comentarios/form' %>
  

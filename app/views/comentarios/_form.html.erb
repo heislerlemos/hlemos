@@ -1,12 +1,21 @@
 <%= form_with(model: [ @blog, @blog.comentarios.build ], local: true) do |form| %>
-  <p>
-    <%= form.label :comentariador %><br>
-    <%= form.text_field :comentariador %>
-  </p>
-  <p>
-    <%= form.label :corpo%><br>
-    <%= form.text_area :corpo %>
-  </p>
 
-  <%= form.submit %>
+
+<div class="field">
+  <label class="label">  <%= form.label :Utilizador %></label>
+  <div class="control">
+        <%= form.text_field :comentariador, placeholder: "Insira o nome", class: "input" , :size=>"50"%>
+
+  </div>
+</div>
+
+<div class="field">
+  <label class="label"><%= form.label :Mensagem%></label>
+  <div class="control">
+    <%= form.text_area :corpo , placeholder: "Insira o texto", class: "textarea"  %>
+
+  </div>
+</div>
+  <%= form.submit "Postar", class: "button is-link" %>
 <% end %>
+
