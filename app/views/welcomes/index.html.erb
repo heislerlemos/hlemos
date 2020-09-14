@@ -2,11 +2,37 @@
 <%= stylesheet_link_tag "welcomes", :media => "all" %>
 
 
+
 <script>
   function scrolldiv(elemento) { 
   var elem = document.getElementById(elemento); 
   elem.scrollIntoView(); 
   } 
+
+
+var i = 0;
+var images = [];
+var times = 3000;
+
+images[0] = 'https://www.pexels.com/photo/young-woman-helping-senior-man-with-payment-on-internet-using-laptop-3823488.jpeg';
+images[1] = 'https://www.pexels.com/photo/serious-ethnic-field-engineer-examining-hardware-and-working-on-laptop-442152.jpeg';
+images[2] = 'https://www.pexels.com/photo/female-student-suffering-from-headache-in-library-3808057.jpeg';
+
+  
+// Mudança de plano
+function changeImg(){
+  document.slide.src = images[i];
+
+  if(i < images.length - 1){
+    i++;
+  } else {
+    i = 0;
+  }
+  setTimeout("changeImg()", times);
+
+}
+
+window.onload = changeImg;
 
 
 
@@ -30,6 +56,7 @@
     <div class="mobile">
     <div class="desktop">
   <section id="showcase">
+
 
     <br>
   <br>
@@ -56,11 +83,6 @@
     
   </section>
 
-
-
-
- 
-
       <section class="hero is-light">
         <div class="hero-body">
           <div class="container">
@@ -70,66 +92,13 @@
       </section>
 
       <br>
+        <!--
+          <figure class="image is-16by9">
+                    <img name="slide" width="50%" height="100" >  
 
-<div class="tile is-ancestor">
-  <div class="tile is-vertical is-8">
-    <div class="tile">
-      <div class="tile is-parent is-vertical">
-        <article class="tile is-child notification is-primary">
-                    <div align="center">
+</figure>
 
-        </div>
-          <p class="title"></p>
-
-          <p class="subtitle"></p>
- 
-
-        </article>
-        <article class="tile is-child notification is-warning">
-                    <div align="center">
-
-        </div>
-          <p class="title"></p>
-          <p class="subtitle"></p>
-
-        </article>
-
-      </div>
-      <div class="tile is-parent is-vertical">
-        <article class="tile is-child notification is-info">
-          <div align="center">
-          </div>
-          <p class="title"></p>
-          <p class="subtitle"></p>
-       
-  
-        </article>
-      </div>
-    </div>
-    <div class="tile is-parent is-horizontal">
-      <article class="tile is-child notification is-danger">
-                  <div align="center">
-
-      </div>
-        <p class="title"></p>
-        <p class="subtitle"></p>
-  
-      </article>
-    </div>
-  </div>
-  <div class="tile is-parent">
-    <article class="tile is-child notification is-success">
-      <div class="content">
-                  <div align="center">
-
-  </div>
-        <p class="title"></p>
-        <p class="subtitle"> </p>
- 
-      </div>
-    </article>
-  </div>
-</div>
+-->
       <br>
 <nav class="level">
   <div class="level-item has-text-centered">
@@ -315,12 +284,7 @@
     </div>
 
 	      	<br>  
-          <br>  
-          <br>  
-
-
-<br>  
-<br>  
+       
 
     <div id="descer" align="center"> 
 
