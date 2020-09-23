@@ -62,9 +62,11 @@ window.onload = changeImg;
   <br>
   <br>
 
-     <h1 class="title is-1"> Como lhe podemos ajudar ? </h1>
+<h1 class="title is-1">
+     <%= link_to "Como lhe podemos ajudar ",  informations_index_path, class: "button is-info is-focused" %>
+     <!---1"> Como lhe podemos ajudar ? </h1>-->
 
-
+</h1>
 <button onclick="scrolldiv('descer')" style="background-color: Transparent; border: none;" >
 <img src="https://img.icons8.com/clouds/50/000000/down.png"/>
 
