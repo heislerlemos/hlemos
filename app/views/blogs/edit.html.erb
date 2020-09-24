@@ -9,7 +9,7 @@ Editar
       <p class="title">
 
 <%= form_with(model: @blog, local: true) do |form| %>
- 
+
   <% if @blog.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -25,7 +25,7 @@ Editar
   <% end %>
 
 
- 
+
   <div class="field">
     <%= form.label :titulo, class: "label" , style: "color: white;" %><br>
      </div>
@@ -34,7 +34,7 @@ Editar
     <%= form.text_field :titulo, class: "input", placeholder: "Text Input" %>
   </div>
 </div>
- 
+
   <p>
     <%= form.label :texto, class: "label" , style: "color: white;"%><br>
       <div class="control">
@@ -47,7 +47,7 @@ Editar
     <%= link_to 'Back', blogs_path  , class: "button"%>
 </div>
 <% end %>
- 
+
 
 
       </p>
@@ -55,3 +55,8 @@ Editar
   </div>
 </section>
 </div>
+
+<% 10.times do  %>
+<br>
+
+<% end %>

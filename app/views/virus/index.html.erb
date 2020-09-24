@@ -1,38 +1,282 @@
 
-      <center>
 
-             <%= image_tag ("covid") %>
-         <center>
-                <img src="https://img.icons8.com/bubbles/100/000000/home.png"/>
-                   <div class="is-size-1">Fique em casa </div>   
-      </center>
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Fique em casa
+      </h1>
+      <h2 class="subtitle">
+        Se proteja contra o covid-19
 
-
-
- 
-
-
-        <br>
-          <div class="is-size-6 is-bold" style="color: black;" >
-     <div class="is-size-5 is bold" style="color: white;">
-     Mundo 
-      </div>
-  <div class="notification">
- 
-       <%=  @statistics %>
-          </div>
-               <div class="is-size-5 is bold" style="color: white;">
-
-           Angola
-      </div>
-
-  <div class="notification">
-      <%= @angolastat %>
-        </div>
-
+      </h2>
     </div>
-      </center>
-
-   
   </div>
- 
+</section>
+<% 2.times do  %>
+<br>
+
+<% end %>
+
+
+<div class="container">
+
+  <div  class="columns   is-multiline  " >
+    <div class="card">
+  <div class="column">
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-info">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Mundo Casos </p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%=  @totalcases %></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-info">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Angola Casos </p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%=  @totalcasesangola %></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-info">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Brazil Casos </p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%=  @brazilestado %></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-info">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Portugal Casos </p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%= @portugalestado %></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-danger">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Mundo Mortes</p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%= @totaldeaths %></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-danger">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Angola Mortes </p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%=  @totaldeathsangola%> </p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-danger">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Brazil Casos </p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%= @brazilmorte %></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-danger">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Portugal Mortes</p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%= @portugalmortes%></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-success">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Mundo Recuperados</p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%= @totalrecoverd  %></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-success">
+<div class="message-header" >
+        <p class="title is-info"style="color: white;">Angola  Recuperados</p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%= @totalrecoverdangola%></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-success">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Brazil Recuperados</p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%=  @brazilrecuperados  %></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="card">
+
+  <div class="column">
+
+  <div class="level-item has-text-centered">
+    <div>
+      <article class="message is-small  is-success">
+<div class="message-header" >
+      <p class="title is-info"style="color: white;">Portugal Recuperados</p>
+      </div>
+
+
+       <div class="message-body" >
+      <p class="title is-small"  >    <%= @portugarecuperados%></p>
+      </div>
+
+      </article>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+  </div>
+
+</div>
