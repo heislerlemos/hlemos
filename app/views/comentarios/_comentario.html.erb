@@ -1,8 +1,8 @@
 <div class="columns is-mobile is-multiline is-centered" >
- 
+
 <% @blog.comentarios.each do |comentario| %>
 
-	
+
 <div class="card">
   <div class="card-content">
     <p>
@@ -14,7 +14,7 @@
     <p>
 
 <%= fa_icon "comments" %>
-    
+
     <small> <%= comentario.corpo %></small>
  </p>
    </div>
@@ -28,10 +28,11 @@
 
       </span>
     </p>
-   
+
   </footer>
 
 </div>
 <% end %>
 
 </div>
+<br>

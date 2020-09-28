@@ -35,20 +35,20 @@ hr {
 
 
 #showcase {
-	background:url('illustration-wallpaper');
+	/**background:url('illustration-wallpaper');**/
 
 
 	background-repeat: no-repeat;
 	text-align: center;
 
-   background-position: center left ; 
+   background-position: center left ;
 }
 
 
 #showcase h1{
-	margin-top: 100px; 
+	margin-top: 100px;
 	font-size: 55px;
-	margin-bottom: 10px; 
+	margin-bottom: 10px;
 }
 
 #showcase p{
@@ -88,7 +88,7 @@ hr {
 }
 
 #boxes .box {
-	
+
 	text-align: center;
 	width: 30%;
 	padding: 10px;
@@ -120,15 +120,16 @@ body {
  /**background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /*  Chrome 10-25, Safari 5.1-6 */
 /***background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-} 	
+}
 
 footer {
-	padding: 5px;
+padding: 5px;
 	color: white;
 	background-color: #370D32;
   text-align: center;
 
- 
+
+
 }
 
 
@@ -211,9 +212,9 @@ flip-card {
   width: 50%;
   padding: 10px;
   left: 25%;
-	}	   
+	}
 
-	
+
 	#showcase h1 {
 		color: white;
 		padding: 5px;
@@ -224,7 +225,7 @@ flip-card {
 	#project-web {
 		color: transparent;
 
-	}	
+	}
 
 		.hero{
 			width:90%;
@@ -303,12 +304,12 @@ html {
 
 @media screen and (max-width: 768px) {
 .columns{
-display: none;   
+display: none;
 }
 
 
 .media-left {
-  
+
   display: none;
 }
 .subtitle.is-6 {
@@ -323,11 +324,11 @@ display: none;
 
 @media screen and (max-width: 1068px) {
 .columns{
-display: none;   
+display: none;
 }
 
 .media-left {
-  
+
   display: none;
 }
 
@@ -340,5 +341,3 @@ display: none;
 }
 
 }
-
-
