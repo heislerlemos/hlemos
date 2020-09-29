@@ -20,7 +20,9 @@ gem 'ahoy_matey'
 #gem 'covid19-rb'
 #gem 'yarn', '~> 0.1.1'
  gem 'unicorn'
-
+ gem 'fullcalendar-rails'
+ gem 'momentjs-rails'
+gem 'jquery-rails'
 #gem 'covid19-rb', require: 'covid19'
 #gem 'json', '~> 1.8', '>= 1.8.3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -41,7 +43,7 @@ gem 'devise'
 gem 'hirb', '~> 0.7.3'
 # Use ActiveModel has_secure_password
 
-  gem 'covid19-rb', require: 'covid19', git: 'https://github.com/viccarrasco/covid19-rb' 
+  gem 'covid19-rb', require: 'covid19', git: 'https://github.com/viccarrasco/covid19-rb'
 
 # gem 'bcrypt', '~> 3.1.7'
 gem 'byebug', '~> 11.1', '>= 11.1.3'

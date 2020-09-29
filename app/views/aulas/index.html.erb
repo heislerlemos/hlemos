@@ -1,5 +1,23 @@
+<head>
 
+<%= stylesheet_link_tag "aulas", :media => "all" %>
+
+
+</head>
 <body>
+
+  <script>
+    //= require moment
+    //= require fullcalendar
+    //= require fullcalendar/locale-all
+
+    $('#calendar').fullCalendar({});
+
+
+    </script>
+
+
+
   <section class="section">
     <div class="container">
 
@@ -27,4 +45,22 @@ Smartphone
 </section>
 
 
+
+  <section class="hero is-info is-large">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Calendario
+        </h1>
+        <h2 class="subtitle">
+          Fique atento ao nosso calendario de aulas !!
+
+        </h2>
+
+        <div id="calendar">
+          Calendar
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
