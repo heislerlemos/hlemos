@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'websites/index'
     get 'sistemas/index'
         get 'aulas/index'
-
+            resource :aulas, only: [:index], controller: :aulas
         get 'suportes/index'
         get 'redes/index'
         get 'informations/index'

@@ -2,7 +2,10 @@
 
 <%= stylesheet_link_tag "aulas", :media => "all" %>
 
+<%= stylesheet_link_tag "http://yandex.st/bootstrap/3.0.2/css/bootstrap.min.css", media: "all" %>
+<%= javascript_include_tag "http://yandex.st/bootstrap/3.0.2/js/bootstrap.min.js" %>
 
+<%= csrf_meta_tags %>
 </head>
 <body>
 
@@ -44,14 +47,35 @@ Smartphone
           Calendario
         </h1>
         <h2 class="subtitle">
-          Fique atento ao nosso calendario de aulas !!
+          Fique atento ao nosso calendario de aulas !!  <hr>
+          Aulas dia 10 de outubro
 
         </h2>
 
-        <div id="calendar">
-          Calendar
-        </div>
       </div>
     </div>
   </section>
+
+
+          <div class="row">
+
+      <div class="col-md-12 text-center" style="color: black;">
+        <div class="well controls">
+          <%= link_to  aulas_index_path(date: @date - 1.month), class: "btn btn-default" do %>
+            <i class="glyphicon glyphicon-backward"></i>
+          <% end %>
+          <%= "#{@date.strftime("%B")} #{@date.year}" %>
+          <%= link_to  aulas_index_path(date: @date + 1.month), class: "btn btn-default" do %>
+            <i class="glyphicon glyphicon-forward"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" style="color: black;">
+        <%= calendar @date do |date| %>
+          <%= date.day %>
+        <% end %>
+      </div>
+    </div>
 </body>
