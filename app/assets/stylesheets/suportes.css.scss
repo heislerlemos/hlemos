@@ -1,0 +1,42 @@
+
+.centered {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+
+}
+
+
+
+.imgfull  {
+  -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+
+min-height: 100%;
+min-width: 1024px;
+
+width: 100%;
+height: auto;
+
+position: fixed;
+top: 0;
+left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .imgfull {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+
+p {
+  background-color: blue;
+  color: white;
+    border-radius: 3px;
+}
