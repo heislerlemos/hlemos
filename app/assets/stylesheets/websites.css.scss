@@ -1,10 +1,15 @@
-
-#calendar {
-  background-color: white;
+body, html {
+  height: 100%;
 }
 
+.centered {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-
+}
 
 .imgfull  {
   -webkit-background-size: cover;
@@ -30,20 +35,19 @@ left: 0;
   }
 }
 
+h1 {
+  display: block;
+  font-size: 2em;
 
-.centered {
-  position: absolute;
-  color: white;
-  top: 50%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
-
 
 
 p {
   background-color: blue;
-  color: white;
-  width: 40%;
+  border-radius: 3px;
 }

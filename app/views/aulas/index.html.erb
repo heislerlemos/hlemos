@@ -8,22 +8,22 @@
 <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="imgfull">
+
+<img src="https://images.pexels.com/photos/2406271/pexels-photo-2406271.jpeg" alt="Lamp" >
+
+</div>
 
 
-
-
-    <div class="container">
-
-  <section class="hero is-info is-large">
-    <div class="hero-body">
       <div class="container">
-        <h1 class="title">
-          Calendario      Aulas
-        </h1>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <h2 class="subtitle">
-          Fique atento ao nosso calendario de aulas !!  <hr>
-          Aulas dia 10 de outubro
+<p>          Fique atento ao nosso calendario de aulas !!  </p> <hr>
+    <p>      Aulas dia 10 de outubro </p>
 
         </h2>
         <h2 class="subtitle">
@@ -31,27 +31,24 @@
 
 <br>
 
-A internet
+<p> A internet </p>
 
-Segurança
+<p> Segurança </p>
 
-Redes
+<p> Redes </p>
 <hr>
-Softwares Individuais
+<p> Softwares Individuais </p>
 <hr>
-Hardware
+<p> Hardware </p>
 <hr>
-Smartphone
+<p> Smartphone </p>
 
 
 </h2>
       </div>
-    </div>
-  </section>
-  <br>
-  <br>
 
           <div class="table is-bordered is-striped is-narrow is-hoverable is-full is-selected" align="center">
+            <div class="centered">
 
           <%= link_to  aulas_index_path(date: @date - 1.month) do %>
           <span class="icon">
@@ -72,8 +69,7 @@ Smartphone
         <% end %>
 
       </div>
-
-      </div>
+</div>
     <br>
     <br>
     <br>

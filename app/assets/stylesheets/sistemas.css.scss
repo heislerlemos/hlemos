@@ -1,10 +1,13 @@
 
-#calendar {
+h1 {
   background-color: white;
 }
 
+p {
 
-
+  background-color: blue;
+  border-radius: 3px;
+}
 
 .imgfull  {
   -webkit-background-size: cover;
@@ -35,15 +38,7 @@ left: 0;
   position: absolute;
   color: white;
   top: 50%;
-  left: 65%;
+  left: 50%;
   transform: translate(-50%, -50%);
 
-}
-
-
-
-p {
-  background-color: blue;
-  color: white;
-  width: 40%;
 }
