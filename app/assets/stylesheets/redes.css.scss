@@ -3,17 +3,35 @@
   position: absolute;
   color: white;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
 
 }
 
+h1 {
+  font-size: 80px;
+  color:  white;
+  text-shadow: 2px 2px grey;
 
-p {
-  background-color: blue;
-  color: white;
-    border-radius: 3px;
+
+  font-weight: bold;
+
 }
+
+h3 {
+  font-size: 35px;
+  color: white;
+  /**background-color: white;*/
+  text-align: center;
+
+}
+
+h3  span {
+  text-shadow: 1px 1px grey;
+
+}
+
+
 
 
 .imgfull  {
