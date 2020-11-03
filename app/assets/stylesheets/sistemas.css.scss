@@ -1,13 +1,4 @@
 
-h1 {
-  background-color: white;
-}
-
-p {
-
-  background-color: blue;
-  border-radius: 3px;
-}
 
 .imgfull  {
   -webkit-background-size: cover;
@@ -38,7 +29,29 @@ left: 0;
   position: absolute;
   color: white;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
+
+}
+
+
+h1 {
+  font-size: 80px;
+  color:  white;
+  text-shadow: 2px 2px grey;
+
+  font-weight: bold;
+}
+
+h2 {
+  color: white;
+  /**background-color: white;*/
+  text-align: center;
+
+}
+
+h2  span {
+  text-shadow: 1px 1px grey;
+  font-size: 15px;
 
 }
