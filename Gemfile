@@ -18,6 +18,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'ahoy_matey'
 #gem 'covid19-rb'
+gem 'excon'
+
 #gem 'yarn', '~> 0.1.1'
  gem 'unicorn'
 

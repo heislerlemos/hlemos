@@ -119,6 +119,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     errbase (0.2.0)
     erubi (1.9.0)
+    excon (0.78.0)
     execjs (2.7.0)
     ffi (1.13.1)
     ffi (1.13.1-java)
@@ -327,6 +328,7 @@ DEPENDENCIES
   coffee-rails
   covid19-rb!
   devise
+  excon
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
   hirb (~> 0.7.3)
   httparty (~> 0.18.1)

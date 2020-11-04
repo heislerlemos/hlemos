@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'stories/top'
   get 'virus/index'
   #get 'subscribers/index'
   resources :subscribers
