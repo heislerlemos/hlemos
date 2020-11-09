@@ -12,6 +12,7 @@
 
 
 
+    <div class="container">
 
     <section class="hero is-info is-large">
 
@@ -24,52 +25,32 @@
 
           </div>
     </section>
+
+    <%= render partial: 'story', collection: @stories %>
+
+
+
+
     <br>
-    <div class="container">
-    <div class="columns  is-multiline">
-        <% @stories.each do |story| %>
-        <div class="column ">
-          <div class="box" style="overflow: auto ; width: auto;">
 
-      <article class="media ">
+<nav class="pagination  is-centered" role="navigation" aria-label="pagination" >
 
-  <div class="media-content">
-    <div class="content">
-      <p>
-        <a href="<%= story['url'] %>"><%= story['title'] %></a>
+  <ul class="pagination-list" >
 
-        <br>
-
-      </p>
-
-
-    </div>
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <p class="level-item">
-       <%= story['score'] %> points
-        </p>
-        <p class="level-item">
-            by <%= story['by'] %>
-        </p>
-        <p class="level-item">
-      <%= time_ago_in_words(story['time']) %> ago
-        </p>
-        <p class="level-item">
-        <%= story['descendants'] %> comments
-        </p>
-
-      </div>
-    </nav>
-  </div>
-
-</article>
-    </div>
-    </div>
+    <li>
+    <% if @start != 0 %>
+      <%= link_to 'Previous', stories_top_path(start: @start - @per_page), class: "pagination-previous"%>
+    <% else %>
+      <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
     <% end %>
+    </li>
+    <li>
+    <%= link_to 'Next', stories_top_path(start: @start + @per_page), class: 'pagination-next' %>
+    </li>
+  </ul>
+</nav>
+<br>
+</div>
 
-    </div>
-    </div>
-    <br>
   </body>
 </html>

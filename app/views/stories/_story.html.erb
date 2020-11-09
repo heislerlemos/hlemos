@@ -1,0 +1,47 @@
+<br>
+<div class="columns  is-multiline">
+    <div class="column ">
+      <div class="box" style="overflow: auto ; width: auto;">
+
+  <article class="media ">
+
+<div class="media-content">
+<div class="content">
+  <p>
+    <a href="<%= story['url'] %>"><%= story['title'] %></a>
+
+    <br>
+
+  </p>
+
+
+</div>
+<nav class="level is-mobile">
+  <div class="level-left">
+    <p class="level-item">
+   <%= story['score'] %> points
+    </p>
+    <p class="level-item">
+        by <%= story['by'] %>
+    </p>
+    <p class="level-item">
+
+    <%= time_ago_in_words(story['time']) %> ago
+    </p>
+    <p class="level-item">
+
+    <%= link_to "#{story['descendants']}  comments ", story_path(story['id']) %>
+    </p>
+
+
+
+  </div>
+</nav>
+</div>
+
+</article>
+</div>
+</div>
+
+
+</div>
