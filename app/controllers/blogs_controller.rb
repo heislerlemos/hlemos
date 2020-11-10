@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
 	  http_basic_authenticate_with name: "heisler", password: "pass", except: [:index, :show]
- 
+
 	def index
     @blogs = Blog.all
 
@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
 	end
 
 
-	def edit 
+	def edit
 		@blog = Blog.find(params[:id])
 	end
 
@@ -25,14 +25,14 @@ class BlogsController < ApplicationController
   	@blog = Blog.new(blog_params)
   	if @blog.save
   	redirect_to @blog
-  else 
+  else
   	render 'new'
   end
 end
 
 def update
 	  @blog = Blog.find(params[:id])
- 
+
   if @blog.update(blog_params)
     redirect_to @blog
   else
@@ -44,7 +44,7 @@ def update
 def destroy
   @blog = Blog.find(params[:id])
   @blog.destroy
- 
+
   redirect_to blogs_path
 end
 
@@ -53,7 +53,7 @@ end
 private
 
 def blog_params
-	params.require(:blog).permit(:titulo, :texto)
+	params.require(:blog).permit(:titulo, :texto, :avatar)
 
 end
 end

@@ -5,6 +5,7 @@
 	Insira as novidades tecnologicas.
 </h1>
 
+<!--- Image attachment -->
 
 
 <%= form_with scope: :blog, url: blogs_path, local: true do |f| %>
@@ -16,6 +17,11 @@
 <div class="field">
 <%= f.text_field :titulo, placeholder: "Insira o seu titulo do artigo " ,style: "width:50%;" , class: "input"%>
 <div>
+
+<div class="field">
+	<%= f.file_field :avatar , class: "file"  %>
+	</div>
+
 
 <div class="field">
 
