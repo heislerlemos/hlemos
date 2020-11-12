@@ -21,11 +21,12 @@
 
 <div class="card">
   <div class="card-image">
-    <figure class="image is-128x128	">
-      <%= image_tag f.image_url%>
+  <figure class="image is-4by3">
+    <%= image_tag f.image_url%>
 
-    </figure>
-  </div>
+  </figure>
+</div>
+
   <header class="card-header">
     <p class="card-header-title">
       <%= f.titulo%>
@@ -41,7 +42,7 @@
     <div class="content" >
       <div  align="center" >
 
-       <%= truncate( f.texto, :length => 40, :separator => ' ') %>
+       <%= truncate( f.texto, :length => 20, :separator => ' ') %>
      </div>
     </div>
   </div>
