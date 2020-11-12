@@ -1,13 +1,10 @@
-<div class="container">
-<div class="title">
-  <br>
-Editar
-</div>
-<section class="hero is-info">
-  <div class="hero-body">
+<br>
+<br>
     <div class="container">
-      <p class="title">
 
+      <h1 class="title is-1">
+      	Editar blog
+      </h1>
 <%= form_with(model: @blog, local: true) do |form| %>
 
   <% if @blog.errors.any? %>
@@ -35,8 +32,15 @@ Editar
   </div>
 </div>
 
+<div class="field">
+  <%= form.label :image_url , class: "label" , style: "color:white;"%>
+  </div>
+    <div class="field">
+      <%= form.text_field :image_url , class: "input", placeholder: "Url Input" %>
+      </div>
+
         <div class="field">
-        	<%= form.file_field :avatar , class: "file"  %>
+        	<% form.file_field :avatar , class: "file"  %>
         	</div>
 
   <p>
@@ -54,8 +58,4 @@ Editar
 
 
 
-      </p>
     </div>
-  </div>
-</section>
-</div>

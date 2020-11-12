@@ -1,6 +1,8 @@
 <body>
 <br>
 <div class="container">
+	<br>
+	<br>
 <h1 class="title is-1">
 	Insira as novidades tecnologicas.
 </h1>
@@ -19,9 +21,17 @@
 <div>
 
 <div class="field">
-	<%= f.file_field :avatar , class: "file"  %>
+	<% f.file_field :avatar , class: "file"  %>
 	</div>
 
+	<div class="field">
+
+	<%= f.label :image_url , class: "label"%>
+	</div>
+
+	<div class="field">
+		<%= f.text_field :image_url , class: "input",placeholder: "Url Input" %>
+		</div>
 
 <div class="field">
 
