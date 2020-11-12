@@ -38,14 +38,7 @@
       </span>
     </a>
   </header>
-  <div class="card-content">
-    <div class="content" >
-      <div  align="center" >
 
-       <%= truncate( f.texto, :length => 20, :separator => ' ') %>
-     </div>
-    </div>
-  </div>
   <footer class="card-footer">
     <a><%= link_to "Ver", blog_path(f), class: "card-footer-item"%></a>
     <a  ><%= link_to 'Editar', edit_blog_path(f), class: "card-footer-item" %></a>
