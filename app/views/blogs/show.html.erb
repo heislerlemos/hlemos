@@ -3,16 +3,18 @@
 <section class="hero is-medium is-info is-bold">
   <div class="hero-body">
     <div class="container">
+
       <h1 class="title">
        <%= @blog.titulo%>
       </h1>
+			<figure class="image is-128x128	">
+				<%= image_tag @blog.image_url class: 'is-rounded'%>
+
+			</figure>
       <h2 class="subtitle">
              <%= @blog.texto%>
       </h2>
-			<figure class="image is-square">
-				<%= image_tag @blog.image_url%>
 
-			</figure>
 
     </div>
   </div>
