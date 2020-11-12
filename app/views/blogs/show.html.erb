@@ -11,9 +11,8 @@
 				<%= image_tag @blog.image_url%>
 
 			</figure>
-      <h2 class="subtitle">
-             <%= @blog.texto%>
-      </h2>
+
+						 <%= simple_format(@blog.texto) %>
 
 
     </div>
