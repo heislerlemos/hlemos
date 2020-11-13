@@ -1,122 +1,37 @@
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-
-    // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
-      });
-    });
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
   }
-
-});
-
+}
 </script>
 
-   <header>
-<nav class="navbar is-dark " role="navigation" aria-label="main navigation">
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-         <%= link_to " Comunidade Angolana De Informatica 💻 🇦🇴", root_path , class: "navbar-item" %>
-        <%= link_to "Agenda", subscribers_path, class: "navbar-item" %>
-         <%= link_to "Blog",blogs_path, class: "navbar-item" %>
-         <%= link_to "Noticias", stories_top_path, class: "navbar-item" %>
+  <!-- Simulate a smartphone / tablet look -->
 
-            <div class="navbar-item has-dropdown is-hoverable">
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+   <%= link_to "Comunidade Angolana De Informatica 💻 🇦🇴", root_path  %>
 
+    <%= link_to "Agenda", subscribers_path %>
+    <%= link_to "Blog",blogs_path %>
+     <%= link_to "Noticias", stories_top_path %>
+            <%= link_to "Websites", websites_index_path %>
+                    <%= link_to "Sistemas", sistemas_index_path %>
 
-        <a class="navbar-link">
-          Serviços
-        </a>
+                <%= link_to "Aulas", aulas_index_path %>
 
-            <div class="navbar-dropdown">
-
-        <%= link_to "Websites", websites_index_path, class: "navbar-item" %>
-                <%= link_to "Sistemas", sistemas_index_path, class: "navbar-item" %>
-
-                <%= link_to "Aulas", aulas_index_path, class: "navbar-item" %>
-                <%= link_to "Suporte", suportes_index_path, class: "navbar-item" %>
-              <%= link_to "Redes", redes_index_path, class: "navbar-item" %>
-
-
-
-
-        </div>
-
-
-
-
-              </div>
-
-
-      <div class="navbar-item has-dropdown is-hoverable">
-
-
-        <a class="navbar-link">
-          Mais
-        </a>
-
-        <div class="navbar-dropdown">
-                        <%= link_to "Sobre Nos",  informations_index_path, class: "navbar-item" %>
-
-         <%= link_to"Covid-19", virus_index_path, class: "navbar-item" %>
-        <%= link_to "Mapa", abouts_index_path, class: "navbar-item" %>
-
-        </div>
-
-      </div>
-
-
-            </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-             <a class="button is-primary is-light"  href="https://whats.link/heisler
-" >
-              <span class="icon">
-                <%= fa_icon "whatsapp" %>
-
-              </span>
-            </a>
-          <a class="button is-light is-light"  href="https://github.com/heislerlemos" >
-              <span class="icon">
-                <%= fa_icon "github" %>
-
-              </span>
-            </a>
-              <a class="button is-info is-light"  href="https://www.linkedin.com/in/wesley-lemos-48b638aa/" >
-              <span class="icon">
-                <%= fa_icon "linkedin" %>
-
-              </span>
-            </a>
-               <a class="button is-info is-light"  href="https://www.facebook.com/wesley.lemos.33" >
-              <span class="icon">
-                <%= fa_icon "facebook" %>
-
-              </span>
-            </a>
-        </div>
-      </div>
-    </div>
+                <%= link_to "Suporte", suportes_index_path %>
+                         <%= link_to "Redes", redes_index_path %>
+                           <%= link_to "Sobre Nos",  informations_index_path %>
+                                    <%= link_to"Covid-19", virus_index_path%>
+                                        <%= link_to "Mapa", abouts_index_path %>
 
   </div>
-</nav>
 
-  </header>
+
+
+  <!-- End smartphone / tablet look -->
