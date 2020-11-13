@@ -1,57 +1,17 @@
 
 
-.imgfull  {
-  -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
 
-min-height: 100%;
-min-width: 1024px;
-
-width: 100%;
-height: auto;
-
-position: fixed;
-top: 0;
-left: 0;
-}
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  .imgfull {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
-}
-
-
-.centered {
-  position: absolute;
-  color: white;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-
-}
 
 
 h1 {
   font-size: 80px;
-  color:  white;
+  color:  purple;
   text-shadow: 2px 2px grey;
 
   font-weight: bold;
 }
 
-h2 {
-  color: white;
-  /**background-color: white;*/
-  text-align: center;
 
-}
-
-h2  span {
-  text-shadow: 1px 1px grey;
-  font-size: 15px;
-
+.column  h2 {
+  color: black;
 }

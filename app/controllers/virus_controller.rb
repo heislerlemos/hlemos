@@ -5,7 +5,7 @@ class VirusController < ApplicationController
     puts "At the moment covid server is #{response.code}"
     puts "At the moment covid server is #{response.body}"
 
-    if response.body == "maintaining"
+    if response.body == "developing"
 
 
 

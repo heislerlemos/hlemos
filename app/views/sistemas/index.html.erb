@@ -4,42 +4,37 @@
     <meta charset="utf-8">
     <title>Sistemas</title>
     <%= stylesheet_link_tag "sistemas", :media => "all" %>
+    <div id="ytplayer"></div>
+
+    <script>
+      // Load the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // Replace the 'ytplayer' element with an <iframe> and
+      // YouTube player after the API code downloads.
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('ytplayer', {
+          height: '360',
+          width: '640',
+          videoId: 'M7lc1UVf-VE'
+        });
+      }
+    </script>
+
+
 
   </head>
-  <body>
-    <div class="imgfull">
 
-    <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg" alt="Lamp" >
-    </div>
-  <div class="centered">
-                    <% 15.times do %>
-                    <br>
-                    <% end %>
+<div id="container">
 
-          <h1>    Windows  e Linux </h1>
-          <% 5.times do %>
-          <br>
-          <% end %>
 
-          <figure class="image is-16by9">
-      <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/aLZcyTtfLzo" frameborder="0" allowfullscreen></iframe>
-        </figure>
-        <% 5.times do %>
-        <br>
-        <% end %>
-          <div class="columns">
-<div class="column">
-<h2> <span>  Servidores web, e-mail, cloud armazenamento pessoal </span></h2>
-</div>
-<h2><span>  Servidores Windows active domain, DNS, DHCP  FILE SERVICE </span> </h2>
-<div class="column">
-<h2> <span> Windows and Linux accesso remoto </span> </h2>
-</div>
+
 </div>
 
 
-      </div>
-
-  </body>
 
 </html>
