@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
 	  http_basic_authenticate_with name: "heisler", password: "pass", except: [:index, :show]
 
 	def index
-    @blogs = Blog.all
+    @blogs = Blog.all.order("created_at DESC")
 
 	end
 
