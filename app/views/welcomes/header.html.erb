@@ -17,7 +17,7 @@ function myFunction() {
    <%= link_to "Comunidade Angolana De Informatica 💻 🇦🇴",  welcomes_index_path  , class: ("active" if current_page?( welcomes_index_path))  %>
 
     <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
-    <%= link_to "Blog",blogs_path , class: ("active" if current_page?(blogs_path)) %>
+    <%= link_to "Blog",root_path , class: ("active" if current_page?(root_path)) %>
      <%= link_to "Noticias", stories_top_path , class: ("active" if current_page?(stories_top_path))%>
             <% link_to "Websites", websites_index_path %>
                     <% link_to "Sistemas", sistemas_index_path %>
