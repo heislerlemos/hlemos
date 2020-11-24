@@ -14,7 +14,7 @@ function myFunction() {
 
   <!-- Top Navigation Menu -->
   <div class="topnav">
-   <%= link_to "Comunidade Angolana De Informatica 💻 🇦🇴", root_path  , class: ("active" if current_page?(root_path))  %>
+   <%= link_to "Comunidade Angolana De Informatica 💻 🇦🇴",  welcomes_index_path  , class: ("active" if current_page?( welcomes_index_path))  %>
 
     <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
     <%= link_to "Blog",blogs_path , class: ("active" if current_page?(blogs_path)) %>

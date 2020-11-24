@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'stories/top'
   get 'stories/:id', to: 'stories#show', as: :story
   get 'comments/:id', to: 'comments#show', as: :comment
-
+  get 'welcomes/index'
   get 'virus/index'
   #get 'subscribers/index'
   resources :subscribers
