@@ -17,8 +17,6 @@ function myFunction() {
    <%= link_to "Comunidade Angolana De Informatica 💻 🇦🇴", root_path  , class: ("active" if current_page?(root_path))  %>
 
     <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
-
-
     <%= link_to "Blog",blogs_path , class: ("active" if current_page?(blogs_path)) %>
      <%= link_to "Noticias", stories_top_path , class: ("active" if current_page?(stories_top_path))%>
             <% link_to "Websites", websites_index_path %>
@@ -30,7 +28,4 @@ function myFunction() {
                                         <%= link_to "Mapa", abouts_index_path , class: ("active" if current_page?(abouts_index_path))%>
                                           <%= link_to "Sobre Nos",  informations_index_path  , class: ("active" if current_page?(informations_index_path))%>
   </div>
-
-
-
   <!-- End smartphone / tablet look -->
