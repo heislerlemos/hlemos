@@ -7,6 +7,7 @@ Rails.application.config.assets.precompile += %w( sistemas.css )
 Rails.application.config.assets.precompile += %w( suportes.css )
 Rails.application.config.assets.precompile += %w( redes.css )
 Rails.application.config.assets.precompile += %w( stories.css )
+Rails.application.config.assets.precompile += %w( blogs.css )
 
 
 
