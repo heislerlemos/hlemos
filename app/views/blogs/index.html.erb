@@ -39,6 +39,12 @@
       </span>
     </a>
   </header>
+  <div class="card-content " align="center">
+    <div class="content is-subtitle is-small">
+  <%=  (f.created_at)  %>
+
+    </div>
+  </div>
 
   <footer class="card-footer">
     <a><%= link_to "Ver", blog_path(f), class: "card-footer-item"%></a>
@@ -50,3 +56,6 @@
 </div>
 <% end %>
  </div>
+<% 4.times do %>
+<br>
+<% end %>
