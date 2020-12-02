@@ -1,10 +1,12 @@
 class ComentariosController < ApplicationController
+  http_basic_authenticate_with name: "heisler", password: "heisler", except: [:create]
+
   def create
     @blog = Blog.find(params[:blog_id])
     @comentario = @blog.comentarios.create(comentario_params)
     redirect_to blog_path(@blog)
   end
- 
+
   def destroy
     @blog = Blog.find(params[:blog_id])
     @comentario = @blog.comentarios.find(params[:id])

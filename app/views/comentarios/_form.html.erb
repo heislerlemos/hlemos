@@ -4,7 +4,7 @@
 <div class="field">
   <label class="label">  <%= form.label :Utilizador %></label>
   <div class="control">
-        <%= form.text_field :comentariador, placeholder: "Insira o nome", class: "input" , :size=>"50"%>
+        <%= form.text_field :comentariador, placeholder: "Insira o nome", class: "input" , style: 'width: 20%; '%>
 
   </div>
 </div>
@@ -16,6 +16,5 @@
 
   </div>
 </div>
-  <%= form.submit "Postar", class: "button is-link" %>
+  <%= form.submit "Postar", class: "button is-link is-small" %>
 <% end %>
-
