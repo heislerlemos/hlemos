@@ -25,7 +25,7 @@ function myFunction() {
                 <% link_to "Suporte", suportes_index_path %>
                          <% link_to "Redes", redes_index_path %>
                                     <%= link_to"Covid-19", virus_index_path , class: ("active" if current_page?(virus_index_path))%>
-                                        <%= link_to "Mapa", abouts_index_path , class: ("active" if current_page?(abouts_index_path))%>
+                                        <% link_to "Mapa", abouts_index_path , class: ("active" if current_page?(abouts_index_path))%>
                                           <%= link_to "Sobre Nos",  informations_index_path  , class: ("active" if current_page?(informations_index_path))%>
   </div>
   <!-- End smartphone / tablet look -->
