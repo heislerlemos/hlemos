@@ -22,10 +22,11 @@
    <footer class="card-footer">
     <p class="card-footer-item">
       <span>
-      	  <%= link_to 'Apagar', [comentario.blog, comentario],
+      	  <%= link_to  [comentario.blog, comentario],
                method: :delete,
-               data: { confirm: 'Are you sure?' }, class: "button is-danger is-small"  %>
-
+               data: { confirm: 'Are you sure?' }, class: "button is-danger is-small" do  %>
+               <%= fa_icon "trash" %>
+               <% end %>
       </span>
     </p>
 
