@@ -47,11 +47,19 @@
   </div>
 
   <footer class="card-footer">
-    <a><%= link_to "Ver", blog_path(f), class: "card-footer-item"%></a>
-    <a  ><%= link_to 'Editar', edit_blog_path(f), class: "card-footer-item" %></a>
-    <a ><%= link_to 'Apagar', blog_path(f),
+    <%= link_to blog_path(f), class: "card-footer-item " do %>
+    <%= fa_icon "eye" %>
+    <% end %>
+
+    <%= link_to  edit_blog_path(f), class: "card-footer-item" do  %>
+    <%= fa_icon "pencil" %>
+    <% end %>
+
+    <%= link_to  blog_path(f),
               method: :delete,
-              data: { confirm: 'Are you sure?' } , class: "card-footer-item"%></a>
+              data: { confirm: 'Are you sure?' } , class: "card-footer-item" do %>
+              <%= fa_icon "trash" %>
+              <% end %>
   </footer>
 </div>
 <% end %>
