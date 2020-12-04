@@ -12,6 +12,7 @@ gem 'net-ping', '~> 1.7', '>= 1.7.8'
 # Use Puma as the app server
 gem 'httparty', '~> 0.18.1'
 gem 'puma', '~> 3.11'
+#gem "mini_magick"
 # Use SCSS for stylesheets
 gem 'webpacker', '~> 5.x'
 gem 'sass-rails', '~> 5.0'
