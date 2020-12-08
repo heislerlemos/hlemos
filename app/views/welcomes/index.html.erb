@@ -87,7 +87,7 @@ window.onload = changeImg;
 <nav class="level">
   <div class="level-item has-text-centered">
     <div>
-      <img src="https://img.icons8.com/clouds/100/000000/support.png"/>
+      <%= link_to image_tag("https://img.icons8.com/clouds/100/000000/support.png"), suportes_index_path %>
 
       <p class="heading">Apoio tecnico disponivel </p>
       <p class="title">Suporte</p>
@@ -95,7 +95,7 @@ window.onload = changeImg;
   </div>
   <div class="level-item has-text-centered">
     <div>
-              <img src="https://img.icons8.com/clouds/100/000000/wrench.png"/>
+              <%= link_to  image_tag("https://img.icons8.com/clouds/100/000000/wrench.png"),  redes_index_path %>
 
       <p class="heading">Administração de equipamentos que estão na LAN </p>
       <p class="title">Redes</p>
@@ -103,7 +103,7 @@ window.onload = changeImg;
   </div>
   <div class="level-item has-text-centered">
     <div>
-      <img src="https://img.icons8.com/clouds/100/000000/trust.png"/>
+      <%= link_to image_tag("https://img.icons8.com/clouds/100/000000/trust.png"),  aulas_index_path  %>
 
       <p class="heading">Aprenda sobre as tecnologias</p>
       <p class="title">Aulas</p>
@@ -111,7 +111,7 @@ window.onload = changeImg;
   </div>
   <div class="level-item has-text-centered">
     <div>
-    <img src="https://img.icons8.com/clouds/100/000000/online-support.png"/>
+    <%=  link_to image_tag("https://img.icons8.com/clouds/100/000000/online-support.png"), sistemas_index_path %>
       <p class="heading">Administração de sistemas </p>
       <p class="title">Sistemas</p>
     </div>
@@ -119,7 +119,7 @@ window.onload = changeImg;
   <div class="level-item has-text-centered">
 
     <div>
-    <img src="https://img.icons8.com/clouds/100/000000/maintenance.png"/>
+    <%= link_to image_tag("https://img.icons8.com/clouds/100/000000/maintenance.png"), websites_index_path %>
          <p class="heading">Construção de websites </p>
       <p class="title">Websites</p>
 
