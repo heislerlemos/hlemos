@@ -47,14 +47,18 @@
   <p>
     <%= form.label :texto, class: "label" , style: "color: black;"%><br>
       <div class="control">
-    <%= form.rich_text_area :texto, class: "textarea", rows: "30"  %>
+    <%= form.rich_text_area :texto %>
       </div>
   </p>
  <br>
+<br>
 <div class="control">
     <%= form.submit  "Submeter", class: "button is-info is-small"%>
     <%= link_to 'Back', blogs_path  , class: "button is-info is-small"%>
 </div>
+<% 4.times do %>
+<br>
+<% end %>
 <% end %>
 
 
