@@ -193,6 +193,7 @@ GEM
       nokogiri (~> 1.8, >= 1.8.4)
     ntlm-http (0.1.1)
     orm_adapter (0.5.0)
+    pagy (3.10.0)
     paperclip (6.0.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
@@ -324,6 +325,7 @@ GEM
     websocket-driver (0.7.3-java)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.1.8)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.4.0)
@@ -353,6 +355,7 @@ DEPENDENCIES
   link_with_icon
   listen (~> 3.2, >= 3.2.1)
   net-ping (~> 1.7, >= 1.7.8)
+  pagy
   paperclip (~> 6.0.0)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
@@ -367,6 +370,7 @@ DEPENDENCIES
   unicorn
   web-console (>= 3.3.0)
   webpacker (~> 5.x)
+  will_paginate (~> 3.1.0)
 
 RUBY VERSION
    ruby 2.7.0p0

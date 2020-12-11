@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
 before_action  :data_analise
+ include Pagy::Backend
 def client
 
   @client ||= Hackernews::Client.new

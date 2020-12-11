@@ -10,9 +10,11 @@ gem 'rails', '~> 6.0.3.2'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'net-ping', '~> 1.7', '>= 1.7.8'
 # Use Puma as the app server
+  gem 'pagy'# omit patch digit and use the latest if possible
 gem 'httparty', '~> 0.18.1'
 gem 'puma', '~> 3.11'
 #gem "mini_magick"
+gem 'will_paginate', '~> 3.1.0'
 # Use SCSS for stylesheets
 gem 'webpacker', '~> 5.x'
 gem 'sass-rails', '~> 5.0'
