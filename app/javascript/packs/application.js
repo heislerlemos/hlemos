@@ -6,3 +6,5 @@ import 'regenerator-runtime/runtime'
 
 require("trix")
 require("@rails/actiontext")
+require("@rails/ujs").start()
+require("turbolinks").start()
