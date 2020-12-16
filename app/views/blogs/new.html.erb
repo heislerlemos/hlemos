@@ -3,9 +3,6 @@
 <div class="container">
 	<br>
 	<br>
-<h1 class="title is-1">
-	Insira as novidades tecnologicas.
-</h1>
 
 
 
@@ -40,6 +37,10 @@
 <div class="field">
 <%= f.rich_text_area :texto ,  placeholder: "Insira o artigo" %>
 </div>
+<% 2.times do %>
+<br>
+<% end %>
+
 <div class="field">
 <%= link_to 'Back', blogs_path, class: "button is-secondary" %>
 <%= f.submit "Guardar o artigo", class: "button is-primary" %>
@@ -50,6 +51,9 @@
 </div>
 </div>
 </div>
+<% 2.times do %>
+<br>
+<% end %>
 
   <% if @blog.errors.any? %>
     <div id="error_explanation">
@@ -65,3 +69,6 @@
     </div>
   <% end %>
 </body>
+<% 2.times do %>
+<br>
+<% end %>
