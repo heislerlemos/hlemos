@@ -1,20 +1,10 @@
-<script>
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-</script>
 
 
   <!-- Simulate a smartphone / tablet look -->
 
   <!-- Top Navigation Menu -->
-  <div class="topnav" >
-   <%= link_to "Comunidade Angolana de Informática",  welcomes_index_path  , class: ("active" if current_page?( welcomes_index_path))  %>
+  <div class="topnav" id="myTopnav">
+   <%= link_to "Inicio",  welcomes_index_path  , class: ("active" if current_page?( welcomes_index_path))  %>
 
     <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
     <%= link_to "Blog",root_path , class: ("active" if current_page?(root_path)) %>
@@ -27,5 +17,21 @@ function myFunction() {
                                     <%= link_to"Covid-19", virus_index_path , class: ("active" if current_page?(virus_index_path))%>
                                         <% link_to "Mapa", abouts_index_path , class: ("active" if current_page?(abouts_index_path))%>
                                           <%= link_to "Sobre Nos",  informations_index_path  , class: ("active" if current_page?(informations_index_path))%>
+
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>	  
+
   </div>
   <!-- End smartphone / tablet look -->
+
+  <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
