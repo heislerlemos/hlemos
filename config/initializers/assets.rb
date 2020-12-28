@@ -8,6 +8,8 @@ Rails.application.config.assets.precompile += %w( suportes.css )
 Rails.application.config.assets.precompile += %w( redes.css )
 Rails.application.config.assets.precompile += %w( stories.css )
 Rails.application.config.assets.precompile += %w( blogs.css )
+Rails.application.config.assets.precompile += %w( virus.css )
+Rails.application.config.assets.precompile += %w( subscribers.css )
 
 
 

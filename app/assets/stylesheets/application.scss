@@ -104,3 +104,17 @@ html, body {
   }
  
 }
+@media screen and (max-width: 600px) {
+
+
+.footer {
+
+    display: none;
+}
+#container {
+    min-height: 0;
+}
+
+
+
+}

@@ -6,7 +6,7 @@
 
 .media a{
   color: hsl(217, 71%, 53%);
-  font-weight: bold;
+  
 
 }
 
@@ -14,3 +14,12 @@
   background-color: hsl(0, 0%, 96%);
   border-radius: 5px;
 }
+
+@media screen and (max-width: 600px) {
+    .box {
+	width: 80%;
+    }
+
+    
+}
+

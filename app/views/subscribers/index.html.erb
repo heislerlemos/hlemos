@@ -1,16 +1,19 @@
 
 <html>
+      <%= stylesheet_link_tag    'subscribers', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 <head>
   <title>Agenda</title>
 
 </head>
 <body>
+  <% 6.times do %>
+
+  <br>
+
+  <% end %>
 
 
-
-<div class="container">
-
-  <div class="hero-body">
 
 <div class="container">
     <%= form_for @subscriber do |f| %>
@@ -27,19 +30,19 @@
 </div>
 
 
-
+<br>
 <div class="field">
 		  <label class="label">Numero</label>
 	    <div class="control has-icons-left has-icons-right">
 
- <%= f.number_field :number, placeholder: "Insira o seu número de telefone", class: "input is-primary" %>
+ <%= f.number_field :number, placeholder: "Insira o seu número de telefone", class: "input is-primary" , style: "width: 50%;"%>
         <span class="icon is-small is-left">
       		<%= fa_icon "phone" %>
         </span>
 
 </div>
 </div>
-
+<br>
 <div class="field" >
 			  <label class="label">Email</label>
 	    <div class="control has-icons-left has-icons-right">
@@ -50,7 +53,7 @@
         </span>
 
 </div>
-
+<br>
 <div class="field">
 
 					  <label class="label">Feedback</label>
@@ -63,14 +66,11 @@
   </div>
    </div>
 
-
+<br>
 <div class="field is-grouped">
      <%= f.submit "Enviar", class: "button is-primary" %>
 </div>
  <% end %>
-</div>
- </div>
-
 </div>
 
 </body>
