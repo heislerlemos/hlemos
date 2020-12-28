@@ -19,6 +19,7 @@ header {
 html, body {
   height: 100%;
   margin: 0;
+  
 }
 
 #container {
@@ -106,7 +107,13 @@ html, body {
 }
 @media screen and (max-width: 600px) {
 
-
+   html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+    
 .footer {
 
     display: none;
