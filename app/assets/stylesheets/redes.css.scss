@@ -1,37 +1,6 @@
 
-.centered {
-  position: absolute;
-  color: white;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
 
-}
-
-h1 {
-  font-size: 80px;
-  color:  white;
-  text-shadow: 2px 2px grey;
-
-
-  font-weight: bold;
-
-}
-
-h3 {
-  font-size: 35px;
-  color: white;
-  /**background-color: white;*/
-  text-align: center;
-
-}
-
-h3  span {
-  text-shadow: 1px 1px grey;
-
-}
-
-
+/* This code will be needed 
 
 
 .imgfull  {
@@ -53,7 +22,7 @@ z-index: -1;
 
 }
 
-
+*/
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   .imgfull {

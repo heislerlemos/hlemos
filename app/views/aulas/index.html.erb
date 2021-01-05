@@ -5,16 +5,31 @@
 <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="imgfull">
+   <br>
+  <div class="table  " align="center">
 
-<img src="https://images.pexels.com/photos/4144101/pexels-photo-4144101.jpeg" alt="Lamp" >
+        <%= link_to  aulas_index_path(date: @date - 1.month) do %>
+        <span class="icon">
+          <%= fa_icon "arrow-left" %>
 
-</div>
+        </span>
+        <% end %>
+        <%= "#{@date.strftime("%B")} #{@date.year}" %>
+        <%= link_to  aulas_index_path(date: @date + 1.month) do %>
+        <span class="icon">
+          <%= fa_icon "arrow-right" %>
+
+        </span>
+        <% end %>
+
+        <%= calendar @date do |date| %>
+        <%= date.day %>
+        <% end %>
+
+        </div>
 
 
-      <div class="container">
 
-        <h1> Fornecemos aulas de  </h1>
         <br>
               <div class="columns is-mobile is-multiline is-centered">
           <div class="column is-narrow">
@@ -54,38 +69,5 @@
             </div>
           </div>
         </div>
-        <br>
-        <br>
-        <div class="table  " align="center">
-
-        <%= link_to  aulas_index_path(date: @date - 1.month) do %>
-        <span class="icon">
-          <%= fa_icon "arrow-left" %>
-
-        </span>
-        <% end %>
-        <%= "#{@date.strftime("%B")} #{@date.year}" %>
-        <%= link_to  aulas_index_path(date: @date + 1.month) do %>
-        <span class="icon">
-          <%= fa_icon "arrow-right" %>
-
-        </span>
-        <% end %>
-
-        <%= calendar @date do |date| %>
-        <%= date.day %>
-        <% end %>
-
-        </div>
-
-
-        </div>
-
-
-      <% 14.times do %>
-
-      <br>
-
-      <% end %>
-
+       
 </body>
