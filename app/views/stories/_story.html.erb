@@ -8,7 +8,7 @@
 <div class="media-content">
 <div class="content">
   <p>
-    <a href="<%= story['url'] %>"><%= story['title'] %></a>
+    <a href="<%= story['url'] %>"  target="_blank" ><%= story['title']  %></a>
 
     <br>
 
@@ -30,7 +30,7 @@
     </p>
     <p class="level-item">
 
-    <%= link_to "#{story['descendants']}  comments ", story_path(story['id']) %>
+    <%= link_to "#{story['descendants']}  comments ", story_path(story['id']) , target: "_blank"  %>
     </p>
 
 
