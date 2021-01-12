@@ -1,32 +1,41 @@
 <%= stylesheet_link_tag "blogs", :media => "all" %>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
 <body>
-	<div class="container">
-<section class="hero is-medium is-light ">
-  <div class="hero-body">
-    <div class="container">
 
-      <h1 class="title">
+	<div class="container" >
+	 <div class="w3-container">
+<br>
+<div class="w3-panel w3-leftbar w3-light-grey">
+  <figure class="image is-128x128" style="float: left;">
+    <%= image_tag ("logo_blog.png"), class: "is-rounded" %>
+  </figure>
+  <br>
+    <p class="w3-xxlarge w3-serif"><i>"Espero que você goste deste artigo."</i></p>
+    <p>Comunidade Angolana de Informatica </p>
+  </div>
+</div>
+	  <br>
+	 <h1 class="w3-xxlarge w3-serif">
+	   <center>
        <%= @blog.titulo%>
-      </h1>
-			<figure class="image is-16by">
-				<div class="imagemblog">
-				<%= image_tag @blog.image_url%>
-				</div>
-			</figure>
+       </center>
+	 </h1>
+	 <br>
+	 <div align="center" >
+	<%= image_tag @blog.image_url, style: "padding:16px;width:60%;", class: "w3-border" %>
+	</div>		
 			<br>
 			<br>
 						 <%= @blog.texto %>
 
 
-    </div>
-  </div>
-</section>
+
 
 <br>
 <br>
 <br>
-
 
 
 <%=render 'comentarios/comentario' %>
