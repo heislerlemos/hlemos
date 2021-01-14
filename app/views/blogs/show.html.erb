@@ -30,9 +30,6 @@
 	<br>
 	<%= @blog.texto %><hr>
 
-	
-
-
 <br>
 <br>
 <br>
@@ -47,14 +44,11 @@ Adicionar Comentarios
 <%=render 'comentarios/form' %>
 <br>
 <br>
-<%= link_to  edit_blog_path(@blog), class: "button is-primary is-small" do %>
-<%= fa_icon "pencil" %>
-<% end %>
+<%= link_to "Editar", edit_blog_path(@blog), class: "button is-link"  %>
 
-<%= link_to  blogs_path, class: "button is-primary is-small" do %>
-<%= fa_icon "undo" %>
 
-<% end %>
+<%= link_to  "Voltar", blogs_path, class: "button is-link " %>
+
 </div>
 </body>
 <br>
