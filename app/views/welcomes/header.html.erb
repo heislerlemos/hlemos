@@ -4,7 +4,9 @@
 
   <!-- Top Navigation Menu -->
   <div class="topnav" id="myTopnav">
-   <%= link_to "Inicio",  welcomes_index_path  , class: ("active" if current_page?( welcomes_index_path))  %>
+   
+   
+    <%= link_to "Inicio",  welcomes_index_path  , class: ("active" if current_page?( welcomes_index_path))  %>
 
     <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
     <%= link_to "Blog",root_path , class: ("active" if current_page?(root_path)) %>
