@@ -93,7 +93,10 @@ html, body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+
+    
+    
+ .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
       position: absolute;
       left: 80%;
@@ -112,7 +115,30 @@ html, body {
 }
 @media screen and (max-width: 600px) {
 
+
+.topnav input[type=text ] , #button  {
+  float: left;
+  padding: 3px;
+  border: none;
+  width: 200px;
+   margin-top: 8px;
+  margin-right: 10px;
+  font-size: 17px;
+  height: 35px;
+  border-style:   solid;
+  background-color: lightgrey;
+  border-color: black;
+  display:none;
+
    
+}
+
+
+#button {
+
+  border-style: solid;
+  border-color: black;     
+}   
     
 .footer {
 
@@ -134,5 +160,36 @@ html, body {
  border-radius: 100px;
  -webkit-border-radius: 100px;
  -moz-border-radius: 100px;
+
+}
+
+
+
+@media screen and (max-width: 1380px) {
+
+
+.topnav input[type=text ] , #button  {
+  float: left;
+  padding: 3px;
+  border: none;
+  width: 200px;
+   margin-top: 8px;
+  margin-right: 10px;
+  font-size: 17px;
+  height: 35px;
+  border-style:   solid;
+  background-color: lightgrey;
+  border-color: black;
+  display:none;
+
+   
+}
+
+
+#button {
+
+  border-style: solid;
+  border-color: black;     
+}   
 
 }
