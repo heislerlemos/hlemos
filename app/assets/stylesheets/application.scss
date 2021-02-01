@@ -12,13 +12,15 @@ header {
 }
 
 * {
-  margin: 1;
+   margin: 1;
+
   
 }
 
 html, body {
   height: 100%;
   margin: 0;
+
   
 }
 
@@ -44,14 +46,17 @@ html, body {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: white;
+    border-bottom: 0.5px solid black;
+   
+
   
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -66,7 +71,7 @@ html, body {
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: blue;
   color: white;
 }
 
