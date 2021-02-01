@@ -1,5 +1,37 @@
 <style>
 
+.topnav input[type=text ] , #button  {
+  float: right;
+  padding: 3px;
+  border: none;
+   margin-top: 8px;
+  margin-right: 10px;
+  font-size: 17px;
+  height: 35px;
+  border-style:   solid;
+  background-color: lightgrey;
+  border-color: black;
+
+
+   
+}
+
+
+#button {
+
+  border-style: solid;
+  border-color: black;     
+}
+
+::placeholder {
+    color: black;
+
+    
+}
+
+
+
+
   .logo img {
       float:left;
   }
@@ -19,9 +51,15 @@
       <%= link_to  image_tag("logo_blog.jpg" , width: "70"), welcomes_index_path %>  
     </div>
     
-  <div class="topnav" id="myTopnav">
-   
-   
+    <div class="topnav" id="myTopnav">
+
+
+
+       <%= form_tag(blogs_path, :method => "get", id: "search-form") do %>
+       <%= text_field_tag :search, params[:search], placeholder: "Encontre uma publicação", size: "75" %>
+  <%= submit_tag "Procurar", id: "button" %>
+      <% end %>
+
 
     <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
     <%= link_to "Blog",root_path , class: ("active" if current_page?(root_path)) %>

@@ -2,8 +2,10 @@ class BlogsController < ApplicationController
 	  http_basic_authenticate_with name: "heisler", password: "heislerpass2020", except: [:index, :show]
 
 	def index
-  @pagy,  @blogs = pagy(Blog.all.order("created_at DESC"))
+          @pagy,  @blogs = pagy(Blog.all.order("created_at DESC"))
+          @blogs = Blog.search(params[:search]).order("created_at DESC")
 
+  
 	end
 
 
