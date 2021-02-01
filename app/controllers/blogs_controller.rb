@@ -3,8 +3,11 @@ class BlogsController < ApplicationController
 
 	def index
           @pagy,  @blogs = pagy(Blog.all.order("created_at DESC"))
-          @blogs = Blog.search(params[:search]).order("created_at DESC")
 
+              if params[:search]
+
+          @blogs = Blog.search(params[:search]).order("created_at DESC")
+              end
   
 	end
 
