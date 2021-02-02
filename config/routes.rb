@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'comments/:id', to: 'comments#show', as: :comment
   get 'welcomes/index'
   get 'virus/index'
-  #get 'subscribers/index'
   resources :subscribers
   get 'abouts/index'
   get 'websites/index'
@@ -18,6 +17,7 @@ Rails.application.routes.draw do
  root'blogs#index'
  resources :blogs do
   resources :comentarios
-end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+ end
+    mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
+ 
 end

@@ -142,6 +142,8 @@ GEM
     io-like (0.3.1)
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
+    json (2.5.1)
+    json (2.5.1-java)
     kgio (2.11.3)
     link_with_icon (0.0.1)
     listen (3.4.1)
@@ -204,6 +206,10 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
+    pdfjs_viewer-rails (0.3.1)
+      json (> 1.8.4)
+      rails (> 4.2.0)
+      sass-rails (~> 5.0)
     pg (1.2.3)
     pg (1.2.3-x64-mingw32)
     pg (1.2.3-x86-mingw32)
@@ -364,6 +370,7 @@ DEPENDENCIES
   net-ping (~> 1.7, >= 1.7.8)
   pagy
   paperclip (~> 6.0.0)
+  pdfjs_viewer-rails
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 6.0.3.2)

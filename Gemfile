@@ -24,6 +24,7 @@ gem 'ahoy_matey'
 #gem 'covid19-rb'
 gem 'excon'
 gem "paperclip", "~> 6.0.0"
+gem 'pdfjs_viewer-rails'
 
 #gem 'yarn', '~> 0.1.1'
  gem 'unicorn'
