@@ -1,27 +1,31 @@
 <style>
 
 .topnav input[type=text ] , #button  {
-  float: right;
+  float: left;
   padding: 3px;
   border: none;
    margin-top: 8px;
   margin-right: 10px;
   font-size: 17px;
   height: 35px;
-  background-color: blue;
-  color: white;
-
-   
+  border-radious: 1px solid;
 }
 
 
+
+.topnav input[type=text ]  {
+    margin-left: 5%;
+
+}
+
 #button {
     color: white;
+    background-color: blue;
 
 }
 
 ::placeholder {
-    color: white;
+    color: black;
 
     
 }
@@ -39,35 +43,50 @@
   margin-right:auto;
 }
 
+
+.link {
+   
+    margin-right: 5%;
+
+    float: right;
+}
+
   
 </style>
 
 
 
     <div class="logo">
-      <%= link_to  image_tag("logo_blog.jpg" , width: "70"), welcomes_index_path %>  
+      <%= link_to  image_tag("logo_blog.jpg" , width: "
+
+
+
+
+70"), root_path %>  
     </div>
     
     <div class="topnav" id="myTopnav">
 
 
-
        <%= form_tag(blogs_path, :method => "get", id: "search-form") do %>
-       <%= text_field_tag :search, params[:search], placeholder: "Encontre uma publicação", size: "75" %>
+       <%= text_field_tag :search, params[:search], placeholder: "Encontre uma publicação", size: "60"  %>
   <%= submit_tag "Procurar", id: "button" %>
-      <% end %>
+  <% end %>
 
-
-    <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
+  <div class="link">
+  <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
     <%= link_to "Blog",root_path , class: ("active" if current_page?(root_path)) %>
     <%= link_to "Noticias", stories_top_path , class: ("active" if current_page?(stories_top_path))%>
     <%= link_to "Preços", pdfjs.full_path(file: "/Preçario.pdf"), class: "nav-link",  target: "_blank"%>
     <%= link_to "Sobre Nos",  informations_index_path  , class: ("active" if current_page?(informations_index_path))%>
-					  
+    
+  <%= link_to "Github", ("https://github.com/heislerlemos"),   target: "_blank" %>
+</div>					  
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>	  
 
+			
   </div>
    
 
