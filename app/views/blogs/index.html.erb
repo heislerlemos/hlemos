@@ -1,13 +1,7 @@
 
-
 <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
 <div class="container">
 <div class="buttons has-addons">
    <%= link_to 'Blogger', new_blog_path, class: "button is-danger is-selected"%>
@@ -33,7 +27,7 @@
 
   <header class="card-header">
     <p class="card-header-title">
-      <%= truncate(  f.titulo, :length => 35, :separator => ' ') %>
+      <%= truncate(  f.titulo, :length => 35, :separator => ' ')  %>
 
       </p>
     <a href="#" class="card-header-icon" aria-label="more options">
@@ -44,8 +38,8 @@
     </a>
   </header>
   <div class="card-content " align="center">
-    <div class="content is-subtitle is-small">
-  <%=  (f.created_at)  %>
+    <div class="contentblog">
+  <%=  time_ago_in_words(f.created_at)   %>
 
     </div>
   </div>

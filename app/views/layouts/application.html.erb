@@ -35,10 +35,8 @@
 
     </div>
     <div class="menu">
-      <ul>
-	
     <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
-    <%= link_to "Assuntos", subscribers_show_path %>
+    <%= link_to "Assuntos", subscribers_show_path , class: ("active" if current_page?(subscribers_show_path)) %>
     <%= link_to "Blog",root_path , class: ("active" if current_page?(root_path)) %>
     <%= link_to "Noticias", stories_top_path , class: ("active" if current_page?(stories_top_path))%>
     <%= link_to "Preços", pdfjs.full_path(file: "/Preçario.pdf"), class: "nav-link",  target: "_blank"%>
@@ -46,20 +44,19 @@
     <%= link_to fa_icon('github') , "https://github.com/heislerlemos" ,   target: "_blank" %>
     <%= link_to fa_icon('facebook'), "https://www.facebook.com/wesley.lemos.33/", target: "_blank" %>
     <%= link_to fa_icon('twitter'), "https://twitter.com/heisler_lemos", target: "_blank" %>
-      </ul>
       </div>
       </div>
 
-    </header>
-  <div class="content">
-    <h1> Trabalhe connosco comunidade de informatica angola </h1>
+</header>
+
+  <div id="content">
+    <h1> Cai na nossa invoção  </h1>
+    <br>
     <h2> Juntos contra o covid 19 </h2>
-   
+    <br>
 
     <div id="button ">
       
-     <a href="#" class="color1"> Agenda </a>
-     <a href="#" class="color2">Acerca de nos </a>
      </div>
 </div>
 <!---wave --->
@@ -69,7 +66,11 @@
 
 <!--- end of wave ---->
 </div>
+<% 5.times do %>
 
+<br>
+
+<% end %>
  <div id="container">
   <div id="main">
 

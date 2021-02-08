@@ -5,6 +5,10 @@ $footer-color: black;
 @import "font-awesome";
 @import "welcomes";
 
+
+
+
+
 .wave {
     width: 100%;
     position: absolute;
@@ -13,12 +17,12 @@ $footer-color: black;
 }
 
 #mainheader {
-    position: fixed;
+    
     top: 0;
     left: 0;
     width: 100%;
     padding: 25px 80px;
-    background: linear-gradient
+    background: linear-gradient(to top, transparent, rgba(0,0,0,0.7));
 
 }
 
@@ -37,7 +41,7 @@ $footer-color: black;
     display: inline-block;
 }
 
-#mainheader ul, li, a {
+#mainheader li   {
     text-decoration: none;
     font-size: 16px;
     color: white;
@@ -47,45 +51,82 @@ $footer-color: black;
 
 }
 
-.content {
+#mainheader ul {
+        text-decoration: none;
+    font-size: 16px;
+    color: white;
+    margin: 0 25px;
+    font-weight: 300px;
+    letter-spacing: 1px;
+
+}
+
+#mainheader  a {
+        text-decoration: none;
+    font-size: 16px;
+    color: white;
+    margin: 0 25px;
+    font-weight: 300px;
+    letter-spacing: 1px;
+
+
+}
+
+#content {
     max-width: 55%;
     padding: 200px 80px 0;
     color: #fff;
+    
 
 }
 
-.content h1, h2 {
+#content h1 {
     font-size: 48px;
     background-color: #fff;
+    opacity: 0.8;
+    border-left: solid black;
+    border-right: solid black;
+
     border-radius: 3px;
     text-align: center;
+    color: black;
 }
 
-.content p {
+#content h2 {
+    font-size: 28px;
+    background-color: #fff;
+    opacity: 0.8;
+    border-left: solid black;
+    border-right: solid black;
+
+    border-radius: 3px;
+    text-align: center;
+    color: black;
+}
+
+
+
+#content p {
     font-size: 20px;
     padding: 25px 0;
     font-weight: 300;
 
 }
 
-.content a {
+#content a {
     display: inline-block;
     padding: 15px 45px;
     text-decoration:  none;
-    color: #fff;
+    color: black;
     border-radius: 50px;
 
 }
 
-.content a.color1{
+#content a.color1{
     background-color: #ffc107;
 
 }
 
-.button is-info {
-
-
-}
 
 
 
@@ -161,11 +202,11 @@ html, body {
   color: black;
   
   
+  
 }
 
-.topnav a.active {
-  background-color: blue;
-  color: white;
+a.active {
+ color: green;
 }
 
 .topnav .icon {
