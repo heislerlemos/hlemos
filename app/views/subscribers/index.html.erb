@@ -1,3 +1,12 @@
+<style>
+#overall {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+  </style>
+
 
 <html>
       <%= stylesheet_link_tag    'subscribers', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -7,21 +16,21 @@
 
 </head>
 <body>
-  <% 6.times do %>
-
+  <% 4.times do %>
+  
   <br>
 
   <% end %>
 
-
-
 <div class="container">
+
+<div id="overall">
     <%= form_for @subscriber do |f| %>
 
 <div class="field">
 	  <label class="label">Nome</label>
 	    <div class="control has-icons-left has-icons-right">
-    <%= f.text_field :name, placeholder: "Insira o seu nome " , class: "input is-primary"%>
+    <%= f.text_field :name, placeholder: "Insira o seu nome " , class: "input is-dark"%>
        <span class="icon is-small is-left">
                     	<%= fa_icon "user" %>
     </span>
@@ -35,7 +44,7 @@
 		  <label class="label">Numero</label>
 	    <div class="control has-icons-left has-icons-right">
 
- <%= f.number_field :number, placeholder: "Insira o seu número de telefone", class: "input is-primary" , style: "width: 50%;"%>
+ <%= f.number_field :number, placeholder: "Insira o seu número de telefone", class: "input is-dark"%>
         <span class="icon is-small is-left">
       		<%= fa_icon "phone" %>
         </span>
@@ -47,7 +56,7 @@
 			  <label class="label">Email</label>
 	    <div class="control has-icons-left has-icons-right">
 
-    <%= f.email_field :email, placeholder: "Insira o seu endereço de email", class: "input is-primary" %>
+    <%= f.email_field :email, placeholder: "Insira o seu endereço de email", class: "input is-dark" %>
             <span class="icon is-small is-left">
       		<%= fa_icon "envelope" %>
         </span>
@@ -57,7 +66,7 @@
 <div class="field">
 
 					  <label class="label">Feedback</label>
-            <div class="select is-primary ">
+            <div class="select is-dark ">
 
     <%= f.select :source, ["Vizinhos", "Redes Sociais", "Negocio", "Agencia"], prompt: "Como ouviste acerca de mim ? "   %>
 
@@ -68,10 +77,10 @@
 
 <br>
 <div class="field is-grouped">
-     <%= f.submit "Enviar", class: "button is-primary" %>
+     <%= f.submit "Enviar", class: "button is-dark" %>
 </div>
  <% end %>
 </div>
-
+</div>
 </body>
 </html>
