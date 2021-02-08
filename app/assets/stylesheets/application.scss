@@ -5,8 +5,30 @@ $footer-color: black;
 @import "font-awesome";
 @import "welcomes";
 
+.wave {
+    width: 100%;
+    position: absolute;
+    bottom: -140px;
+    opacity: 1;
+    display: none;
+}
+
+
+.wrap {
+    display: none;
+    background-image: url("https://images.pexels.com/photos/6140412/pexels-photo-6140412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") ; 
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+    background-blend-mode: overlay;
+    
+
+}
+
+
+
 header {
-	background-color: lightblue;
 }
 
 * {

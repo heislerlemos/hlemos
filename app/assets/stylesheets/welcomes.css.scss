@@ -207,72 +207,6 @@ flip-card {
 }
 
 
-
-/**  Making responsive **/
-
-
-
-/* Tabled Portrait
-@media screen and (max-width: 768px) {
-    h1 { color: white;
-    }
-
-
-   .navbar-brand {
-   	  max-width: 100%;
-
-   }
-
- 	.tile {
- 		width:100%;
- margin-right:auto;
-  margin-left:auto;
- 	}
-
-	.navbar-item a {
-  width: 50%;
-  padding: 10px;
-  left: 25%;
-	}
-
-
-	#showcase h1 {
-		color: white;
-		padding: 5px;
-		top: 50px;
-
-	}
-
-	#project-web {
-		color: transparent;
-
-	}
-
-		.hero{
-			width:90%;
- margin-right:auto;
-  margin-left:auto;
-		}
-
-
-
-  #showcase{
-  display: none;
-    }
-
-    .topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
-
-
-
-
-}
-
-*/
-
 @media screen and (max-width: 1280px) {
 
 
@@ -295,15 +229,6 @@ html {
 }
 }
 
-/*
-@media screen and (max-width: 800px) {
-
-
-.title.is-4 {
-    font-size: 1.0rem;
-}
-}
-*/
 @media screen and (max-width: 1600px) {
 
 

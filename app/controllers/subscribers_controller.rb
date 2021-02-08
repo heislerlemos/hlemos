@@ -11,10 +11,15 @@ class SubscribersController < ApplicationController
    	else
    		redirect_to root_path
    end
-end
+    end
+
+    def show
+      @subscriber = Subscriber.all.order("created_at DESC")
+
+    end
 	private 
 	def subscriber_params
-		params.require(:subscriber).permit(:name, :email, :source, :number)
+		params.require(:subscriber).permit(:name, :email, :source, :number,:subject, :issue)
 	end
 
 end

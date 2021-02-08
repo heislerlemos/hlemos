@@ -12,7 +12,8 @@
   <% end %>
 
   <div class="link">
-  <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
+    <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
+    <%= link_to "Assuntos", subscribers_show_path %>
     <%= link_to "Blog",root_path , class: ("active" if current_page?(root_path)) %>
     <%= link_to "Noticias", stories_top_path , class: ("active" if current_page?(stories_top_path))%>
     <%= link_to "Preços", pdfjs.full_path(file: "/Preçario.pdf"), class: "nav-link",  target: "_blank"%>

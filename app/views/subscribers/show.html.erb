@@ -1,0 +1,47 @@
+
+<div class="columns is-multiline is-mobile">
+
+<% @subscriber.each do |f| %>
+
+
+
+<div class="card" style="color:   black; width:40%;">
+  <header class="card-header" style="background-color: lightgreen; color: white;">
+    <p class="card-header-title" style="color: white;">
+      <%= f.name %>
+     
+
+    </p>
+    <div  class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <%= fa_icon("angle-down") %>
+      </span>
+    </div>
+  </header>
+  <div class="card-content" style="word-wrap: break-word; ">
+    <div class="content" >
+       <h6>Numero de Telefone</h6>
+       <%= f.number %>
+       <br>
+       <br>
+       <h6>     Assunto : </h6>
+       <%= f.subject %>
+       <br>
+       <br>
+      <h6> Pedido: </h6>
+      <div id="coloring" style="color: black; font-size: 17px;" >"
+	   <%= f.issue  %>"
+      </div>
+      <br>
+      <h6>Email</h6>
+      <%= f.email %>
+      <br>
+     
+      <%= time_ago_in_words(f.created_at) %>
+      
+    </div>
+    </div>
+  </div>
+<% end %>
+
+</div>

@@ -13,7 +13,8 @@ Rails.application.routes.draw do
         get 'suportes/index'
         get 'redes/index'
         get 'informations/index'
-  resources :blogs
+        get 'subscribers/show'
+        resources :blogs
  root'blogs#index'
  resources :blogs do
   resources :comentarios

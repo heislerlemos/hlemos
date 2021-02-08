@@ -5,6 +5,7 @@
   padding: 20px;
 }
 
+
   </style>
 
 
@@ -15,6 +16,8 @@
   <title>Agenda</title>
 
 </head>
+
+<br>
 <body>
   <% 4.times do %>
   
@@ -62,13 +65,42 @@
         </span>
 
 </div>
-<br>
-<div class="field">
+	    <br>
 
-					  <label class="label">Feedback</label>
+	    <div class="field is-horizontal">
+  <div class="field-label is-normal">
+    <label class="label">Assunto</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <div class="control">
+	    <%= f.text_field :subject, placeholder: "Insira o seu nome " , class: "input is-dark"%>
+      </div>
+    </div>
+  </div>
+	    </div>
+	    <br>
+	    <div class="field is-horizontal">
+  <div class="field-label is-normal">
+    <label class="label " >Pedido</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <div class="control">
+	    <%= f.rich_text_area :issue, placeholder: "Por favor descreva o seu pedido " ,style: "background-color: white;"%>
+
+      </div>
+    </div>
+  </div>
+	    </div>
+	    <br>
+<div class="field " >
+
+  <label class="label">Feedback</label>
+  
             <div class="select is-dark ">
 
-    <%= f.select :source, ["Vizinhos", "Redes Sociais", "Negocio", "Agencia"], prompt: "Como ouviste acerca de mim ? "   %>
+    <%= f.select :source, ["Vizinhos", "Redes Sociais", "Negocio", "Agencia"], prompt: "Como ouviste acerca de nos ? "   %>
 
   </div>
 
