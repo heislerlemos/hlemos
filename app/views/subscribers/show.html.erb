@@ -1,11 +1,12 @@
 
-<div class="columns is-multiline is-mobile">
+<div class="container">
+
+<div class="columns is-multiline  is-mobile">
 
 <% @subscriber.each do |f| %>
 
 
-
-<div class="card" style="color:   black; width:40%;">
+<div class="card">
   <header class="card-header" style="background-color: lightgreen; color: white;">
     <p class="card-header-title" style="color: white;">
       <%= f.name %>
@@ -41,7 +42,8 @@
       
     </div>
     </div>
-  </div>
-<% end %>
+</div>
 
+<% end %>
+</div>
 </div>
