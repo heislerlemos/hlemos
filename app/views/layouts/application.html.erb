@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<script>
+function myFunction() {
+  var elmnt = document.getElementById("container");
+  elmnt.scrollIntoView();
+}
+</script>
+
 <html>
   <head>
     <title> Comunidade Angolana De Informatica </title>
@@ -9,11 +17,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <%= javascript_pack_tag 'application' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<script data-ad-client="ca-pub-9034325329206943" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-
 <meta name="msvalidate.01" content="0886CE95205FB195696229B14A3A6ACC" />
 <meta name="google-site-verification" content="vqylBeMzgOhs4hMVGIlsdMDKALg4beidWopdEqBxSmM" />
 
@@ -35,7 +38,8 @@
 
     </div>
     <div class="menu">
-    <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
+      <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path))   %>
+
     <%= link_to "Assuntos", subscribers_show_path , class: ("active" if current_page?(subscribers_show_path)) %>
     <%= link_to "Blog",root_path , class: ("active" if current_page?(root_path)) %>
     <%= link_to "Noticias", stories_top_path , class: ("active" if current_page?(stories_top_path))%>
@@ -44,6 +48,11 @@
     <%= link_to fa_icon('github') , "https://github.com/heislerlemos" ,   target: "_blank" %>
     <%= link_to fa_icon('facebook'), "https://www.facebook.com/wesley.lemos.33/", target: "_blank" %>
     <%= link_to fa_icon('twitter'), "https://twitter.com/heisler_lemos", target: "_blank" %>
+    <button onclick="myFunction()" style="background-color: transparent; border-color: transparent;">
+          <%= fa_icon("arrow-down 3x", style: "color: lightblue;")  %>
+
+    </button>
+
       </div>
       </div>
 
