@@ -1,7 +1,30 @@
 
 <div class="container">
+  <section class="hero is-link">
+  <div class="hero-body">
+    <p class="title">
+      Tickets dos clientes
+    </p>
+    <p class="subtitle">
+      A resposta rapida ao pedido do cliente é importante .
+    </p>
+  </div>
+</section>
+  <br>
 
-<div class="columns is-multiline  is-mobile">
+  
+       <%= form_tag(subscribers_show_path, :method => "get", id: "search-form") do %>
+       <%= text_field_tag :search, params[:search], placeholder: "Encontre o nome do cliente ", class: "input is-info" , style: "width: 50%;" %>
+       <%= submit_tag "Procurar",  class: "button is-info" %>
+       <% end %>
+
+       <% 2.times do %>
+
+       <br>
+       <% end %>
+
+  
+<div class="columns is-multiline  is-mobile is-centered">
 
 <% @subscriber.each do |f| %>
 

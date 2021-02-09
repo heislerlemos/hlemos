@@ -1,12 +1,33 @@
 
 <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-
 <div class="container">
-<div class="buttons has-addons">
-   <%= link_to 'Blogger', new_blog_path, class: "button is-danger is-selected"%>
+
+  <section class="hero is-link">
+  <div class="hero-body">
+    <p class="title">
+      Blogger
+    </p>
+    <p class="subtitle">
+      Visualise os nossos blogs e adicione comentarios
+    </p>
+  </div>
+  </section>
+  <br>
+  <div class="buttons has-addons">
+    
+  
+    <%= link_to 'Blogger', new_blog_path, class: "button is-danger is-selected"%>
+  </div>
+  <div id="searchcontainer">
+
+
+       <%= form_tag(blogs_path, :method => "get", id: "search-form") do %>
+       <%= text_field_tag :search, params[:search], placeholder: "Encontre uma publicação", class: "input is-info" , style: "width: 50%;" %>
+       <%= submit_tag "Procurar",  class: "button is-info" %>
+  <% end %>
 </div>
- </div>
+</div>
 <br>
 <br>
 
@@ -65,9 +86,3 @@
  </div>
 
 <%== pagy_bulma_combo_nav_js(@pagy) %>
-
-<% 5.times do %>
-
-<br>
-
-<% end %>

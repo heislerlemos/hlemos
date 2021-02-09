@@ -4,13 +4,24 @@
     <meta charset="utf-8">
     <%= stylesheet_link_tag "stories", :media => "all" %>
 
-    <title>Noticias</title>
+    <title>Noticias</title> 
   </head>
 
   <body>
 
     <br>
-    <br>
+    <div class="container">
+      <section class="hero is-link">
+  <div class="hero-body">
+    <p class="title">
+      Hacker News API
+    </p>
+    <p class="subtitle">
+      Desfrute das noticias tecnologicas atuais do mundo.
+    </p>
+  </div>
+</section>
+      <br>
    
  <%= render partial: 'story', collection: @stories %>
 
@@ -32,6 +43,6 @@
   </ul>
 </nav>
 <br>
-
+ </div>
   </body>
 </html>

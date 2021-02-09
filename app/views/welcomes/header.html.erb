@@ -1,42 +1,39 @@
+<style>
+.active {
+    color: lightgreen;
+}
+
+
+  </style>
+
+
+<link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     <div id="mainheader">
 
     <div class="logo">
-      <%= link_to  image_tag("logo_blog.jpg" , width: "100"), root_path %>  
+            <%= link_to  image_tag("logo_blog.jpg" , width: "100"), root_path %>  
+
     </div>
-    
-    <div class="topnav" id="myTopnav">
+    <div class="menu">
+      
+ <%= link_to  fa_icon("home", style: "color: black") , root_path  , id: ("active" if current_page?(root_path))   %>
+ <%= link_to "Agenda", subscribers_path  , id: ("active" if current_page?(subscribers_path))   %>
 
-
-       <%= form_tag(blogs_path, :method => "get", id: "search-form") do %>
-       <%= text_field_tag :search, params[:search], placeholder: "Encontre uma publicação", size: "40"  %>
-  <%= submit_tag "Procurar", id: "button" %>
-  <% end %>
-
-  <div class="link">
-    <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path)) %>
-    <%= link_to "Assuntos", subscribers_show_path %>
-    <%= link_to "Blog",root_path , class: ("active" if current_page?(root_path)) %>
-    <%= link_to "Noticias", stories_top_path , class: ("active" if current_page?(stories_top_path))%>
-    <%= link_to "Preços", pdfjs.full_path(file: "/Preçario.pdf"), class: "nav-link",  target: "_blank"%>
-    <%= link_to "Sobre Nos",  informations_index_path  , class: ("active" if current_page?(informations_index_path))%>
+    <%= link_to "Assuntos", subscribers_show_path , id: ("active" if current_page?(subscribers_show_path)) %>
+    <%= link_to "Blog", blogs_path , id: ("active" if current_page?(blogs_path)) %>
+    <%= link_to "Noticias", stories_top_path , id: ("active" if current_page?(stories_top_path))%>
+    <%= link_to "Preços", pdfjs.full_path(file: "/Preçario.pdf"), id: "nav-link",  target: "_blank"%>
+    <%= link_to "Sobre Nos",  informations_index_path  , id: ("active" if current_page?(informations_index_path))%>
     <%= link_to fa_icon('github') , "https://github.com/heislerlemos" ,   target: "_blank" %>
     <%= link_to fa_icon('facebook'), "https://www.facebook.com/wesley.lemos.33/", target: "_blank" %>
     <%= link_to fa_icon('twitter'), "https://twitter.com/heisler_lemos", target: "_blank" %>
-</div>					  
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>	  
 
-			
-  </div>
-   
+      </div>
+      </div>
+</div>
 
-  <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+<% 5.times do %>
+<br>
+<% end %>
+  

@@ -7,12 +7,22 @@ $footer-color: black;
 
 
 
+  #search-form {
+  display: inline;
+}
+
+  .menu #active {
+    border: solid black;
+    border-radius: 1px;
+      box-shadow: 5px 10px;
+
+}
 
 
 .wave {
     width: 100%;
     position: absolute;
-    bottom: -110px;
+    bottom: -50px;
     opacity: 1;
 }
 
@@ -22,7 +32,7 @@ $footer-color: black;
     left: 0;
     width: 100%;
     padding: 25px 80px;
-    background: linear-gradient(to top, transparent, rgba(0,0,0,0.7));
+   /** background: linear-gradient(to top, transparent, rgba(0,0,0,0.7));**/
 
 }
 
@@ -63,8 +73,8 @@ $footer-color: black;
 
 #mainheader  a {
         text-decoration: none;
-    font-size: 16px;
-    color: white;
+    font-size: 17px;
+    color: black;
     margin: 0 25px;
     font-weight: 300px;
     letter-spacing: 1px;
@@ -187,7 +197,7 @@ html, body {
     width: 40%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
       
@@ -204,7 +214,7 @@ html, body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
      

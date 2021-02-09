@@ -14,6 +14,55 @@
 
 <body>
  
+
+  <div class="wrap">
+    
+  <div id="mainheader">
+    
+    <div class="logo">
+            <%= link_to  image_tag("logo_blog.jpg" , width: "100"), root_path %>  
+
+    </div>
+    <div class="menu">
+ 
+ <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path))   %>
+
+    <%= link_to "Assuntos", subscribers_show_path , class: ("active" if current_page?(subscribers_show_path)) %>
+    <%= link_to "Blog", blogs_path , class: ("active" if current_page?(blogs_path)) %>
+    <%= link_to "Noticias", stories_top_path , class: ("active" if current_page?(stories_top_path))%>
+    <%= link_to "Preços", pdfjs.full_path(file: "/Preçario.pdf"), class: "nav-link",  target: "_blank"%>
+    <%= link_to "Sobre Nos",  informations_index_path  , class: ("active" if current_page?(informations_index_path))%>
+    <%= link_to fa_icon('github') , "https://github.com/heislerlemos" ,   target: "_blank" %>
+    <%= link_to fa_icon('facebook'), "https://www.facebook.com/wesley.lemos.33/", target: "_blank" %>
+    <%= link_to fa_icon('twitter'), "https://twitter.com/heisler_lemos", target: "_blank" %>
+
+      </div>
+      </div>
+
+</header>
+
+  <div id="content">
+    <h1> Cai na nossa invoção  </h1>
+    <br>
+    <h2> Juntos contra o covid 19 </h2>
+    <br>
+
+    <div id="button ">
+      
+     </div>
+</div>
+<!---wave --->
+<svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#000b76" fill-opacity="1" d="M0,96L48,133.3C96,171,192,245,288,266.7C384,288,480,256,576,208C672,160,768,96,864,85.3C960,75,1056,117,1152,138.7C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+</svg>
+
+<!--- end of wave ---->
+</div>
+<% 5.times do %>
+
+<br>
+
+<% end %>
   
     <div class="mobile">
     <div class="desktop">
@@ -70,23 +119,6 @@
       </section>
       </div>
 </div>
-
-      <section class="hero ">
-        <div class="hero-body">
-          <div class="container ">
-            <br>
-            <br>
-            <h1 class="title" align="center">Projectos</h1>
-          </div>
-        </div>
-      </section>
-      <br>
-          <br>
-          <br>
-
-
-<br>
-<br>
 
 
 <div  class="columns is-mobile is-multiline is-centered" >

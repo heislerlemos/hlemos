@@ -19,6 +19,13 @@ class SubscribersController < ApplicationController
     def show
       @subscriber = Subscriber.all.order("created_at DESC")
 
+       if params[:search]
+
+             @subscriber =  Subscriber.search(params[:search]).order("created_at DESC")
+              end
+  
+
+
     end
 	private 
 	def subscriber_params

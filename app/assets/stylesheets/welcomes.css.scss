@@ -1,24 +1,5 @@
 
-.imgfull  {
-  -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
-
-min-height: 100%;
-min-width: 1024px;
-
-width: 100%;
-height: auto;
-
-position: fixed;
-top: 0;
-left: 0;
-z-index: -1;
-
-}
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
+@media screen and (max-width: 1424px) { /* Specific to this particular image */
   .imgfull {
     left: 50%;
     margin-left: -512px;   /* 50% */
@@ -38,51 +19,7 @@ hr {
 	background: transparent;
 }
 
-/* News Letter */
 
-
-#newsletter h1 {
-	float: center;
-}
-
-#newsletter form {
-	float: center;
-	margin-top: 15px;
-}
-
-#newsletter input[type='email'] {
-	height: 25px;
-	width: 450px;
-}
-
-/**Show Case **/
-
-
-#showcase {
-	/**background:url('illustration-wallpaper');**/
-
-
-	background-repeat: no-repeat;
-	text-align: center;
-
-   background-position: center left ;
-}
-
-
-#showcase h1{
-	margin-top: 100px;
-	font-size: 55px;
-	margin-bottom: 10px;
-}
-
-#showcase p{
-	font-size: 20px;
-
-}
-
-
-
-/* Boxes */
 
 .card {
   transition: 0.3s;
@@ -129,20 +66,11 @@ hr {
 
 }
 
-/**br {
-   display: block;
-   margin: 100px 40px;
-}
-**/
 
 body {
 	line-height: 1.5;
 	margin: 0;
 	padding: 0;
-    /**font: 15px/1,5 Arial, Helvetica,sans-serif;**/
-   /**background: #C6FFDD;  /* fallback for old browsers */
- /**background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /*  Chrome 10-25, Safari 5.1-6 */
-/***background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -207,7 +135,7 @@ flip-card {
 }
 
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1080px) {
 
 
 
@@ -219,7 +147,7 @@ flip-card {
 
 
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1540px) {
 html {
   font-size: 12px;
 }
@@ -231,42 +159,13 @@ html {
 
 @media screen and (max-width: 1600px) {
 
-
+    .level {
+	width: 10%;
+    }
 .title.is-4 {
     font-size: 1.0rem;
 }
 }
-
-/*
-@media screen and (max-width: 360px) {
-
-
-.columns {
-  display: none;
-}
-}
-*/
-/*
-
-@media screen and (max-width: 768px) {
-.columns{
-display: none;
-}
-
-
-.media-left {
-
-  display: none;
-}
-.subtitle.is-6 {
-  font-size: 0.5rem;
-}
-  .title.is-4 {
-    font-size: 0.5rem;
-}
-}
-
-*/
 
 @media screen and (max-width: 1068px) {
 .columns{
@@ -300,26 +199,6 @@ display: none;
 
 
 
-}
-
-
-
-/*
-
-Mobile Navbar
-
-*/
-
-
-@media screen and (max-width: 600px) {
-
-    .card {
-	width: 80%;
-    }
-
-    #particles-image-src {
-	display: none;
-    }
 }
 
 
