@@ -1,6 +1,6 @@
 class SubscribersController < ApplicationController
 
-  	  http_basic_authenticate_with name: "cai", password: "cai2021luanda", except: [:index ]
+  	# http_basic_authenticate_with name: "cai", password: "cai2021luanda", except: [:index ]
 
   def index
     @subscriber =  Subscriber.new
