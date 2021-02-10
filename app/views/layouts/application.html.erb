@@ -28,7 +28,9 @@
 
 
   <div class="topnav" id="myTopnav">
-  
+
+          <%= link_to "Bem Vindo", root_path  , class: ("active" if current_page?(root_path))   %>
+
       <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path))   %>
 
     <%= link_to "Assuntos", subscribers_show_path , class: ("active" if current_page?(subscribers_show_path)) %>
