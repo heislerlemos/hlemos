@@ -185,51 +185,29 @@ flip-card {
 }
 */
 
-@media screen and (max-width: 1280px) {
 
-
-
-/*
-@media screen and (max-width: 800px) {
-.title.is-4 {
-    font-size: 1.0rem;
-}
-}
-*/
 @media screen and (max-width: 1600px) {
+   .columns {
+	width:  100%;
+	
+    }
+
 
 
 .title.is-4 {
     font-size: 1.0rem;
 }
 }
-/*
-@media screen and (max-width: 360px) {
-.columns {
-  display: none;
-}
-}
-*/
-/*
-@media screen and (max-width: 768px) {
-.columns{
-display: none;
-}
-.media-left {
-  display: none;
-}
-.subtitle.is-6 {
-  font-size: 0.5rem;
-}
-  .title.is-4 {
-    font-size: 0.5rem;
-}
-}
-*/
-@media screen and (max-width: 1068px) {
-.columns{
-display: none;
-}
+
+
+@media screen and (max-width: 1868px) {
+
+    .columns {
+	width:  100%;
+	
+    }
+
+
 .media-left {
   display: none;
 }
@@ -240,21 +218,12 @@ display: none;
     font-size: 0.7rem;
 }
 }
+
+
+
 .fonttitle {
   font-size: 80px;
   color:  darkgrey;
   text-shadow: 2px 2px black;
   font-weight: bold;
-}
-/*
-Mobile Navbar
-*/
-@media screen and (max-width: 600px) {
-    .card {
-	width: 80%;
-    }
-    #particles-image-src {
-	display: none;
-    }
-}
 }
