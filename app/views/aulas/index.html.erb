@@ -5,29 +5,7 @@
 <%= csrf_meta_tags %>
 </head>
 <body>
-   <br>
-  <div class="table  " align="center">
-
-        <%= link_to  aulas_index_path(date: @date - 1.month) do %>
-        <span class="icon">
-          <%= fa_icon "arrow-left" %>
-
-        </span>
-        <% end %>
-        <%= "#{@date.strftime("%B")} #{@date.year}" %>
-        <%= link_to  aulas_index_path(date: @date + 1.month) do %>
-        <span class="icon">
-          <%= fa_icon "arrow-right" %>
-
-        </span>
-        <% end %>
-
-        <%= calendar @date do |date| %>
-        <%= date.day %>
-        <% end %>
-
-        </div>
-
+<div class="container">
 
 
         <br>
@@ -51,7 +29,7 @@
             </div>
           </div>
           <div class="column is-narrow">
-            <div class="box">
+            <div class="box ">
               <p class="title is-5">Software</p>
               <p class="subtitle">Conheça os diversos programas utlizados no dia a dia .</p>
             </div>
@@ -68,6 +46,7 @@
               <p class="subtitle">Estude os conteudo para configuração</p>
             </div>
           </div>
-        </div>
-       
+              </div>
+	      <br>
+       </div>
 </body>
