@@ -5,7 +5,10 @@ $footer-color: black;
 @import "font-awesome";
 @import "welcomes";
 
+#button-landing a {
 
+
+}
 
   #search-form {
   display: inline;
@@ -32,7 +35,7 @@ $footer-color: black;
     left: 0;
     width: 100%;
     padding: 25px 80px;
-   /** background: linear-gradient(to top, transparent, rgba(0,0,0,0.7));**/
+  /** background: linear-gradient(to top, transparent, rgba(0,0,0,0.7)); */
 
 }
 
@@ -92,27 +95,9 @@ $footer-color: black;
 
 #content h1 {
     font-size: 48px;
-    background-color: #fff;
-    opacity: 0.8;
-    border-left: solid black;
-    border-right: solid black;
-
-    border-radius: 3px;
-    text-align: center;
-    color: black;
+    color: #fff;
 }
 
-#content h2 {
-    font-size: 28px;
-    background-color: #fff;
-    opacity: 0.8;
-    border-left: solid black;
-    border-right: solid black;
-
-    border-radius: 3px;
-    text-align: center;
-    color: black;
-}
 
 
 
@@ -122,26 +107,59 @@ $footer-color: black;
     font-weight: 300;
 
 }
+#content #button-landing {
+
+    margin-top: 45px;
+
+    
+}
+
 
 #content a {
     display: inline-block;
     padding: 15px 45px;
-    text-decoration:  none;
-    color: black;
+    text-decoration: none;
+    color: #fff;
     border-radius: 50px;
 
 }
 
-#content a.color1{
+#content a.color1 {
     background-color: #ffc107;
+}
+
+#content a.color2 {
+    background-color: #ffc107;
+}
+
+.our-partner {
+    padding: 0 80px;
+    position: relative;
 
 }
 
+.our-partner h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
 
+}
 
+.our-partner hr {
+    border: none;
+    height: 4px;
+    width: 300px;
+    background-color: orange;
+
+}
 
 .wrap {
-    background-image:url("https://images.pexels.com/photos/5938646/pexels-photo-5938646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") ; 
+
+    /** this is a covid image **/
+    
+    /** background-image:url("https://images.pexels.com/photos/5938646/pexels-photo-5938646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") ; **/
+    
+    /** this is a africa picture to be as default**/
+    background-image:url("https://images.pexels.com/photos/1046601/pexels-photo-1046601.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
     background-position: center;
     background-size: cover;
     min-height: 100vh;
