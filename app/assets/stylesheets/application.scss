@@ -152,6 +152,26 @@ $footer-color: black;
 
 }
 
+.our-partner-inner {
+    margin-top: 50px;
+}
+
+.our-partner-inner a {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    margin-right: 25px;
+    border: 1px solid #cacaca;
+    border-radius: 20px;
+    box-shadow: 0 5px 0 #cacaca;
+    
+}
+
+.our-partner-inner img {
+    width:100%;
+}
+
+
 .wrap {
 
     /** this is a covid image **/
