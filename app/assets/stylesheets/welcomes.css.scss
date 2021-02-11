@@ -1,25 +1,4 @@
-.column img {
-    width: 150px;
-    height: 100px;
-     display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-    footer {
-  text-align: center;
-}
-
-@media screen and (max-width: 1624px) { /* Specific to this particular image */
-    .title {
-	font-size: 20px;
-    }
-
-}
-
-
-.imgfull  {
+imgfull  {
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -157,7 +136,13 @@ flip-card {
   color: white;
   transform: rotateY(180deg);
 }
+
+
+
 /**  Making responsive **/
+
+
+
 /* Tabled Portrait
 @media screen and (max-width: 768px) {
     h1 { color: white;
@@ -199,42 +184,29 @@ flip-card {
 }
 */
 
-@media screen and (max-width: 1280px) {
 
 @media screen and (max-width: 1600px) {
    .columns {
 	width:  100%;
-
+	
     }
 
 
 
-/*
-@media screen and (max-width: 800px) {
 .title.is-4 {
     font-size: 1.0rem;
 }
 }
-*/
-@media screen and (max-width: 1600px) {
 
 
-.title.is-4 {
-    font-size: 1.0rem;
-}
-}
-/*
-@media screen and (max-width: 360px) {
-.columns {
-  display: none;
-}
-}
-*/
-/*
-@media screen and (max-width: 768px) {
-.columns{
-display: none;
-}
+@media screen and (max-width: 1868px) {
+
+    .columns {
+	width:  100%;
+	
+    }
+
+
 .media-left {
   display: none;
 }
@@ -242,26 +214,6 @@ display: none;
   font-size: 0.5rem;
 }
   .title.is-4 {
-    font-size: 0.5rem;
-}
-}
-*/
-@media screen and (max-width: 1068px) {
-.columns{
-display: none;
-}
-@media screen and (max-width: 1868px) {
-
-    .columns {
-	width:  100%;
-
-    }
-
-
-.media-left {
-  display: none;
-}
-    display: none;
     font-size: 0.7rem;
 }
 }
@@ -274,17 +226,17 @@ display: none;
   text-shadow: 2px 2px black;
   font-weight: bold;
 }
-/*
-Mobile Navbar
-*/
-@media screen and (max-width: 600px) {
-    .card {
-	width: 80%;
+
+
+.column img {
+    width: 150px;
+    height: 100px;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+    .title {
+	font-size: 20px;
     }
-    #particles-image-src {
-	display: none;
-    }
-}
-}
-}
- 
