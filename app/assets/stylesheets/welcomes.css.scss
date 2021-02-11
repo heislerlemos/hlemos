@@ -1,3 +1,12 @@
+.column img {
+    width: 150px;
+    height: 100px;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 @media screen and (max-width: 1624px) { /* Specific to this particular image */
     .title {
