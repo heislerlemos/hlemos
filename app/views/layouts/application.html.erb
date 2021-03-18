@@ -11,15 +11,53 @@
   }
 
 
-  // flash button the delete
-  document.addEventListener('DOMContentLoaded', () => {
-  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
-    const $notification = $delete.parentNode;
 
-    $delete.addEventListener('click', () => {
-      $notification.parentNode.removeChild($notification);
+  document.addEventListener('DOMContentLoaded', function () {
+
+    // Modals
+
+    var rootEl = document.documentElement;
+    var allModals = getAll('.modal');
+    var modalButtons = getAll('.modal-button');
+    var modalCloses = getAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button');
+
+    if (modalButtons.length > 0) {
+        modalButtons.forEach(function (el) {
+            el.addEventListener('click', function () {
+                var target = document.getElementById(el.dataset.target);
+                rootEl.classList.add('is-clipped');
+                target.classList.add('is-active');
+            });
+        });
+    }
+
+    if (modalCloses.length > 0) {
+        modalCloses.forEach(function (el) {
+            el.addEventListener('click', function () {
+                closeModals();
+            });
+        });
+    }
+
+    document.addEventListener('keydown', function (event) {
+        var e = event || window.event;
+        if (e.keyCode === 27) {
+            closeModals();
+        }
     });
-  });
+
+    function closeModals() {
+        rootEl.classList.remove('is-clipped');
+        allModals.forEach(function (el) {
+            el.classList.remove('is-active');
+        });
+    }
+
+    // Functions
+
+    function getAll(selector) {
+        return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
+    }
 });
 </script>
 
@@ -44,7 +82,7 @@
 
       <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path))   %>
 
-    <%= link_to "Assuntos", subscribers_show_path , class: ("active" if current_page?(subscribers_show_path)) %>
+    <%= link_to "Administração", subscribers_show_path , class: ("active" if current_page?(subscribers_show_path)) %>
     <%= link_to "Blog", blogs_path , class: ("active" if current_page?(blogs_path)) %>
     <%= link_to "Noticias", stories_top_path , class: ("active" if current_page?(stories_top_path))%>
     <%= link_to "Preços", pdfjs.full_path(file: "/Preçario.pdf"), class: "nav-link",  target: "_blank"%>
@@ -89,14 +127,19 @@
     <div class="modal is-active is-clipped">
   <div class="modal-background"></div>
   <div class="modal-card">
-     <section class="modal-card-body" style:"font-size: 24px; color: black;">
        <!-- Content ... -->
+       <div style="font-size: xx-large;   padding: 20px;
+  background-color: hsl(217, 71%, 53%);
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+text-align:center;
+  margin-bottom: 15px;">
            <%= msg %>
-
-    </section>
+	   </div>
+    
       </div>
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
+    <button class="modal-close is-large" aria-label="close" ></button>
+    </div>
 
     <% end %>
 
