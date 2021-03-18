@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-before_action  :data_analise
+  add_flash_types :info, :error, :warning , :notice
+  before_action  :data_analise
  include Pagy::Backend
 def client
 

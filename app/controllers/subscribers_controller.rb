@@ -9,9 +9,9 @@ http_basic_authenticate_with name: "cai", password: "cai2021luanda", except: [:i
   	@subscriber = Subscriber.new(subscriber_params)
   	if @subscriber.save
   		cookies[:saved_lead] = true
-  		redirect_to root_path
+  		redirect_to root_path, notice: "Formulario submetido com sucesso"
    	else
-   		redirect_to root_path
+   		redirect_to root_path, error: "Erro no formulario por favor volte a submeter"
    end
     end
 

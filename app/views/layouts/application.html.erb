@@ -8,7 +8,19 @@
   } else {
     x.className = "topnav";
   }
-}
+  }
+
+
+  // flash button the delete
+  document.addEventListener('DOMContentLoaded', () => {
+  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+    const $notification = $delete.parentNode;
+
+    $delete.addEventListener('click', () => {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
+});
 </script>
 
 <html>
@@ -73,8 +85,23 @@
       <%= render template: "welcomes/header" %>
  <% end %>
   <body>
-    
-<%= notice %>
+    <% flash.each do |type, msg| %>
+    <div class="modal is-active is-clipped">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+     <section class="modal-card-body" style:"font-size: 24px; color: black;">
+       <!-- Content ... -->
+           <%= msg %>
+
+    </section>
+      </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+    <% end %>
+
+
+
 
  <div id="container">
   <div id="main">
