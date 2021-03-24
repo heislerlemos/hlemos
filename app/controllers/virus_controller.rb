@@ -1,3 +1,4 @@
+# coding: utf-8
 class VirusController < ApplicationController
   def index
   	   response = HTTParty.get('http://api.thevirustracker.com')
@@ -11,7 +12,7 @@ class VirusController < ApplicationController
 
 @nostatus = "no info covid at the moment"
 
-else if  response.code  == 400 ||  response.code  == 404 ||  response.code  == 401 ||  response.code  == 500
+else if  response.code  == 200 ||  response.code  == 404 ||  response.code  == 401 ||  response.code  == 500
 
     @nostatus = "Não existe informação de momento "
 

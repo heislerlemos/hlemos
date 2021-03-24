@@ -1,10 +1,13 @@
 
-<%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<!-- start of the container -->
 
 <div class="container">
 
-  <section class="hero is-link">
-  <div class="hero-body">
+  <!-- hero link -->
+   <section class="hero is-link">
+     <div class="hero-body">
     <p class="title">
       Blogger
     </p>
@@ -13,12 +16,19 @@
     </p>
   </div>
   </section>
-  <br>
+   <br>
+
+   <!-- admin  access bottom  -->
+   
   <div class="buttons has-addons">
     
   
     <%= link_to 'Blogger', new_blog_path, class: "button is-danger is-selected"%>
   </div>
+
+
+  <!-- search bar for blog -->
+  
   <div id="searchcontainer">
 
 
@@ -26,17 +36,20 @@
        <%= text_field_tag :search, params[:search], placeholder: "Encontre uma publicação", class: "input is-info" , style: "width: 50%;" %>
        <%= submit_tag "Procurar",  class: "button is-info" %>
   <% end %>
-</div>
-</div>
+  </div>
+
+  <!-- end of container -->
+  </div>
+
 <br>
 <br>
 
-<div  class="columns is-mobile is-multiline is-centered >
-<div class="column ">
+<!-- column cards start -->
+<div class="columns is-mobile is-multiline is-centered" >
+
+
+  <!-- each loop method to display every card -->
 <% @blogs.each do |f| %>
-
-
-
 
 <div class="card">
   <div class="card-image">
@@ -82,8 +95,12 @@
   </footer>
 </div>
 
+<!-- end of the each loop -->
 <% end %>
+<!-- end of the columns grid -->
 </div>
- </div>
+ 
 
+
+<!-- javascript pagination -->
 <%== pagy_bulma_combo_nav_js(@pagy) %>
