@@ -23,7 +23,6 @@
     <%= link_to "Blog", blogs_path , id: ("active" if current_page?(blogs_path)) %>
     <%= link_to "Noticias", stories_top_path , id: ("active" if current_page?(stories_top_path))%>
     <%= link_to "Preços", pdfjs.full_path(file: "/Preçario.pdf"), id: "nav-link",  target: "_blank"%>
-      <%= link_to "Covid-19",  virus_index_path , id: ("active" if current_page?( virus_index_path)) %>
     <%= link_to "Administração", subscribers_show_path , id: ("active" if current_page?(subscribers_show_path)) %>
     <%= link_to "Sobre Nos",  informations_index_path  , id: ("active" if current_page?(informations_index_path))%>
     <%= link_to fa_icon('github') , "https://github.com/heislerlemos" ,   target: "_blank" %>
