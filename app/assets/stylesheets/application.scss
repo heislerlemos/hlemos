@@ -300,17 +300,66 @@ html, body {
     display: none;
 }
 
+
 .wrap {
-    display: none;
+
+    /** this is a covid image **/
+    
+    /** background-image:url("https://images.pexels.com/photos/5938646/pexels-photo-5938646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") ; **/
+    
+    /** this is a africa picture to be as default**/
+    background-image:url("https://images.pexels.com/photos/1046601/pexels-photo-1046601.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh;
+    overflow: hidden;
+    background-blend-mode: overlay;
+      background-repeat: no-repeat;
+    
+      
+}
+
+
+
+
+#content  {
+    background-size: cover;
+    position: relative;
+    bottom: 140px;
+    text-align: left;
+    max-width: 150%;
+
+
+    
+}
+
+#content a {
+    font-size: 15px;
+    text-align: center;
 }
 
 .wave {
 
-    display: none;
+    width: 100%;
+    position: relative;
+    opacity: 1;    
+    bottom: -10px;
 }
+
 
 .container .card {
     width: 100%;
+}
+
+}
+
+
+@media( max-width: 468px) {
+
+
+.wave {
+
+    display: none;
 }
 
 }
