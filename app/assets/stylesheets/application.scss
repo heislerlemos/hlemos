@@ -5,10 +5,6 @@ $footer-color: black;
 @import "font-awesome";
 @import "welcomes";
 
-#button-landing a {
-
-
-}
 
   #search-form {
   display: inline;
@@ -43,6 +39,8 @@ $footer-color: black;
     font-size: 28px;
     font-weight: 700px;
     float: left;
+      
+    
 }
 
 #mainheader .menu {
@@ -85,11 +83,17 @@ $footer-color: black;
 
 }
 
+#button-landing  a {
+    float: right;
+    position: absolute;
+}
+
 #content {
-    max-width: 55%;
-    padding: 200px 80px 0;
+    max-width: 40%;
+    padding: 150px 80px 0;
     color: #fff;
-    
+    left: 50%;
+   
 
 }
 
@@ -101,15 +105,15 @@ $footer-color: black;
 
 
 
-#content p {
+#content p a {
     font-size: 20px;
     padding: 25px 0;
     font-weight: 300;
-
+    font-color: red;
 }
 #content #button-landing {
 
-    margin-top: 45px;
+    margin-bottom: 35px;
 
     
 }
@@ -128,9 +132,6 @@ $footer-color: black;
     background-color: hsl(217, 71%, 53%);
 }
 
-#content a.color2 {
-    background-color: #ffc107;
-}
 
 .our-partner {
     padding: 0 80px;

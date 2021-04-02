@@ -20,9 +20,9 @@
   <div id="mainheader">
     
     <div class="logo">
-            <%= link_to  image_tag("logo_blog.jpg" , width: "100"), root_path %>  
-	    <h1 class="title is-3" style="color: white;" align="center">  CAI </h1>
-	    	 <h1 class="subtitle is-3" style="color: white;" align="center">  Comunidade Angola Informática </h1>
+            <%= link_to  image_tag("logo_v2.png", width: "500", style: "  float: left;  z-index: 2; "), root_path %>  
+	  <!--  <h1 class="title is-3" style="color: white;" align="center">  CAI </h1>
+	    	 <h1 class="subtitle is-3" style="color: white;" align="center">  Comunidade Angola Informática </h1>-->
     </div>
 
     <div class="menu">
@@ -42,14 +42,16 @@
 
 </header>
 
-  <div id="content">
-    <p> Cai na nossa invoção  </p>
-    <p> Contribui no crescimento tecnológico do nosso pais  </p>
-    <br>
+  <div id="content" aling="center">
+   <!-- <p> Cai na nossa invoção  </p>
+   -->
+   
 
-    <div id="button-landing ">
-       <%= link_to "Agenda", subscribers_path  , class: "color1"   %>
-           <%= link_to "Saiba mais sobre nos",  informations_index_path%>
+   <div id="button-landing ">
+     <br>
+      <%= link_to "Agenda", subscribers_path  , class: "color1"   %>
+      <%= link_to "Saiba mais sobre nos",  informations_index_path %>
+
      </div>
 </div>
 <!---wave --->
