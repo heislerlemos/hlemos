@@ -325,11 +325,9 @@ html, body {
 
 #content  {
     background-size: cover;
-    position: relative;
-    bottom: 140px;
     text-align: left;
     max-width: 150%;
-
+    float: left;
 
     
 }
@@ -341,10 +339,11 @@ html, body {
 
 .wave {
 
-    width: 100%;
+  /**  width: 100%;
     position: relative;
     opacity: 1;    
-    bottom: -10px;
+    bottom: -40px;**/
+    display: none;
 }
 
 
