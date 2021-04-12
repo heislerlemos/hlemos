@@ -76,52 +76,11 @@
   </head>
 
 
-  <div class="topnav" id="myTopnav">
+   <%= render template: "welcomes/header" %>
 
-          <%= link_to "Bem Vindo", root_path  , class: ("active" if current_page?(root_path))   %>
+   <br>
+   <br>
 
-      <%= link_to "Agenda", subscribers_path  , class: ("active" if current_page?(subscribers_path))   %>
-
-    <%= link_to "Administração", subscribers_show_path , class: ("active" if current_page?(subscribers_show_path)) %>
-    <%= link_to "Blog", blogs_path , class: ("active" if current_page?(blogs_path)) %>
-    <%= link_to "Noticias", stories_top_path , class: ("active" if current_page?(stories_top_path))%>
-    <%= link_to "Preços", pdfjs.full_path(file: "/Preçario.pdf"), class: "nav-link",  target: "_blank"%>
-    <%= link_to "Sobre Nos",  informations_index_path  , class: ("active" if current_page?(informations_index_path))%>
-  <a href="javascript:void(0);" class="icon" onclick="opennavFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-
-
-  <% if current_page?(root_path) %>
-  <% render template: "welcomes/header" %>
-  <style>
-    #mainheader  a {
-        text-decoration: none;
-    font-size: 17px;
-    color:  white;
-    margin: 0 25px;
-    font-weight: 300px;
-    letter-spacing: 1px;
-    }
-    
-#mainheader {
-     top: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 80px;
- 
-   background: linear-gradient(to top, transparent, rgba(0,0,0,0.7));
-
-
-
-}
-
-    
-    </style>
-   <% else %>
-      <%= render template: "welcomes/header" %>
- <% end %>
   <body>
     <% flash.each do |type, msg| %>
     <div class="modal is-active is-clipped">

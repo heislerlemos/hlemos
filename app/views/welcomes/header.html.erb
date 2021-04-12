@@ -1,39 +1,80 @@
-<style>
-.active {
-    color: lightgreen;
-}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
 
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-  </style>
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
 
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
 
-<link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+
+  </script>
+
    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     <div id="mainheader">
 
-    <div class="logo">
-      <%= link_to  image_tag("logo_v2.png" , width: "130"), root_path %>  
+   <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+          <%= link_to  image_tag("logo_v2.png", width: "112", height: "28"), root_path %>  
 
-    </div>
-    <div class="menu">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to "Portal Cliente", subscribers_path, class: "navbar-item"  %>
+      <%= link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank", class: "navbar-item"%>
+            <%= link_to "Blogs", blogs_path , class: "navbar-item" %>
+	    <%= link_to "Haker News", stories_top_path , class: "navbar-item"%>
+	               <%= link_to "Sobre Nos",  informations_index_path  , class: "navbar-item" %>
+
       
- <%= link_to  fa_icon("home", style: "color: black") , root_path  , id: ("active" if current_page?(root_path))   %>
- <%= link_to "Agenda", subscribers_path  , id: ("active" if current_page?(subscribers_path))   %>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Rede Sociais
+        </a>
 
-    <%= link_to "Blog", blogs_path , id: ("active" if current_page?(blogs_path)) %>
-    <%= link_to "Noticias", stories_top_path , id: ("active" if current_page?(stories_top_path))%>
-    <%= link_to "Preços", pdfjs.full_path(file: "/Preçario.pdf"), id: "nav-link",  target: "_blank"%>
-    <%= link_to "Administração", subscribers_show_path , id: ("active" if current_page?(subscribers_show_path)) %>
-    <%= link_to "Sobre Nos",  informations_index_path  , id: ("active" if current_page?(informations_index_path))%>
-    <%= link_to fa_icon('github') , "https://github.com/heislerlemos" ,   target: "_blank" %>
-    <%= link_to fa_icon('facebook'), "https://www.facebook.com/wesley.lemos.33/", target: "_blank" %>
-    <%= link_to fa_icon('twitter'), "https://twitter.com/heisler_lemos", target: "_blank" %>
+        <div class="navbar-dropdown">
+         
+	  <%= link_to "Github", "https://github.com/heislerlemos" ,   target: "_blank" ,class: "navbar-item" %>
 
+
+          <hr class="navbar-divider">
+         	  <%= link_to "Facebook", "https://www.facebook.com/wesley.lemos.33/", target: "_blank", class: "navbar-item" %>
+
+        </div>
       </div>
-      </div>
-</div>
+    </div>
+ <div class="navbar-end">
+   <div class="navbar-item">
+     <%= link_to "Portal Administrativo", subscribers_show_path , class: "button is-warning" %>
 
-<% 5.times do %>
-<br>
-<% end %>
+       
+      </div>
+    </div>
+  </div>
+</nav>
   
