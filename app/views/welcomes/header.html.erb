@@ -1,5 +1,6 @@
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+
+  document.addEventListener('DOMContentLoaded', () => {
 
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <%= link_to "Portal Cliente", subscribers_path, class: "navbar-item"  %>
       <%= link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank", class: "navbar-item"%>
             <%= link_to "Blogs", blogs_path , class: "navbar-item" %>
-	    <%= link_to "Haker News", stories_top_path , class: "navbar-item"%>
+	    <%= link_to "Hacker News", stories_top_path , class: "navbar-item"%>
 	               <%= link_to "Sobre Nos",  informations_index_path  , class: "navbar-item" %>
 
       
