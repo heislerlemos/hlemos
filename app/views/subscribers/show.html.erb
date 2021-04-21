@@ -30,9 +30,11 @@
 
 
 <div class="card">
-  <header class="card-header" style="background-color: lightgreen; color: white;">
+  <header class="card-header" style="background-color: hsl(0, 0%, 21%); color: white;">
     <p class="card-header-title" style="color: white;">
-      <%= f.name %>
+      
+	TICKET ID [  <%= f.id %> ]
+
      
 
     </p>
@@ -44,6 +46,11 @@
   </header>
   <div class="card-content" style="word-wrap: break-word; ">
     <div class="content" >
+      <h6>Name </h6>
+      <%= f.name %>
+      <br>
+      <br>
+      
        <h6>Numero de Telefone</h6>
        <%= f.number %>
        <br>
@@ -60,8 +67,9 @@
       <h6>Email</h6>
       <%= f.email %>
       <br>
+      <br>
      
-      <%= time_ago_in_words(f.created_at) %>
+      <h6 style="color: white; background-color: hsl(217, 71%, 53%);" align="center">   <%= time_ago_in_words(f.created_at) %> </h6>
       
     </div>
     </div>
