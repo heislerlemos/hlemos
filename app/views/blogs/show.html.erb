@@ -54,15 +54,15 @@ Adicionar Comentarios
 <%=render 'comentarios/form' %>
 <br>
 <br>
-<%= link_to "Editar", edit_blog_path(@blog), class: "button is-link"  %>
 
+<%= link_to  "Voltar", blogs_path, class: "button is-primary " %>
 
-<%= link_to  "Voltar", blogs_path, class: "button is-link " %>
+<%= link_to "Editar", edit_blog_path(@blog), class: "button is-warning"  %>
 
 
   <%= link_to "Apagar",  @blogs,
               method: :delete,
-              data: { confirm: 'Are you sure?' }, class: "button is-link" %>
+              data: { confirm: 'Are you sure?' }, class: "button is-warning" %>
 
 </div>
 </body>
