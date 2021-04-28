@@ -53,8 +53,10 @@
 
 <div class="card">
   <div class="card-image">
-  <figure class="image is-4by3">
-    <%= image_tag f.image_url%>
+    <figure class="image is-4by3">
+      <%= link_to blog_path(f) do %>
+      <%= image_tag f.image_url%>
+      <% end %>
 
   </figure>
 </div>
@@ -78,21 +80,7 @@
     </div>
   </div>
 
-  <footer class="card-footer">
-    <%= link_to blog_path(f), class: "card-footer-item " do %>
-    <%= fa_icon "eye" %>
-    <% end %>
 
-    <%= link_to  edit_blog_path(f), class: "card-footer-item" do  %>
-    <%= fa_icon "pencil" %>
-    <% end %>
-
-    <%= link_to  blog_path(f),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } , class: "card-footer-item" do %>
-              <%= fa_icon "trash" %>
-              <% end %>
-  </footer>
 </div>
 
 <!-- end of the each loop -->

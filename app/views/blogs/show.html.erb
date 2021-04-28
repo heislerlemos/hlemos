@@ -59,6 +59,11 @@ Adicionar Comentarios
 
 <%= link_to  "Voltar", blogs_path, class: "button is-link " %>
 
+
+  <%= link_to "Apagar",  @blogs,
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, class: "button is-link" %>
+
 </div>
 </body>
 <br>
