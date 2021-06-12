@@ -15,7 +15,7 @@ Rails.application.routes.draw do
         get 'informations/index'
         get 'subscribers/show'
         resources :blogs
- root'welcomes#index'
+ root'blogs#index'
  resources :blogs do
   resources :comentarios
  end
