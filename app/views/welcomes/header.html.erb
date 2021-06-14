@@ -77,8 +77,8 @@ function myFunction() {
 
 
 
-
    <div class="topnav" id="myTopnav">
+<div class="container">
 
               <%= link_to  image_tag("logo_v2.png", width: "112", height: "28"),  welcomes_index_path %>  
 
@@ -90,6 +90,8 @@ function myFunction() {
 	       <%= link_to "Proposta de Serviço", pdfjs.full_path(file: "/proposta.pdf"),  target: "_blank", class: "navbar-item"%>
 	       <%= link_to "Github", "https://github.com/heislerlemos" ,   target: "_blank" ,class: "navbar-item" %>
                <%= link_to "Facebook", "https://www.facebook.com/wesley.lemos.33/", target: "_blank", class: "navbar-item" %>
+              
+
 	            <%= link_to "Portal Administrativo", subscribers_show_path  %>
 
       
@@ -100,3 +102,5 @@ function myFunction() {
 </div>
 
 
+
+   </div>
