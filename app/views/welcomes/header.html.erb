@@ -11,22 +11,39 @@
 }
 
 .topnav a {
-  float: left;
+    float: left;
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 14px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+      border-bottom: 5px solid   hsl(204, 86%, 53%) ;
   color: black;
+        border-radius: 5px;
+
+}
+
+.topnav a.active_sub {
+    background-color:     hsl(0, 0%, 21%)   ;
+      border-radius: 5px;
+  color: white;
+}
+
+
+
+.topnav a.image_box {
+     width: 100px;
+  /* Center vertically */
+  top: 100%;
 }
 
 .topnav a.active {
-  background-color: blue;
+    background-color:   hsl(348, 100%, 61%)  ;
+      border-radius: 5px;
   color: white;
 }
 
@@ -77,23 +94,23 @@ function myFunction() {
 
 
 
+
    <div class="topnav" id="myTopnav">
-<div class="container">
-
-              <%= link_to  image_tag("logo_v2.png", width: "112", height: "28"),  welcomes_index_path %>  
-
-         <%= link_to "Portal Cliente", subscribers_path %>
+     <div class="container">
+       	      <%= link_to  image_tag("logo_v2.png", width: "112", height: "28"),  welcomes_index_path , class: "image_box" %>  
+         <%= link_to "Portal do Cliente", subscribers_path, class: "active_sub" %>
   <%= link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank"%>
             <%= link_to "Blog", blogs_path  %>
 	    <%= link_to "Hacker News", stories_top_path %>
+
  	    <%= link_to "Sobre Nos",  informations_index_path  %>
+	    
 	       <%= link_to "Proposta de Serviço", pdfjs.full_path(file: "/proposta.pdf"),  target: "_blank"%>
 	       <%= link_to "Github", "https://github.com/heislerlemos" ,   target: "_blank"  %>
                <%= link_to "Facebook", "https://www.facebook.com/wesley.lemos.33/", target: "_blank" %>
               
 
-	            <%= link_to "Portal Administrativo", subscribers_show_path  %>
-
+	            <%= link_to "Portal do  Administrador", subscribers_show_path, class: "active"  %>
       
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
