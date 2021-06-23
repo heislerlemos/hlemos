@@ -15,9 +15,10 @@
   display: block;
   color: black;
   text-align: center;
-  padding: 12px 14px;
+  padding: 10px 14px;
   text-decoration: none;
   font-size: 15px;
+  
 }
 
 .topnav a:hover {
@@ -33,7 +34,15 @@
   color: white;
 }
 
-
+  .container_long {
+     display: flex;
+     align-items: center;
+     justify-content:center;
+     background-color: hsl(0, 0%, 96%);
+     width: 73%;
+     border-radius: 3px;
+     margin: auto;
+ }
 
 .topnav a.image_box {
      width: 100px;
@@ -57,6 +66,9 @@
     float: right;
     display: block;
   }
+  .container_long {
+          display: block;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -65,7 +77,9 @@
     position: absolute;
     right: 0;
     top: 0;
+    
   }
+  
   .topnav.responsive a {
     float: none;
     display: block;
@@ -96,7 +110,7 @@ function myFunction() {
 
 
    <div class="topnav" id="myTopnav">
-     <div class="container">
+     <div class="container_long">
        	      <%= link_to  image_tag("logo_v2.png", width: "112", height: "28"),  welcomes_index_path , class: "image_box" %>  
          <%= link_to "Portal do Cliente", subscribers_path, class: "active_sub" %>
   <%= link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank"%>
