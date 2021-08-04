@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+  resources :products
+  resources :shops, only:[:index, :show]
+  
   get 'stories/top'
   get 'stories/:id', to: 'stories#show', as: :story
   get 'comments/:id', to: 'comments#show', as: :comment

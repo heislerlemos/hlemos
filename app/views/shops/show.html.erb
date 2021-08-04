@@ -1,0 +1,17 @@
+<h1>Shops#show</h1>
+<p>Find me in app/views/shops/show.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @product.titulo %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @product.preco %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Voltar', shops_path %>

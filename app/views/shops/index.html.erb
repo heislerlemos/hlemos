@@ -1,0 +1,28 @@
+<h1>Shops#index</h1>
+<p>Find me in app/views/shops/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Preco</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.titulo %></td>
+        <td><%= product.preco %></td>
+	<td><%= link_to 'Mostrar', shop_path(product) %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
