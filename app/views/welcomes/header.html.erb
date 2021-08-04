@@ -34,6 +34,13 @@
   color: white;
 }
 
+
+.topnav a.active_sub_welcome {
+    background-color:      hsl(141, 53%, 53%)    ;
+      border-radius: 5px;
+  color: white;
+}
+
   .container_long {
      display: flex;
      align-items: center;
@@ -110,8 +117,8 @@ function myFunction() {
 
    <div class="topnav" id="myTopnav">
      <div class="container_long">
-       	      <%= link_to  image_tag("logo_v2.png", width: "112", height: "28"),  welcomes_index_path , class: "image_box" %>  
-         <%= link_to "Portal do Cliente", subscribers_path, class: "active_sub" %>
+       	      <%= link_to 'Comunidade Angolana de Informatica', welcomes_index_path , class: "active_sub_welcome" %>  
+         <%= link_to "Portal do Cliente", subscribers_path, class: "active_s" %>
   <%= link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank"%>
             <%= link_to "Blog", blogs_path  %>
 	    <%= link_to "Hacker News", stories_top_path %>
