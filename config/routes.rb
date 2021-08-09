@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   
+  get 'cards/show'
   resources :products
   resources :shops, only:[:index, :show]
-  
+  resources :cards
+  resources :order_items
   get 'stories/top'
   get 'stories/:id', to: 'stories#show', as: :story
   get 'comments/:id', to: 'comments#show', as: :comment

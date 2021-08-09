@@ -117,7 +117,11 @@ function myFunction() {
 
    <div class="topnav" id="myTopnav">
      <div class="container_long">
-       	      <%= link_to 'Comunidade Angolana de Informatica', welcomes_index_path , class: "active_sub_welcome" %>  
+       <%= link_to  welcomes_index_path  do %>
+          
+      <%= image_tag "https://previews.dropbox.com/p/thumb/ABQW9Blv8F10pywPmI8RLMaaL7P4CwsFyX0sMNQLaW3LYdLzr6ibsO8WRF6cek-kn9ROU1lh9J-IwG-xeWEJzaD93K4_4vC_2LpcWWYocG_c_X7RQYm5OcJJl0jU-TfMrPXfBMnRg34Xn3-2OzpHMz6nHQgZqIcOMfA2xPCBow6xSL633hgjVI_s9SO8pGvlnPjzKNuLvDMBdj_3dHNOEpPLk4uDmTGXVM9OzZCONxbt3ltLW7AdCiiO9-1EWkryW9Zy18mi1TChtxxyDDvn_SzHRJdkKv7lbNnteRSXenH3DgaUCkdalLFp2uBt3HPDviR4W5KQQECU8DunbAUxhgQksx8o5S8Nv_xBw3jTCvHPRw/p.png?size=2048x1536&size_mode=3" , width: "100"  %>
+     
+       <% end %>
          <%= link_to "Portal do Cliente", subscribers_path, class: "active_s" %>
   <%= link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank"%>
             <%= link_to "Blog", blogs_path  %>
@@ -130,7 +134,7 @@ function myFunction() {
                <%= link_to "Facebook", "https://www.facebook.com/wesley.lemos.33/", target: "_blank" %>
               
 
-	            <%= link_to "Portal do  Administrador", subscribers_show_path, class: "active"  %>
+	            <%= link_to " Administrador", subscribers_show_path, class: "active"  %>
       
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
