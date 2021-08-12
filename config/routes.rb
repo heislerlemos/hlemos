@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'cards/show'
   resources :products
   resources :shops, only:[:index, :show]
-  resources :cards
+  resource :cards, only:[:show]
   resources :order_items
   get 'stories/top'
   get 'stories/:id', to: 'stories#show', as: :story
