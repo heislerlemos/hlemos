@@ -1,6 +1,8 @@
 class OrderItem < ApplicationRecord
   belongs_to :order
   belongs_to :product
+  validates :unit_price,  presence: true
+
 
 
   def unit_price
@@ -8,7 +10,7 @@ class OrderItem < ApplicationRecord
       self [:unit_price]
 
     else
-      product.price
+      product.preco
     end
     
   end
