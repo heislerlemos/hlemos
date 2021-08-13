@@ -9,6 +9,15 @@
 <h3><%= item.product.titulo  %></h3>
 <h5><%= item.product.preco %> </h5>
 
+ 
+<%=  form_for item do |f| %>
 
 
+<%= f.hidden_field :product_id, :value => item.product.id %>
+<%= f.number_field  :quantity, :value => item.quantity.to_i %>
+<%= f.submit "Atualizar" %>
+
+<% end %>
+
+<h2> Subtotal: <%= item.total %></h2>
 <% end %>

@@ -1,8 +1,11 @@
 class OrderItem < ApplicationRecord
+
   belongs_to :order
   belongs_to :product
+  
   validates :unit_price,  presence: true
-
+  before_save :set_unit_price
+  before_save :set_total 
 
 
   def unit_price
