@@ -5,6 +5,7 @@
     "@rails/actiontext": "^6.0.3-4",
     "@rails/ujs": "^6.1.0",
     "@rails/webpacker": "5.2.1",
+    "jquery": "^3.6.0",
     "rails-particles.js": "^1.0.6",
     "trix": "^1.2.0",
     "turbolinks": "^5.2.0"
