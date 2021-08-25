@@ -1,8 +1,8 @@
 class AddAttachmentAvatarToBlogs < ActiveRecord::Migration[6.0]
   def self.up
-    change_table :blogs do |t|
-      t.attachment :avatar
-    end
+    
+      add_attachment :avatar
+  
   end
 
   def self.down
