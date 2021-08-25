@@ -1,5 +1,6 @@
-=begin
+
 class AddAttachmentAvatarToBlogs < ActiveRecord::Migration[6.0]
+=begin
   def self.up
     
       add_attachment :blogs,  :avatar
@@ -9,7 +10,7 @@ class AddAttachmentAvatarToBlogs < ActiveRecord::Migration[6.0]
   def self.down
     remove_attachment :blogs, :avatar
   end
+=end
 end
 
-I'm not using paper cut at the moment
-=end
+
