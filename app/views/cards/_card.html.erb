@@ -1,1 +1,1 @@
-<%= link_to "#{current_order.order_items.size} items with a value of $", cards_path %>
+<%= link_to "Voce possui #{current_order.order_items.size} items no seu carrinho de compras no valor de :  #{current_order.subtotal}", cards_path  , class: 'button is-danger is-light is-large'%>
