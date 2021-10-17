@@ -1,3 +1,3 @@
-#require 'pagy/extras/bulma'
-#Pagy::VARS[:items]     = 12
+require 'pagy/extras/bulma'
+Pagy::VARS[:items] = 24
 
