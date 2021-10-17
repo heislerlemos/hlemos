@@ -55,14 +55,14 @@ Adicionar Comentarios
 <br>
 <br>
 
-<%= link_to  "Voltar", blogs_path, class: "button is-primary " %>
+<%= link_to  "Voltar", blogs_path, class: "button " %>
 
-<%= link_to "Editar", edit_blog_path(@blog), class: "button is-warning"  %>
+<%= link_to "Editar", edit_blog_path(@blog), class: "button "  %>
 
 
   <%= link_to "Apagar",  @blogs,
               method: :delete,
-              data: { confirm: 'Are you sure?' }, class: "button is-warning" %>
+              data: { confirm: 'Are you sure?' }, class: "button" %>
 
 </div>
 </body>

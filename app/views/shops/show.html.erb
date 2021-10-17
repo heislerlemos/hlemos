@@ -10,20 +10,25 @@
     </p>
   </div>
 </section>
+<br>
 
+<div align="center">
   <p id="notice"><%= notice %></p>
+<div class="box">
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @product.titulo %>
-</p>
+  <div class="title ">Produto
+    <div class="subtitle">
+      <%= @product.titulo %>
+    </div>
+    </div>
 
-<p>
-  <strong>Preco:</strong>
-  <%= @product.preco %>
-</p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Voltar', shops_path %>
-
+  <div class="title">Preço
+  <div class="subtitle">
+  <%= @product.preco %> Kz
+  </div>
+  </div>
+</div>
+<%= link_to 'Edit', edit_product_path(@product) ,class: "button" %>
+<%= link_to 'Voltar', shops_path , class: "button" %>
 </div>

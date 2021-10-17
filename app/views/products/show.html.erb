@@ -1,14 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+<section class="hero is-link">
+  <div class="hero-body">
+    <p class="title">
+      Lista dos produtos 
+    </p>
+    <p class="subtitle">
+      <%= notice %>
+    </p>
+  </div>
+</section>
 
-<p>
+<br>
+<div align="center">
+  <div class="box">
+  <p>
   <strong>Titulo:</strong>
   <%= @product.titulo %>
 </p>
-
 <p>
   <strong>Preco:</strong>
-  <%= @product.preco %>
 </p>
+  </div>
+ 
+<%= link_to 'Edit', edit_product_path(@product), class: "button" %> 
+<%= link_to 'Back', products_path , class: "button" %>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+</div>
+</div>
