@@ -1,3 +1,21 @@
+<style>
+
+
+.imagem {
+    width: 150px;
+    height: 120px;
+    border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+ 
+
+
+}
+
+
+</style>
+
+
 <div class="container">
 
 <section class="hero is-link">
@@ -22,7 +40,9 @@
       <th>Serviço</th>
       <th>Preço</th>
       
+      
       <th colspan="1"></th>
+      <th> </th>
       <th>Quantidade </th>
     </tr>
   </thead>
@@ -32,6 +52,13 @@
       <tr>
         <td class="subtitle is-4"><%= product.titulo %></td>
         <td class="subtitle is-4"><%= product.preco %></td>
+	<td>
+	<div class="imagem">
+      <%= image_tag product.imagelink %>
+	</div>
+
+	</td>
+  
 	<td><%= link_to 'Mostrar', shop_path(product), class: 'button ' %></td>
 	
 	<td>
