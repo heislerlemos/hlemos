@@ -33,7 +33,7 @@
 <br>
 
 <div align="center">
-
+<div class="table-container">
 <table class="table">
   <thead>
     <tr>
@@ -42,7 +42,6 @@
       
       
       <th colspan="1"></th>
-      <th> </th>
       <th>Quantidade </th>
     </tr>
   </thead>
@@ -50,8 +49,8 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td class="subtitle is-4"><%= product.titulo %></td>
-        <td class="subtitle is-4"><%= product.preco %> Kz </td>
+        <td class="subtitle "><%= product.titulo %></td>
+        <td class="subtitle "><%= product.preco %> Kz </td>
 	<td>
 	<div class="imagem">
       <%= image_tag product.imagelink %>
@@ -73,14 +72,17 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
+</div>
 
 <br>
 
-
-<div id="card">
+<section class="hero is-link is-small">
+  <div class="hero-body">
 <%= render 'cards/card' %>
-</div>
+
 </div>
 
+</section>
 </div>

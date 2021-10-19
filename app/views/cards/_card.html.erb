@@ -1,1 +1,5 @@
-<%= link_to "Voce possui #{current_order.order_items.size} items no seu carrinho de compras no valor de :  #{current_order.subtotal} Kz", cards_path  , class: 'button '%>
+<div class="container">
+<div align="center">
+<%= link_to " #{current_order.order_items.size} items no carrinho :  #{current_order.subtotal} Kz", cards_path  , class: 'button '%>
+</div>
+</div>
