@@ -51,16 +51,13 @@
     <% @products.each do |product| %>
       <tr>
         <td class="subtitle is-4"><%= product.titulo %></td>
-        <td class="subtitle is-4"><%= product.preco %></td>
+        <td class="subtitle is-4"><%= product.preco %> Kz </td>
 	<td>
 	<div class="imagem">
       <%= image_tag product.imagelink %>
 	</div>
 
 	</td>
-  
-	<td><%= link_to 'Mostrar', shop_path(product), class: 'button ' %></td>
-	
 	<td>
 	  <%= form_for @order_item, remote: true  do |f| %>
 	  <%= f.hidden_field :product_id, :value => product.id  %>
