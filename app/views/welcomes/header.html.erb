@@ -122,7 +122,7 @@ function myFunction() {
      
        <% end %>
          <%= link_to "Portal do Cliente", subscribers_path, class: "active_s" %>
-  <%= link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank"%>
+  <% link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank"%>
             <%= link_to "Blog", blogs_path  %>
 	    <%= link_to "Hacker News", stories_top_path %>
 	    <%= link_to "Loja" , shops_path  %>
