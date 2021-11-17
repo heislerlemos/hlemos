@@ -1,12 +1,12 @@
 
 <% @blog.comentarios.each do |comentario| %>
 <br>
-<article class="media">
+<article class="media" style="border-bottom: 0.5px solid black;">
  
   <div class="media-content">
     <div class="content">
       <p>
-        <strong> <%= comentario.comentariador  %></strong>  <small> Criado em : <%= comentario.created_at %></small>
+        <%= fa_icon "user" %>  <%= comentario.comentariador  %>   <div><%= fa_icon "calendar" %>  <%= comentario.created_at %></div>
         <br>
 	  <small>  <%= sanitize comentario.corpo %> </small>
 	  
@@ -19,7 +19,7 @@
       <%= link_to  [comentario.blog, comentario],
                method: :delete,
                data: { confirm: 'Are you sure?' } do  %>
-               <%= fa_icon "trash" %>
+               <%= fa_icon "trash" , style: "color: red;" %>
                <% end %>
   </div>
 </article>
