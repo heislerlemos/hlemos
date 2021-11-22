@@ -23,12 +23,24 @@ top: 0;
 left: 0;
 z-index: -1;
 }
-@media screen and (max-width: 1204px) { /* Specific to this particular image */
 
-    .tile .is-child .box  {
+@media screen and (max-width: 500px ) {
+   .our-partner {
+	display: none;
+   }
+
+   .tile is-parent  {
+       width: 100%;
+       
+   }
+  .tile .is-child .box  {
 	display: none;
     }
-
+   
+}
+@media screen and (max-width: 1204px) { /* Specific to this particular image */
+ 
+    
     
     .background-image {
 	 width: 100%;
