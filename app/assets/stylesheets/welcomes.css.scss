@@ -1,4 +1,14 @@
 
+
+.image_back  {
+    background-image: url("https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    height: auto;
+    background-position: 50%, 100% ;
+        left: 100%;
+			    
+}
+
 imgfull  {
   -webkit-background-size: cover;
  -moz-background-size: cover;
@@ -14,15 +24,31 @@ left: 0;
 z-index: -1;
 }
 @media screen and (max-width: 1204px) { /* Specific to this particular image */
-  .imgfull {
+
+    .tile .is-child .box  {
+	display: none;
+    }
+
+    
+    .background-image {
+	 width: 100%;
+  height: auto;
+    }
+
+    .image_back  .container {
+	 width: 100%;
+  height: auto;
+    }
+    .imgfull {
     left: 50%;
     margin-left: -512px;   /* 50% */
-  }
+    }
+
 }
 .container
 {
 	width: 80%;
-	height: 50%;
+	height:auto ;
 	margin: auto;
 	overflow: hidden;
 }
