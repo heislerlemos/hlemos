@@ -1,7 +1,22 @@
 <% content_for(:title, "About") %>
 <%= stylesheet_link_tag "welcomes", :media => "all" %>
+  <style>
 
+
+.image_back  {
+    background-image: url("https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    height: auto;
+    background-position: 20%, 100% ;
+        left: 100%;
+			     
+
+}
+
+  </style>
 <html>
+
+
 
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -9,35 +24,34 @@
 <meta name="HandheldFriendly" content="true">
 
 
-	<title>[Heisler] </title>
+<title>[Heisler] </title>
+
 </head>
 
 <body>
+  <div class="image_back">
 <div class="container">
+  <br>
+      <br>
+       <br>
+    <div class="hero-body" style="height: 500px; ">
+      <div align="center"  style="  float: left;">
+	<p class="title is-3" style="color: white;">
 
-  <section class="hero is-medium is-light">
-    <div class="hero-body">
-      <div align="center">
-	<p class="title">
-
-      Se regista ao nosso portal agora  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+      Se regista no nosso portal agora  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
 
     </p>
     <br>
-    <p class="subtitle">
-      A cai resolve os seus problemas de computador, internet e esclarece duvidas de informática, antes de comprar um novo equipamento entre em contacto com a cai que daremos uma nova vida a seu equipamento antigo, poupe dinheiro  entre em contacto  agora <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
 
-      
-    </p>
     <br>
 
-    <%= link_to "Cai na nossa inovação",  subscribers_path , class: "button is-large is-fullwidth is-link" %>
+    <%= link_to "Comunidade Angolana de Informática",  subscribers_path , class: "button is-large  is-link" %>
 
 
     </div>
     </div>
-</section>
- </div>
+</div>
+</div>
 
   <% 5.times do %>
 
@@ -85,7 +99,10 @@
   <div class="column is-12">
     <section class="hero is-warning">
   <div class="hero-body">
-    <p class="title">
+          <p>
+      A cai resolve os seus problemas de computador, internet e esclarece duvidas de informática, antes de comprar um novo equipamento entre em contacto com a cai que daremos uma nova vida a seu equipamento antigo, poupe dinheiro  entre em contacto  agora <i class="fa fa-exclamation-circle" aria-hidden="true"></i><hr>
+
+      
      Estamos situados no Complexo da Samba entre o Bairro Azul e a Mayanga
  seja nosso cliente agora livra-se dos problemas de computador <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
 
@@ -169,7 +186,7 @@
       <p class="subtitle">Técnico</p>
     
   <figure class="image is-128x128">
-  <%= image_tag "paulo_1.png" , class: "is-rounded" %>
+  <%= image_tag "paulo.png" , class: "is-rounded" %>
 </figure>
       <div class="content">
 
