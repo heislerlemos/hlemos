@@ -121,18 +121,35 @@ function myFunction() {
       <%= image_tag "logo_v2.png" , width: "100"  %>
      
        <% end %>
-         <%= link_to "Portal do Cliente", subscribers_path, class: "active_s" %>
+
+       <%= link_to  subscribers_path  do  %>
+       <%= fa_icon "ticket" %> Portal do Cliente
+       <% end %>
+       
   <% link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank"%>
-            <%= link_to "Blog", blogs_path  %>
-	    <%= link_to "Hacker News", stories_top_path %>
-	    <%= link_to "Loja" , shops_path  %>
+  <%= link_to  blogs_path  do  %>
+
+  <%= fa_icon "rss" %> Blog
+
+  <% end %>
+  <%= link_to stories_top_path do  %>
+<%= fa_icon "hacker-news" %> Hacker News 
+  <% end %>
+  <%= link_to  shops_path  do  %>
+  <%= fa_icon "shopping-bag "  %> Loja 
+  <% end %>
  	    <% link_to "Sobre Nos",  informations_index_path  %>
-	    <%= link_to "[CAI DNS] ", "https://dns.cai.co.ao/",   target: "_blank"%>
+	    <%= link_to  "https://dns.cai.co.ao/" , target: "_blank"  do %>
+	    <%= fa_icon "globe" %> Ferramenta NS
+	    <% end %>
 
-	    <%= link_to "Proposta de Serviço", pdfjs.full_path(file: "/proposta.pdf"),  target: "_blank"%>
-             
+	    <%= link_to pdfjs.full_path(file: "/proposta.pdf"),  target: "_blank" do %>
 
-	            <%= link_to " Administrador", subscribers_show_path, class: "active"  %>
+	    <%= fa_icon "book" %> Documentação
+	    <% end %>
+            <%= link_to subscribers_show_path do %>
+	    <%= fa_icon "lock" %> Administrador
+ 	    <% end %>
       
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
