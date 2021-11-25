@@ -36,7 +36,27 @@ z-index: -1;
   .tile .is-child .box  {
 	display: none;
     }
-   
+
+  .image_back background-image {
+      
+        width: 100%;
+  height: auto;
+  }
+
+  .image_back .hero-body {
+       display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-top: 100px;
+  }
+  
+ 
+  
+  br {
+
+      display:none;
+  }
 }
 @media screen and (max-width: 1204px) { /* Specific to this particular image */
  
