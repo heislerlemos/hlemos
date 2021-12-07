@@ -9,14 +9,17 @@
   </style>
 
 
-<footer class="footer is-light" >
+<footer class="footer " style="background-color:    hsl(0, 0%, 29%) ; color: white;" >
 
   <div class="columns">
                  <div class="column">
 <center>
 
-  <div class="is-size-2" style="color: black;"> <%= @ahoy %>    </div> <%= fa_icon("eye" , text: "Visitas")%><hr>
-              <small>     ruby-3.0.0 2021  </small>  <%= link_to fa_icon("github"), "https://github.com/heislerlemos" ,   target: "_blank"  %> <hr>
+  <div class="is-size-2" style="color: white;"> <%= @ahoy %>    </div> <%= fa_icon("eye" , text: "Visitas" , style: "color: black;")%><hr>
+  <small> ruby 3.0.0 & rails 6.0.3.2 </small>  <%= link_to fa_icon("github"), "https://github.com/heislerlemos" ,   target: "_blank"  , style: "color: black;"%> <hr>
+  <small>A Comunidade Angolana de Informática  é uma entidade independente, que possui como parte da sua política de melhoria continua fornecer serviços tecnológicos ao povo Angolano.</small><hr>
+  <small>Copyright ® Comunidade Angolana de Informática  2020 - 2021.<hr>
+    <small> <%= image_tag "logo_v2.png", style: "width:100px; height:100px;"%> Todos os direitos reservados .</small>
 
           </center>
 
