@@ -40,11 +40,44 @@ z-index: -1;
 
    }
 
+   .mobile_body br {
+       display: none;
+   }
+
    #main {
-      padding-button:  800px;
+       padding-bottom: 0%;
+   }
+
+   .topnav a.icon {
+
+       float: right;
+display: block;
+margin-right: 20%;
+margin-top: 5%;
 
    }
+
+   i.fa.fa-bars {
+       font: normal normal normal 40px/1 FontAwesome;
+       color: grey;
+       
+   }
+
+   .topnav a:hover {
+       border: 0px solid  green;
+color: black;
+border-radius: 5px;
+   }
+   #container {
+       min-height: 0%;
+   }
+   #main .image_back {
+       height: 819px;
+    }
+  
  
+
+   
   .tile .is-child .box  {
 	display: none;
     }
