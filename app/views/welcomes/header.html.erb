@@ -84,7 +84,11 @@
     top: 0;
     
   }
-  
+
+
+  .topnav .dont_show {
+      display: none;
+  }
   .topnav.responsive a {
     float: none;
     display: block;
@@ -132,13 +136,17 @@ function myFunction() {
   <%= fa_icon "rss" %> Blog
 
   <% end %>
+<div class="dont_show">
   <%= link_to stories_top_path do  %>
 <%= fa_icon "hacker-news" %> Hacker News 
-  <% end %>
+<% end %>
+</div>
+
+<div class="dont_show">
   <%= link_to  shops_path  do  %>
   <%= fa_icon "shopping-bag "  %> Loja 
   <% end %>
- 	    <% link_to "Sobre Nos",  informations_index_path  %>
+ </div>	    <% link_to "Sobre Nos",  informations_index_path  %>
 	    <%= link_to  "https://dns.cai.co.ao/" , target: "_blank"  do %>
 	    <%= fa_icon "globe" %> Ferramenta NS
 	    <% end %>
@@ -147,10 +155,12 @@ function myFunction() {
 
 	    <%= fa_icon "book" %> Documentação
 	    <% end %>
+	    <div class="dont_show">
+
             <%= link_to subscribers_show_path do %>
 	    <%= fa_icon "lock" %> Administrador
  	    <% end %>
-      
+	    </div>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
