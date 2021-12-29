@@ -24,8 +24,21 @@ left: 0;
 z-index: -1;
 }
 
+.response_info_number {
+    display: none;
+}
+
+
+
 @media screen and (max-width: 500px ) {
-   .our-partner {
+
+    .response_info_number {
+	display: block;
+	padding-bottom: 50px;
+	color: white;
+    }
+
+    .our-partner {
 	display: none;
    }
 
