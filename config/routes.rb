@@ -16,7 +16,10 @@ Rails.application.routes.draw do
     get 'sistemas/index'
         get 'aulas/index'
             resource :aulas, only: [:index], controller: :aulas
-        get 'suportes/index'
+            get 'suportes/index'
+
+                get "suportes", to: "suportes#index"
+post "suportes", to: "suportes#index"
         get 'redes/index'
         get 'informations/index'
         get 'subscribers/show'

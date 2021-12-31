@@ -1,24 +1,107 @@
 <%= stylesheet_link_tag "suportes", :media => "all" %>
 
-  <div class="container">
-    <section class="hero  is-light ">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-      Suporte tecnico ao cliente
-      </h1>
-      <br>
-      <h2 class="subtitle">
-        
-	  Linux Macosx & Windows : Desbloqueo de password, hd & pen drive encriptação, instalação de sistema operativo instalação de software <hr>
-	  Dropbox,google drive configuração de backup <hr>
-	  Antivirus Malware Spam , Remoção de anuncios<hr>
-	  Manutenção e instalação de impressora<hr>
-	  Video vigilancia dvr & nvr configuração <hr>
-	
-      </h2>
-    </div>
-  </div>
-</section>
+<style>
 
+  hr {
+      border: none;
+      background-color: tranparency;
+  }
+
+  .form-control {
+  display: inline;
+}
+
+  
+  </style>
+
+
+
+<br>
+
+<center>
+<div class="container">
+
+<div class="jumbotron">
+  <h1 class="display-4">CAI DNS </h1>
+    <p class="lead"> Com esta ferramenta pode verificar as seguintes informações do host .
+
+</p>
+    <hr class="my-4">
+    
+  <p>
+    <hr> A: o endereço IPv4 do domínio.</hr>
+   <hr> CNAME: o nome canónico — permitindo que um nome de domínio mapeie para outro. Isto permite que mais de um website se refira a um único servidor web.</hr>
+   <hr> NS: um ou mais registos de servidores de nomes autoritários para o domínio.</hr>
+    <hr>MX: o servidor que trata o e-mail para o domínio</hr>
+   .</p>
+
+  <small> Use apenas nomes de host disponíveis ou o aplicativo gerará um erro de tela vermelha | Please only use available hostnames or else the app will raise a red screen error</small>
+</div> 
+<br>
+  <p class="alert-danger" role="alert"><%= @nohost %></p>
+ 
+  </h1>
+<br>
+<div class="h1">Check your dns  | Verifique o seu dns   </div>
+
+<%= form_tag  suportes_path do |form| %>
+  <br>
+  <%= text_field_tag "hostname", @hostname, class: "form-control" , style: "width: 90%;", required: 'required', placeholder: "Host must contain suffix .com .net .ao .biz .org" %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+<br>
+<br>
+
+
+
+ <div class="row">
+<%  @output.each do |s| %>
+
+  
+        <div class="col-sm">
+<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+  <div class="card-header"> Server </div>
+  <div class="card-body">
+    <p class="card-text">  <%= s.server %></p>
+  </div>
 </div>
+	</div>
+  <% end %>
+
+  
+<%  @queryoutput.each do |s| %>
+
+  <div class="col-sm">
+    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+  <div class="card-header is-bold"> Name Server</div>
+  <div class="card-body">
+    <p class="card-text)"><%= s.domainname %> </p>
+     </div>
+</div>
+	  </div>
+ 
+
+<% end %>
+
+<br>
+
+<% @queryoutputmx.each  do |s| %>
+ <div class="col-sm">
+<div class=" card text-white bg-success mb-3" style="max-width: 18rem;">
+  <div class="card-header"> Mail Server </div>
+  <div class="card-body">
+    <p class="card-text"> <%= s.exchange %></p>
+  </div>
+</div>
+</div>
+<% end %>
+
+
+
+<br>
+<br>
+</div>
+</div>
+
+<br>
+</center>

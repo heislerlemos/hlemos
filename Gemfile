@@ -16,6 +16,7 @@ gem 'puma', '~> 3.11'
 #gem "mini_magick"
 gem 'will_paginate', '~> 3.1.0'
 # Use SCSS for stylesheets
+gem 'dnsruby', '~> 1.61', '>= 1.61.5'
 gem 'webpacker', '~> 5.x'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

@@ -114,6 +114,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dnsruby (1.61.7)
+      simpleidn (~> 0.1)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     errbase (0.2.1)
@@ -288,6 +290,8 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    simpleidn (0.2.1)
+      unf (~> 0.1.4)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -363,6 +367,7 @@ DEPENDENCIES
   coffee-rails
   covid19-rb!
   devise
+  dnsruby (~> 1.61, >= 1.61.5)
   excon
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
   hirb (~> 0.7.3)
