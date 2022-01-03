@@ -22,23 +22,37 @@
   <br>
       <br>
        <br>
-    <div class="hero-body" style="height: 500px; ">
-      <div align="center"  style="  float: left;">
-	<p class="title is-3" style="color: white;">
+    <div class="hero-body" >
+      <div  align="center">
+	<p class="title is-1" style="color: white; ">
 
-	  <%=  link_to "Se regista no nosso portal agora, cai na nossa inovação ! " , subscribers_path , style: "color: white;text-shadow: 1px 1px 2px black; " %>
+	  <%=  link_to "Se regista no nosso portal agora, cai na nossa inovação ! " , subscribers_path , style: "color: white;text-shadow: 1px 2px 2px black; " %>
 	    <div class="response_info_number">
     
 
     <section class="hero">
-  <div class="hero-body">
+  <div class="hero-body" align="center">
     <p class="title" style="color: white; text-shadow: 1px 1px 2px black; ">
       Ligue para nossa linha de apoio <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-       <hr>
            <p class="title" style="color: white; text-shadow: 1px 1px 2px black; ">
 
-	     <a href="tel:934659342">934659342<a> - 942869655 - 923957488
-	     </p>
+
+		 <%= link_to "934659342 " do  %>
+		 <%= fa_icon "phone-square ", style: "color: white;" %>
+		 <% end %>
+
+		 
+		 <%= link_to "92869655" do  %>
+		 <%= fa_icon "phone-square ", style: "color: white;" %>
+		 <% end %>
+
+		 
+		 <%= link_to "923957488 " do  %>
+		 <%= fa_icon "phone-square ", style: "color: white;" %>
+		 <% end %>
+	   </p>
+	          <hr>
+
     </p>
   
   </div>
@@ -49,7 +63,7 @@
 
     <br>
 
-    <%= link_to "Comunidade Angolana de Informática",  subscribers_path , class: "button is-medium  is-link" %>
+    <% link_to "Comunidade Angolana de Informática",  subscribers_path , class: "button is-small  is-link" %>
 
 
     </div>
