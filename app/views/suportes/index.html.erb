@@ -1,4 +1,3 @@
-<%= stylesheet_link_tag "suportes", :media => "all" %>
 
 <style>
 
@@ -11,7 +10,28 @@
   display: inline;
 }
 
-  
+
+  .card-header {
+      background-color: #cc33ff;
+      color: white;
+      border-radius: 10px 100px / 120px;
+  }
+
+  .card-content {
+
+      font-size: 20px;
+  }
+
+
+  .espaçamento {
+      padding-top: 30px;
+  }
+
+
+  .card-header-title {
+
+      color: white;
+  }
   </style>
 
 
@@ -20,13 +40,18 @@
 
 <center>
 <div class="container">
+<section class="hero is-medium is-light">
+  <div class="hero-body">
+    <p class="title">
+COMUNIDADE ANGOLANA DE INFORMATICA NS TOOL 
+    </p>
+    <p class="subtitle">
+     Com esta ferramenta pode verificar as seguintes informações do host .
 
-<div class="jumbotron">
-  <h1 class="display-4">CAI DNS </h1>
-    <p class="lead"> Com esta ferramenta pode verificar as seguintes informações do host .
+    </p>
 
-</p>
-    <hr class="my-4">
+
+    <hr>
     
   <p>
     <hr> A: o endereço IPv4 do domínio.</hr>
@@ -37,71 +62,118 @@
 
   <small> Use apenas nomes de host disponíveis ou o aplicativo gerará um erro de tela vermelha | Please only use available hostnames or else the app will raise a red screen error</small>
 </div> 
+  </div>
+</section>
+
 <br>
-  <p class="alert-danger" role="alert"><%= @nohost %></p>
+
+<p  role="alert"><%= @nohost %></p>
+<br>
+<br>
+<br>
  
   </h1>
 <br>
-<div class="h1">Check your dns  | Verifique o seu dns   </div>
+<div class="title is-2">Check your dns  | Verifique o seu dns   </div>
 
 <%= form_tag  suportes_path do |form| %>
   <br>
-  <%= text_field_tag "hostname", @hostname, class: "form-control" , style: "width: 90%;", required: 'required', placeholder: "Host must contain suffix .com .net .ao .biz .org" %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <%= text_field_tag "hostname", @hostname, class: "input is-link" , style: "width: 50%;", required: 'required', placeholder: "Host must contain suffix .com .net .ao .biz .org" %>
+  <%= submit_tag "Search" , class: "button  is-warning" %>
 <% end %>
 <br>
 <br>
+<div class="espaçamento">
+
+  </div>
+
+</center>
+<br>
 
 
+<div class="container">
+ <div class="columns is-mobile is-multiline ">
+   <%  @output.each do |s| %>
+   
+<div class="column">
 
- <div class="row">
-<%  @output.each do |s| %>
+  <header class="card-header">
+    <p class="card-header-title">
+         Server 
 
-  
-        <div class="col-sm">
-<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-  <div class="card-header"> Server </div>
-  <div class="card-body">
-    <p class="card-text">  <%= s.server %></p>
+    </p>
+ 
+  </header>
+  <div class="card-content">
+    <div class="content">
+        <%= s.server %>
+
+    </div>
   </div>
 </div>
-	</div>
+
+
   <% end %>
 
   
 <%  @queryoutput.each do |s| %>
 
-  <div class="col-sm">
-    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-  <div class="card-header is-bold"> Name Server</div>
-  <div class="card-body">
-    <p class="card-text)"><%= s.domainname %> </p>
-     </div>
-</div>
-	  </div>
+
  
 
-<% end %>
+
+  <div class="column">
+
+  <header class="card-header">
+    <p class="card-header-title">
+        Name Server
+
+    </p>
+ 
+  </header>
+  <div class="card-content">
+    <div class="content">
+<%= s.domainname %>
+    </div>
+  </div>
+
+ </div>
+
+
+    <% end %>
+
+  
 
 <br>
 
 <% @queryoutputmx.each  do |s| %>
- <div class="col-sm">
-<div class=" card text-white bg-success mb-3" style="max-width: 18rem;">
-  <div class="card-header"> Mail Server </div>
-  <div class="card-body">
-    <p class="card-text"> <%= s.exchange %></p>
-  </div>
-</div>
-</div>
-<% end %>
+
+ 
 
 
+  <div class="column">
 
-<br>
-<br>
-</div>
-</div>
+  <header class="card-header">
+    <p class="card-header-title">
+ Mail Server 
 
-<br>
+    </p>
+ 
+  </header>
+  <div class="card-content">
+    <div class="content">
+  <%= s.exchange %>
+
+    </div>
+    </div>
+
+ </div>
+
+
+  <% end %>
+
+
+  <!-- end of column -->
+ </div>
+</div>  
 </center>
