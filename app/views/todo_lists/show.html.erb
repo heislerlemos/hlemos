@@ -1,13 +1,34 @@
-<p id="notice"><%= notice %></p><p>
-  <strong>Title:</strong>
+<div class="container">
+  <center>
+    <br>
+
+    
+    <p id="notice"><%= notice %></p><p>
+
+      <section class="hero is-small is-link">
+  <div class="hero-body">
+    <p class="title">
   <%= @todo_list.title %>
-</p><p>
-  <strong>Description:</strong>
+
+    </p>
+    <br>
+    <p class="subtitle">
   <%= @todo_list.description %>
-</p><div id="todo_items_wrapper">
- <%= render @todo_list.todo_items %>
+
+    </p>
+  </div>
+  
+</section>
+
+    <br>
+    <div id="todo_items_wrapper">
+  <%= render @todo_list.todo_items %>
+  <br>
  <div id="form">
   <%= render "todo_items/form" %>
  </div>
-</div><%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>
+ <br>
+</div><%= link_to 'Editar', edit_todo_list_path(@todo_list), class:"button" %> 
+<%= link_to 'Voltar', todo_lists_path, class: "button" %>
+</center>
+</div>
