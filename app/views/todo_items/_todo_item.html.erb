@@ -31,7 +31,7 @@
    <%= link_to "Completo", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch , class: "button is-small" %>
   </div>
   <div class="todo_item">
-   <p style="opacity: 0.4;"><strike><%= todo_item.content %></strike></p>
+   <p style="opacity: 0.4;"><strike><%=sanitize todo_item.content %></strike></p>
   </div>
   <div class="trash">
    <% link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" }, class: "button" %>
@@ -42,7 +42,7 @@
    <%= link_to "Marcar como Completo", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch , class: "button is-small" %>
   </div>
   <div class="todo_item" >
-   <p ><%= todo_item.content %></p>
+   <p ><%= sanitize todo_item.content %></p>
   </div>
   <div class="trash">
    <% link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" }, class: "button" %>
