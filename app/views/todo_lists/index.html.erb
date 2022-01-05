@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
+<br>
+<br>
+<br>
+<div class="container " style="background-color: #FFE4C4;">
   <br>
   <br>
   <section class="hero is-small is-link">
@@ -26,9 +29,9 @@
       <tr>
         <td><%= todo_list.title %></td>
         <td><%= todo_list.description %></td>
-        <td><%= link_to 'Ver', todo_list, class: "button" %></td>
-        <td><%= link_to 'Editar', edit_todo_list_path(todo_list) , class: "button" %></td>
-        <td><%= link_to 'Apagar', todo_list, method: :delete, data: { confirm: 'Are you sure?' } , class: "button" %></td>
+        <td><%= link_to 'Visualizar', todo_list, class: "button is-small is-fullwidth" %></td>
+        <td><% link_to 'Editar', edit_todo_list_path(todo_list) , class: "button" %></td>
+        <td><% link_to 'Apagar', todo_list, method: :delete, data: { confirm: 'Are you sure?' } , class: "button" %></td>
       </tr>
     <% end %>
   </tbody>

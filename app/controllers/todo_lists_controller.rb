@@ -1,5 +1,6 @@
 class TodoListsController < ApplicationController
   before_action :set_todo_list, only: %i[ show edit update destroy ]
+  	  http_basic_authenticate_with name: "cai", password: "cai"
 
   # GET /todo_lists or /todo_lists.json
   def index
@@ -8,6 +9,7 @@ class TodoListsController < ApplicationController
 
   # GET /todo_lists/1 or /todo_lists/1.json
   def show
+
   end
 
   # GET /todo_lists/new

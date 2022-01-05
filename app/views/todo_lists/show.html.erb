@@ -1,3 +1,12 @@
+<style>
+
+  .spacingo {
+
+      margin-top: 20px;
+  }
+
+ </style>
+
 <div class="container">
   <center>
     <br>
@@ -21,14 +30,20 @@
 </section>
 
     <br>
-    <div id="todo_items_wrapper">
-  <%= render @todo_list.todo_items %>
-  <br>
- <div id="form">
+      <%= render @todo_list.todo_items %>
+      <br>
+        <div class="spacingo">
+      </div>
   <%= render "todo_items/form" %>
- </div>
+ 
  <br>
-</div><%= link_to 'Editar', edit_todo_list_path(@todo_list), class:"button" %> 
-<%= link_to 'Voltar', todo_lists_path, class: "button" %>
-</center>
+      <div class="spacingo">
+      </div>
+  
+<% link_to 'Editar', edit_todo_list_path(@todo_list), class:"button" %> 
+<%= link_to 'Voltar', todo_lists_path, class: "button is-warning" %>
+
+  </center>
+
+</div>
 </div>

@@ -10,30 +10,44 @@
       float: right;
   }
 
-  
+  .todo_item {
+
+      font-size: 15px;
+      background-color:  hsl(0, 0%, 96%) ;
+      border-bottom:0.2px solid hsl(204, 86%, 53%);
+          border-right:0.2px solid hsl(204, 86%, 53%);
+
+    margin-top: 30px;
+    border-radius: 0.5 px
+		       padding-top : 20px;
+  }
 
   </style>
 
 <div class="row">
- <% if todo_item.completed? %>
+<center>
+  <% if todo_item.completed? %>
   <div class="complete">
-   <%= link_to "Mark as Complete", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch %>
+   <%= link_to "Completo", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch , class: "button is-small" %>
   </div>
   <div class="todo_item">
    <p style="opacity: 0.4;"><strike><%= todo_item.content %></strike></p>
   </div>
   <div class="trash">
-   <% link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+   <% link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" }, class: "button" %>
   </div>
+  
  <% else %>
   <div class="complete">
-   <%= link_to "Mark as Complete", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch %>
+   <%= link_to "Marcar como Completo", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch , class: "button is-small" %>
   </div>
-  <div class="todo_item">
-   <p><%= todo_item.content %></p>
+  <div class="todo_item" >
+   <p ><%= todo_item.content %></p>
   </div>
   <div class="trash">
-   <%= link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+   <% link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" }, class: "button" %>
   </div>
- <% end %>
+  <% end %>
+</center>
+  
 </div>
