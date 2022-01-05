@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   
 resources :todo_lists do
-   resources :todo_items
+   resources :todo_items do
+    member do
+     patch :complete
+    end
   end
-  get 'cards/show'
+end
+
+get 'cards/show'
   resources :products
   resources :shops, only:[:index, :show]
   resource :cards, only:[:show]
