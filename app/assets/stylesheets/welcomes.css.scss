@@ -1,44 +1,23 @@
-.neocontainer {
-    background-color: hsl(0, 0%, 21%);
-    border-radius: 5px;
-    opacity: 2.0;
-    font-size: 150px;
-    width: 55%;
-      margin: 10px auto;
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
 
 }
 
-.neonText {
-  animation: flicker 1.5s infinite alternate;
-  color: #fff;
+.clearfix:after {
+    clear: both;
 }
+.slogan {
 
-h1 {
-  font-size: 3.2rem;    
+    font-size: 100px;
+    font-weight: bold;
+    float:  right;
+    color:  white;
+    margin-right: 200px;
+    text-shadow: 2px 2px 4px black; 
+
 }
-
-/* Flickering animation */
-@keyframes flicker {
-    
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-
-      text-shadow:
-      0 0 4px #fff,
-      0 0 11px hsl(0, 0%, 21%),
-      0 0 19px hsl(0, 0%, 21%),
-      0 0 40px hsl(0, 0%, 21%),
-      0 0 80px   #838383,
-      0 0 90px   #838383,
-      0 0 100px   #838383,
-      0 0 150px   #838383;
-  
-  }
-  
-  20%, 24%, 55% {        
-      text-shadow: none;
-  }    
-}
-
 
 .image_back  {
     background-image: url("https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
@@ -71,6 +50,11 @@ z-index: -1;
 
 
 @media screen and (max-width: 500px ) {
+
+.slogresponse {
+
+    display: none;
+}
 
     .neocontainer {
 	width: 100%;
