@@ -158,20 +158,12 @@ border-radius: 5px;
 @media screen and (min-width: 1349px) { /* Specific to this particular image */
  
     
-    
-    .background-image {
-     width: 100%;
-  height: auto;
-    }
+.slogresponse {
 
-    .image_back  .container {
-     width: 100%;
-  height: auto;
-    }
-    .imgfull {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-    }
+    display: none;
+}
+
+    
 
 }
 
