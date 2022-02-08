@@ -336,6 +336,21 @@ flip-card {
 }
 */
 
+  /** Fixing slogan image   **/
+
+@media screen and (max-width:  1080px) {
+.slogan {
+    font-size: 50px;
+
+}
+
+
+.imageClass {
+    width:  350px;
+    padding-right: 100px;
+}
+}
+
 
 @media screen and (max-width: 1600px) {
    .columns {
