@@ -27,7 +27,7 @@
         left: 100%;
 			    
 }
-
+/** Old image
 imgfull  {
   -webkit-background-size: cover;
  -moz-background-size: cover;
@@ -42,17 +42,41 @@ top: 0;
 left: 0;
 z-index: -1;
 }
-
+**/
 .response_info_number {
     display: none;
 }
 
 
 
+@media screen and (max-width:  810px) {
+.slogan {
+ display:  none;
+
+}
+
+.imageClass {
+    display: none;
+}
+
+}
+
+
+
+@media screen and (max-width:  1590px) {
+.slogan {
+    font-size: 50px;
+
+}
+
+
+.imageClass {
+    width:  350px;
+    padding-right: 100px;
+}
+}
+
 @media screen and (max-width: 500px ) {
-
-
-
 
 .slogresponse {
 
@@ -154,20 +178,6 @@ border-radius: 5px;
   
  
 }
-
-@media screen and (min-width: 1349px) { /* Specific to this particular image */
- 
-    
-.slogresponse {
-
-    display: none;
-}
-
-    
-
-}
-
-
 @media screen and (max-width: 1204px) { /* Specific to this particular image */
  
     
@@ -352,21 +362,6 @@ flip-card {
 }
 }
 */
-
-  /** Fixing slogan image   **/
-
-@media screen and (max-width:  1080px) {
-.slogan {
-    font-size: 50px;
-
-}
-
-
-.imageClass {
-    width:  350px;
-    padding-right: 100px;
-}
-}
 
 
 @media screen and (max-width: 1600px) {
