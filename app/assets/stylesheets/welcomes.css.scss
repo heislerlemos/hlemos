@@ -54,7 +54,17 @@ z-index: -1;
 	.showbannertexto {
 	display: none;
     }
-@media screen and (max-width:  810px) {
+
+	@media screen and (max-width: 500px ) {
+	    showbannertexto_2 {
+		display: inline;
+	    }
+
+	     .showbannertexto {
+	display: none;
+    }
+}
+	@media screen and (max-width:  810px) {
   .showbannertexto {
 	display: inline;
     }
