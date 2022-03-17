@@ -49,9 +49,20 @@ z-index: -1;
 }
 
 
+        .bannertexto {
+	display: none;
+    }
 
 @media screen and (max-width:  810px) {
-.slogan {
+  .showbannertexto {
+	display: inline;
+    }
+   
+   .showbannertexto {
+	display: none;
+    }
+    
+    .slogan {
  display:  none;
 
 }
