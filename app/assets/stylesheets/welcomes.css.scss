@@ -22,10 +22,10 @@
 .image_back  {
     background-image: url("https://images.pexels.com/photos/2531353/pexels-photo-2531353.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
     background-repeat: no-repeat;
-    height: 30em;
-    background-position: 50%, 100% ;
+    height: 50em;
+    background-position: 50%, 0% ;
     left: 100%;
-   
+        
 			    
 }
 /** Old image
@@ -55,8 +55,13 @@ z-index: -1;
 	display: none;
     }
 
+	  .showbannertexto_2 {
+		display: none;
+	    }
+
+
 	@media screen and (max-width: 500px ) {
-	    showbannertexto_2 {
+	    .showbannertexto_2 {
 		display: inline;
 	    }
 
