@@ -19,13 +19,41 @@
 
 }
 
+#flip {
+ margin-left: auto;
+ margin-right: auto;
+ font-size: 20px;		  
+ 
+}
+
+#flip2 {
+
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;		  
+
+		      
+}
+
+#flip2:hover {
+    background-color: lightgrey;
+    width: 30px;
+}
+
+#flip:hover {
+    background-color: lightgrey;
+    width: 30px;
+}
+
+
+.flex { display : flex } 
 .image_back  {
     background-image: url("https://images.pexels.com/photos/2531353/pexels-photo-2531353.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
     background-repeat: no-repeat;
     height: 50em;
     background-position: 50%, 0% ;
     left: 100%;
-        
+    display: none;    
 			    
 }
 /** Old image
@@ -93,6 +121,13 @@ z-index: -1;
     display: none;
 }
 
+.flex {
+    display: none;
+}
+
+.image_back {
+    display: block;
+}
 }
 
 

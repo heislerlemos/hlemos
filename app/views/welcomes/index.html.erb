@@ -14,9 +14,30 @@
 <title>[Heisler] </title>
 
 </head>
-<div class="mobile_body">
-<body>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+      $(".image_back").slideDown("slow");
 
+  });
+
+      $("#flip2").click(function(){
+      $(".image_back").slideUp("slow");
+
+  });
+
+});
+</script>
+
+<div class="mobile_body">
+  <body>
+    <br>
+  <div align="center">
+    <div class="flex">
+<div id="flip"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+<div id="flip2"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+    </div>
+    </div>
   <div class="image_back">
 <div class="container">
   <br>
