@@ -203,7 +203,8 @@ GEM
     nokogumbo (2.0.5)
       nokogiri (~> 1.8, >= 1.8.4)
     orm_adapter (0.5.0)
-    pagy (4.3.0)
+    pagy (5.10.1)
+      activesupport
     paperclip (6.0.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
@@ -377,7 +378,7 @@ DEPENDENCIES
   link_with_icon
   listen (~> 3.2, >= 3.2.1)
   net-ping (~> 1.7, >= 1.7.8)
-  pagy
+  pagy (~> 5.10)
   paperclip (~> 6.0.0)
   pdfjs_viewer-rails
   pg (>= 0.18, < 2.0)
