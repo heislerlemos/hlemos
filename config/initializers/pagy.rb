@@ -1,3 +1,4 @@
 require 'pagy/extras/bulma'
-Pagy::VARS[:items] = 8
-
+Pagy::DEFAULT[:items] = 8
+  
+Pagy::DEFAULT.freeze
