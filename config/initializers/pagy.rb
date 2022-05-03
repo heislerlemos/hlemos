@@ -1,3 +1,3 @@
 require 'pagy/extras/bulma'
-#Pagy::VARS[:items] = 8
+Pagy::VARS[:items] = 8
 
