@@ -26,8 +26,9 @@ def index
     # Getting cname resolver
 
     rec = Recursor.new
+
     ret = rec.query(@hostname, "CNAME")
-    @cnm = ret.answer
+    @queryoutputcn = ret.answer
 
 
 
@@ -42,6 +43,7 @@ def index
     queryresolver = res.query(@hostname , @nsrecord )
 
 
+
    rescue   Dnsruby::NXDomain
       @nohost = "Can't find host | Certifique que o host encontra-se disponivel"
    
@@ -50,6 +52,7 @@ def index
     queryresolvermx = res.query(@hostname,   @mxrecord )
       @queryoutput =   queryresolver.answer
       @queryoutputmx = queryresolvermx.answer
+
     
     end
 

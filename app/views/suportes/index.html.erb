@@ -179,6 +179,7 @@ COMUNIDADE ANGOLANA DE INFORMATICA NS TOOL
 
 
 
+<% @queryoutputcn.each do |file| %>
 
 
   <div class="column">
@@ -192,13 +193,12 @@ CNAME
   </header>
   <div class="card-content">
     <div class="content">
-<%= @cnm %>
-
-    </div>
+   <%=   file.cname %>
+     </div>
     </div>
 
  </div>
-
+<% end %>
 
   <!-- end of column -->
  </div>
