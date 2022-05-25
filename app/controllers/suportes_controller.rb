@@ -22,9 +22,13 @@ def index
      
     begin
     resolver = Resolver.new(nameserver: @hostname)
+    
+    # Getting cname resolver
+
     rec = Recursor.new
     ret = rec.query(@hostname, "CNAME")
     @cnm = ret.answer
+
 
 
 
