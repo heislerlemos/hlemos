@@ -45,14 +45,14 @@ def index
 
    rescue   Dnsruby::NXDomain 
 
-        unless  @hostname.length < 15 
+        #unless  @hostname.length < 15 
 
-                @nohost = "CNAME founded | Registo CNAME encontrado"
-        else
+                #@nohost = "CNAME founded | Registo CNAME encontrado"
+        #else
 
         @nohost = "Can't find host | Certifique que o host encontra-se disponivel !"
 
-end
+#end
    
    else
     
