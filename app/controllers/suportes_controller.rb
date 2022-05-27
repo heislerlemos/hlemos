@@ -43,9 +43,16 @@ def index
     queryresolver = res.query(@hostname , @nsrecord )
 
 
+   rescue   Dnsruby::NXDomain 
 
-   rescue   Dnsruby::NXDomain
-      @nohost = "Can't find host | Certifique que o host encontra-se disponivel"
+        unless  @hostname.length < 15 
+
+                @nohost = "CNAME founded | Registo CNAME encontrado"
+        else
+
+        @nohost = "Can't find host | Certifique que o host encontra-se disponivel !"
+
+end
    
    else
     
@@ -55,7 +62,6 @@ def index
 
     
     end
-
     
   end
 
