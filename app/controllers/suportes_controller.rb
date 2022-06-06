@@ -1,4 +1,4 @@
-    class SuportesController < ApplicationController
+class SuportesController < ApplicationController
 
 require 'rubygems'
 require 'dnsruby'
