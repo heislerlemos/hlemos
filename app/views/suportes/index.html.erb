@@ -67,9 +67,24 @@ COMUNIDADE ANGOLANA DE INFORMATICA NS TOOL
 
 <br>
 
-<p  style="color: red; font-size: 35px; "><%= @nohost %></p>
-<br>
-<br>
+<!-- Creating a unless method to display the styled container from the instance variable @nohost -->
+
+
+<% unless !@nohost  %>
+<div class="container">
+<section class="hero is-link">
+  <div class="hero-body">
+    <p class="title">
+   <%=  @nohost %>
+    </p>
+
+  </div>
+</section>
+</div>
+<% else %>
+<% end %>
+
+
 <br>
 <div class="espaçamento">
 
