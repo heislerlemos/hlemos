@@ -44,6 +44,7 @@ def index
 
 
    rescue   Dnsruby::NXDomain 
+    # no name error must be checked to add at the rescue error
 
         unless  @hostname.length < 15 
 
