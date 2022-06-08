@@ -43,8 +43,9 @@ def index
     queryresolver = res.query(@hostname , @nsrecord )
 
 
-   rescue   Dnsruby::NXDomain 
-    # no name error must be checked to add at the rescue error
+   rescue  NoMethodError,  Dnsruby::NXDomain 
+    # no name error must be checked to add at the rescue error for the  NoMethodError (undefined method `answer' for nil:NilClass):
+
 
         unless  @hostname.length < 15 
 
