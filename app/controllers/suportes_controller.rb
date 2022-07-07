@@ -45,7 +45,7 @@ def index
 
 
 
-    rescue Dnsruby::NXDomain     #  testing rescue  NoMethodError,  Dnsruby::NXDomain 
+    rescue ActionView::Template::Error,  Dnsruby::NXDomain     #  testing rescue  NoMethodError,  Dnsruby::NXDomain 
     # no name error must be checked to add at the rescue error for the  NoMethodError (undefined method `answer' for nil:NilClass):
 
 
