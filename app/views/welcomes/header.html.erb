@@ -135,11 +135,9 @@ function myFunction() {
   <%= fa_icon "rss" %> Blog
 
   <% end %>
-<div class="dont_show">
   <%= link_to stories_top_path do  %>
 <%= fa_icon "hacker-news" %> Hacker News 
 <% end %>
-</div>
 
 <div class="dont_show">
   <%= link_to  shops_path  do  %>
@@ -160,12 +158,10 @@ function myFunction() {
 
 
 	    <% end %>
-	    <div class="dont_show">
 
             <%= link_to subscribers_show_path do %>
 	    <%= fa_icon "lock" %> Administrador
  	    <% end %>
-	    </div>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>

@@ -43,7 +43,9 @@ def index
     queryresolver = res.query(@hostname , @nsrecord )
 
 
-   rescue  NoMethodError,  Dnsruby::NXDomain 
+
+
+    rescue Dnsruby::NXDomain     #  testing rescue  NoMethodError,  Dnsruby::NXDomain 
     # no name error must be checked to add at the rescue error for the  NoMethodError (undefined method `answer' for nil:NilClass):
 
 
