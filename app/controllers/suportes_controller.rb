@@ -7,7 +7,7 @@ include Dnsruby
  
 def index
     # Default values
-  @hostname = "cai.co.ao"
+  @hostname = "cai.co.ao".downcase
   
   
   @output = []
