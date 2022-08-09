@@ -93,10 +93,6 @@ ActiveRecord::Schema.define(version: 2022_01_05_101828) do
     t.text "texto"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "avatar_file_name"
-    t.string "avatar_content_type"
-    t.integer "avatar_file_size"
-    t.datetime "avatar_updated_at"
     t.string "image_url"
   end
 
