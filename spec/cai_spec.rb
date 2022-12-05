@@ -4,13 +4,28 @@ require 'spec_helper'
 require 'capybara/rspec'
 require "selenium-webdriver"
 
-RSpec.describe 'Cai admin access tests', type: :system do
+RSpec.describe 'Testing all acess from cai page', type: :system do
+
+
+  describe 'accessing facebook cai account ' do 
+
+    it 'should be able to access the view page and drop the down banner to facebook link' do 
+
+       visit '/'     
+       find('#flip',  wait: 5).click    
+       find('.facebook_response','a').click 
+
+        expect(page).to have_current_path("https://www.facebook.com/cai.co.ao")
+      
+    end
+  end
+
+
 
 
 
   describe 'test to check if will show up the message ' do
     it ' it should appear sever name ip ' do
-      #visit blog_index_path
       visit '/blogs'
       visit '/suportes'
 
@@ -44,5 +59,6 @@ RSpec.describe 'Cai admin access tests', type: :system do
     end
     
   end
+
 
 end
