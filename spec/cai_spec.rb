@@ -1,4 +1,5 @@
 # coding: utf-8
+# required librarys 
 require 'rails_helper'
 require 'spec_helper'
 require 'capybara/rspec'
@@ -28,6 +29,8 @@ RSpec.describe 'Testing all acess from cai page', type: :system do
       fill_in 'hostname', with: 'facebook.com'
       click_button 'commit'
       # this adds the  new dns name 
+            page.execute_script('window.scrollTo(0, document.body.scrollHeight)')
+
       fill_in 'hostname', with: 'google '
       click_button 'commit'         
        #expect(find('.hero-body .title')).to have_content("Can't find host  Certifique que o host encontra-se disponivel !")
