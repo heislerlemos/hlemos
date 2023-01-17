@@ -3,28 +3,101 @@
 
 
   <div class="container">
+    <br>
+    <br>
+
     <section class="hero is-light">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-      Criação de websites
+        Coronavirus Contagem   🇦🇴
 
       </h1>
       <br>
-      <h2 class="subtitle">
-       
-	  Ao investir na criação de um site para empresas, você garante que ele tenha a cara do seu negócio a longo prazo. Todas essas vantagens significam que a criação de um site otimizado para sua empresa assegura autoridade no mundo digital.<hr>
-	  Com um layout totalmente inovador e moderno, fazemos uso das particularidades da sua empresa para oferecer um site que gere conversão sendo modelado de acordo com o comportamento do seu consumidor.<hr>
+      <h3 class="subtitle">
+        A doença por coronavírus (COVID-19) é uma doença infeciosa causada pelo vírus SARS-CoV-2.
+A maioria das pessoas que contraem a COVID-19 tem sintomas ligeiros a moderados e recupera sem necessitar de tratamento especial. No entanto, algumas ficam gravemente doentes e necessitam de assistência médica.
+      <br>  
+      <br>
+      <div align="center">
+        <%= image_tag("https://symbols.getvecta.com/stencil_248/4_coronavirus-5.a3153faa12.svg" , width: "150") %>
+      </div>
+      </h3> 
 
-	  A loja virtual é a solução ideal para você começar um negócio de lucratividade na internet.<hr>
 
-Priorizando aspetos funcionais, você pode fazer a gestão da sua loja de forma simplificada , sem precisar de nenhum profissional para administrar as partes técnicas, como adicionar ou retirar produtos, descrições , troca de banners, mudança de preço e etc.<hr>
-
-A loja virtual é a solução ideal para você começar um negócio de lucratividade na internet.<hr>
-	
-      </h2>
+   
     </div>
   </div>
 </section>
+
+<br>
+<br>
+
+<h1>Relatorio diario dos casos de coronavirus em Angola</h1>
+<br>
+<br>
+
+<div class="columns  is-multiline is-mobile">
+  <div class="column">
+    <article class="message is-danger">
+  <div class="message-header">
+    <p>  Mortes</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+  <%= JSON.parse(@responseapi)['data']['deaths'] %>
+
+  </div>
+  </article>
+  </div>
+
+
+  <div class="column">
+     
+     <article class="message is-info">
+  <div class="message-header">
+    <p>Localização</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+  <%= JSON.parse(@responseapi)['data']['location'] %>
+
+  </div>
+</article>
+  </div>
+
+
+
+  <div class="column">
+   <article class="message is-warning">
+  <div class="message-header">
+    <p> Numeros de casos confirmados </p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+  <%= JSON.parse(@responseapi)['data']['confirmed'] %>
+
+  </div>
+</article>
+
+  </div>
+
+
+  <div class="column">
+     <article class="message is-info">
+  <div class="message-header">
+    <p> Ultima verficação </p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+  <%= JSON.parse(@responseapi)['data']['lastChecked'] %>
+
+  </div>
+</article>
+    
+  </div>
+
+
+</div>
 
 </div>
