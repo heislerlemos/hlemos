@@ -15,6 +15,8 @@ gem 'net-ping', '~> 1.7', '>= 1.7.8'
   gem 'pagy', '~> 5.10' # omit patch digit
 gem 'httparty', '~> 0.18.1'
 gem 'puma', '~> 3.11'
+gem 'psych', '< 4'
+
 #gem "mini_magick"
 gem 'will_paginate', '~> 3.1.0'
 # Use SCSS for stylesheets

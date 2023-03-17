@@ -142,6 +142,7 @@ GEM
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.1)
+    jar-dependencies (0.4.1)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -213,6 +214,9 @@ GEM
     pg (1.4.5)
     pg (1.4.5-x64-mingw32)
     pg (1.4.5-x86-mingw32)
+    psych (3.3.4)
+    psych (3.3.4-java)
+      jar-dependencies (>= 0.1.7)
     public_suffix (5.0.0)
     puma (3.12.6)
     puma (3.12.6-java)
@@ -380,7 +384,6 @@ GEM
 
 PLATFORMS
   java
-  ruby
   x64-mingw32
   x86-mingw32
   x86-mswin32
@@ -410,6 +413,7 @@ DEPENDENCIES
   paperclip (~> 6.0.0)
   pdfjs_viewer-rails
   pg (>= 0.18, < 2.0)
+  psych (< 4)
   puma (~> 3.11)
   rails (~> 6.0.3.2)
   rspec-rails
