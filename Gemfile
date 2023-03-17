@@ -3,7 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # heroku upgrade to heroku-22 
 #ruby '2.7.0'
-ruby '3.0.0'
+#ruby '3.0.0'
+ruby '3.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 #gem 'rails', '~> 5.2.3'
 gem 'rails', '~> 6.0.3.2'
