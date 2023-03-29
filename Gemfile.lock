@@ -192,6 +192,7 @@ GEM
     net-http-persistent (4.0.1)
       connection_pool (~> 2.2)
     net-ping (1.7.8)
+    net-ssh (7.0.0.beta1)
     nio4r (2.5.8)
     nio4r (2.5.8-java)
     nokogiri (1.13.9)
@@ -409,6 +410,7 @@ DEPENDENCIES
   link_with_icon
   listen (~> 3.2, >= 3.2.1)
   net-ping (~> 1.7, >= 1.7.8)
+  net-ssh (= 7.0.0.beta1)
   pagy (~> 5.10)
   paperclip (~> 6.0.0)
   pdfjs_viewer-rails

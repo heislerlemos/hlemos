@@ -11,6 +11,7 @@ gem 'rails', '~> 6.0.3.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'net-ping', '~> 1.7', '>= 1.7.8'
+gem 'net-ssh', '7.0.0.beta1'
 
   gem 'pagy', '~> 5.10' # omit patch digit
 gem 'httparty', '~> 0.18.1'
