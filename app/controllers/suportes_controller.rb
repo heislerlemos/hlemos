@@ -3,8 +3,8 @@ class SuportesController < ApplicationController
 require 'rubygems'
 require 'dnsruby'
 include Dnsruby
+require "openssl"
 
- 
 def index
     # Default values
   @hostname = "cai.co.ao".downcase
@@ -27,8 +27,8 @@ def index
 
     rec = Recursor.new
 
-    ret = rec.query(@hostname, "CNAME")
-    @queryoutputcn = ret.answer
+    #ret = rec.query(@hostname, "CNAME")
+    #@queryoutputcn = ret.answer
 
 
 

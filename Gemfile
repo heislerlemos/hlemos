@@ -12,12 +12,14 @@ gem 'rails', '~> 6.0.3.2'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'net-ping', '~> 1.7', '>= 1.7.8'
 gem 'net-ssh', '7.0.0.beta1'
-
+# Gemfile
+# or specify git master
+gem 'openssl', git: 'https://github.com/ruby/openssl'
+# or specify git master
   gem 'pagy', '~> 5.10' # omit patch digit
 gem 'httparty', '~> 0.18.1'
 gem 'puma', '~> 3.11'
 gem 'psych', '< 4'
-
 #gem "mini_magick"
 gem 'will_paginate', '~> 3.1.0'
 # Use SCSS for stylesheets
