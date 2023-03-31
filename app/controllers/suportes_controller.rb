@@ -25,10 +25,10 @@ def index
     
     # Getting cname resolver
 
-    rec = Recursor.new
+    rec = Resolver.new
 
-    #ret = rec.query(@hostname, "CNAME")
-    #@queryoutputcn = ret.answer
+    ret = rec.query(@hostname, "CNAME")
+    @queryoutputcn = ret.answer
 
 
 
