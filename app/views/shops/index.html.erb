@@ -29,7 +29,7 @@
 <% end %>
 
 
-<div class="columns is-multiline">
+<div class="columns is-multiline is-centered is-mobile">
 <!--- Start of the collumn  -->
             <% @products.each do |product| %>
 
@@ -64,11 +64,11 @@
     </div>
 
     <div class="content">
-     Informção do artigo <a></a>.
+ Informção do artigo <a></a>
      <hr>
       <a href="#"><%= link_to 'Show', product, class: "button is-info" %></a> <a href="#"><%= link_to 'Edit', edit_product_path(product), class: "button is-warning" %></a><a ><%= link_to 'Apagar', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-danger" %></a>
       <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+   <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
     </div>
   </div>
 
