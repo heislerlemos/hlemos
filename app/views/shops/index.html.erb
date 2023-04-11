@@ -1,22 +1,6 @@
-<style>
-
-
-.imagem {
-    width: 150px;
-    height: 120px;
-    border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
- 
-
-
-}
-
-
-</style>
-
 
 <div class="container">
+<!--- start of container --->
 
 <section class="hero is-link">
   <div class="hero-body">
@@ -32,65 +16,72 @@
       <br>
       <br>
       <%= link_to "Criar Produtos ",  products_path , class: "button is-warning" %>
+      <%= link_to 'Novo Item', new_product_path , class: "button is-info" %>
+           <div id="card">
+<%= render 'cards/card' %>
+ </div>
+
     </p>
   </div>
 </section>
-
+<% 5.times do %>
 <br>
-<br>
+<% end %>
 
-<div align="center">
-<div class="table-container">
-<table class="table">
-  <thead>
-    <tr>
-      <th>Serviço</th>
-      <th>Preço</th>
-      
-      
-      <th colspan="1"></th>
-      <th>Quantidade </th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td class="subtitle "><%= product.titulo %></td>
-        <td class="subtitle "><%= product.preco %> Kz </td>
-	<td>
-	<div class="imagem">
-      <%= image_tag product.imagelink %>
-	</div>
+<div class="columns is-multiline">
+<!--- Start of the collumn  -->
+            <% @products.each do |product| %>
 
-	</td>
-	<td>
-	  <%= form_for @order_item, remote: true  do |f| %>
-	  <%= f.hidden_field :product_id, :value => product.id  %>
+  <div class="column is-one-third">
+<!--- Start of the card--->
 
-	  <%= f.number_field :quantity, :value => 1 , :min => 1 , class: "input" , style: "width: 80px;" %>
+    <div class="card">
 
-	  <%= f.submit "Adicionar no carrinho" , class: 'button ' %>
+  <div class="card-image">
+    <figure class="image is-4by3">
+            <%= image_tag product.imagelink %>
 
-	  <% end %>
-	</td>
-        
-      </tr>
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+          <%= form_for @order_item, remote: true  do |f| %>
+    <%= f.hidden_field :product_id, :value => product.id  %>
+
+    <%= f.number_field :quantity, :value => 1 , :min => 1 , class: "input is-info  " , style: "width: 50px;" %>
+
+    <%= f.submit "+" , class: 'button is-success' %>
+
     <% end %>
-  </tbody>
-</table>
-</div>
+        <br>
+      </div>
+      <div class="media-content"> 
+        <p class="title is-4"><%= product.titulo %></p>
+        <p class="subtitle is-6"><%= product.preco %> KZ</p>
+      </div>
+    </div>
+
+    <div class="content">
+     Informção do artigo <a></a>.
+     <hr>
+      <a href="#"><%= link_to 'Show', product, class: "button is-info" %></a> <a href="#"><%= link_to 'Edit', edit_product_path(product), class: "button is-warning" %></a><a ><%= link_to 'Apagar', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-danger" %></a>
+      <br>
+      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    </div>
+  </div>
+
 
 </div>
+<!--- Start of the card  -->
 
-<br>
+  </div>
+<!--- Start of the collum -->
+<% end %>
 
-<section class="hero is-link is-small">
-  <div class="hero-body">
-     <div id="card">
-<%= render 'cards/card' %>
- </div>
 </div>
-
-</section>
+<!--- Start of the collumns multiline  -->
+  
+<!-- end of container -->
 </div>
