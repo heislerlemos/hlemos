@@ -12,6 +12,7 @@ gem 'rails', '~> 6.0.3.2'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'net-ping', '~> 1.7', '>= 1.7.8'
 gem 'net-ssh', '7.0.0.beta1'
+gem 'ipaddress', '~> 0.8.3'
 # Gemfile
 # or specify git master
 gem 'openssl', git: 'https://github.com/ruby/openssl'

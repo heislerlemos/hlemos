@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get 'binarys/index'
 resources :todo_lists do
    resources :todo_items do
     member do
@@ -27,7 +28,10 @@ get 'cards/show'
             get 'suportes/index'
 
                 get "suportes", to: "suportes#index"
-post "suportes", to: "suportes#index"
+		post "suportes", to: "suportes#index"
+
+		get"binarys", to: "binarys#index"
+		post"binarys", to: "binarys#index"
         get 'redes/index'
         get 'informations/index'
         get 'subscribers/show'

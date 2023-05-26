@@ -1,0 +1,56 @@
+
+<div class="container">
+
+<section class="hero is-link">
+
+  <div class="hero-body">
+         <p class="title">	 
+   Enter the ip for conversion
+	 </p>
+   
+<%= form_tag  binarys_path do |form| %>
+  <br>
+  <%= text_field_tag "hostname", @hostname, class: "input is-link" , style: "width: 30%;", required: 'required', placeholder: "Must be an ipv4 ip address" %>
+  <%= submit_tag "Search" , class: "button  is-warning" %>
+<% end %>
+	  
+ </div>
+
+</section>
+
+<br>
+
+<div class="columns is-multiline">
+	<div class="column">
+		<div class="card">
+ 			 <div class="card-content">
+    				<div class="content">
+					<p> The value in bits <hr> 
+					<%=  @bits %> </p>
+    				</div>
+ 			 </div>
+		</div>
+	</div>
+		<div class="column">
+		<div class="card">
+ 			 <div class="card-content">
+    				<div class="content">
+					<p> The value in Mask <hr>
+					<%=  @mask %> </p>
+    				</div>
+ 			 </div>
+		</div>
+  	</div>
+	<div class="column">
+		<div class="card">
+ 			 <div class="card-content">
+    				<div class="content">
+					<p> The value in ipv6 <hr>
+					<%=  @ipv6 %> </p>
+    				</div>
+ 			 </div>
+		</div>
+  	</div>
+
+  
+</div>

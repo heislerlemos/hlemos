@@ -128,8 +128,8 @@ function myFunction() {
        <%= link_to  subscribers_path  do  %>
        <%= fa_icon "ticket" %> Portal do Cliente
        <% end %>
-       
-  <% link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank"%>
+     
+       <% link_to "Tabela de preços", pdfjs.full_path(file: "/Preçario.pdf"),  target: "_blank"%>
   <%= link_to  blogs_path  do  %>
 
   <%= fa_icon "rss" %> Blog
@@ -143,9 +143,15 @@ function myFunction() {
   <%= link_to  shops_path  do  %>
   <%= fa_icon "shopping-bag "  %> Loja 
   <% end %>
- </div>	    <% link_to "Sobre Nos",  informations_index_path  %>
+</div>	    <% link_to "Sobre Nos",  informations_index_path  %>
+      		  
+       <%= link_to  binarys_index_path  do  %>
+       <%= fa_icon "globe" %> Ip Check 
+       <% end %>
+
+
 	    <%= link_to  suportes_path   do %>
-	    <%= fa_icon "globe" %> Ferramenta NS
+	    <%= fa_icon "globe" %> DNS Check
 	    <% end %>
 
 	    <%= link_to pdfjs.full_path(file: "/proposta.pdf"),  target: "_blank" do %>
