@@ -1,7 +1,7 @@
 
 <div class="container">
 
-<section class="hero is-link">
+<section class="hero is-light">
 
   <div class="hero-body">
          <p class="title">	 
@@ -11,7 +11,7 @@
 <%= form_tag  binarys_path do |form| %>
   <br>
   <%= text_field_tag "hostname", @hostname, class: "input is-link" , style: "width: 30%;", required: 'required', placeholder: "Must be an ipv4 ip address" %>
-  <%= submit_tag "Search" , class: "button  is-warning" %>
+  <%= submit_tag "Search" , class: "button  is-info" %>
 <% end %>
 	  
  </div>

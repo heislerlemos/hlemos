@@ -5,7 +5,11 @@ class BinarysController < ApplicationController
    	if submitted_hostname 
     	@hostname = submitted_hostname
    	ip = IPAddress::IPv4.new @hostname
-   	@bits = ip.bits
+   	bits = ip.bits
+   	[8 , 19 , 30 ].each do 
+		|i| bits.insert i, ' . ' 
+	end
+	@bits = bits
    	@mask = ip.netmask
    	@ipv6 = ip.to_ipv6 
    	end
