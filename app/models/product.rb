@@ -5,6 +5,6 @@ class Product < ApplicationRecord
 
 
 
-  
+
 
 end

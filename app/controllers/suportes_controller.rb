@@ -1,80 +1,80 @@
 class SuportesController < ApplicationController
 
-require 'rubygems'
-require 'dnsruby'
-include Dnsruby
-require "openssl"
+  require 'rubygems'
+  require 'dnsruby'
+  include Dnsruby
+  require "openssl"
 
-def index
+  def index
     # Default values
-  @hostname = "cai.co.ao".downcase
-  
-  
-  @output = []
-  @queryoutput = []
-  @queryoutputmx = []
-  @queryoutputcn = []
-  submitted_hostname = params[:hostname]
+    @hostname = "cai.co.ao".downcase
 
 
-  if submitted_hostname
-    @hostname = submitted_hostname
-     
-    begin
-    resolver = Resolver.new(nameserver: @hostname)
-    
-    # Getting cname resolver
-
-    rec = Resolver.new
-
-    ret = rec.query(@hostname, "CNAME")
-    @queryoutputcn = ret.answer
+    @output = []
+    @queryoutput = []
+    @queryoutputmx = []
+    @queryoutputcn = []
+    submitted_hostname = params[:hostname]
 
 
+    if submitted_hostname
+      @hostname = submitted_hostname
 
+      begin
+        resolver = Resolver.new(nameserver: @hostname)
 
-    @output = resolver.single_resolvers
-       # working on query
-    @mxrecord = "MX"
-    @nsrecord = "NS"
-  
-    res = Resolver.new
-    
-    queryresolver = res.query(@hostname , @nsrecord )
+        # Getting cname resolver
+
+        rec = Resolver.new
+
+        ret = rec.query(@hostname, "CNAME")
+        @queryoutputcn = ret.answer
 
 
 
 
-  rescue NoMethodError,  Dnsruby::NXDomain #  ActionView::Template::Error 
-    # no name error must be checked to add at the rescue error for the  NoMethodError (undefined method `answer' for nil:NilClass):
+        @output = resolver.single_resolvers
+        # working on query
+        @mxrecord = "MX"
+        @nsrecord = "NS"
+
+        res = Resolver.new
+
+        queryresolver = res.query(@hostname , @nsrecord )
+
+
+
+
+      rescue NoMethodError,  Dnsruby::NXDomain #  ActionView::Template::Error 
+        # no name error must be checked to add at the rescue error for the  NoMethodError (undefined method `answer' for nil:NilClass):
 
 
         unless  @hostname.length < 15 
 
-        @nohost = "CNAME founded | Registo CNAME encontrado"
+          @nohost = "CNAME founded | Registo CNAME encontrado"
         else
 
-        @nohost = "Can't find host | Certifique que o host encontra-se disponivel !"
+          @nohost = "Can't find host | Certifique que o host encontra-se disponivel !"
 
-end
-   
-   else
-    
-    queryresolvermx = res.query(@hostname,   @mxrecord )
-      @queryoutput =   queryresolver.answer
-      @queryoutputmx = queryresolvermx.answer
+        end
 
-    
+      else
+
+        queryresolvermx = res.query(@hostname,   @mxrecord )
+        @queryoutput =   queryresolver.answer
+        @queryoutputmx = queryresolvermx.answer
+
+
+      end
+
     end
-    
+
+
+
+
+
+
   end
-
-
-
- 
-  
-   
- end
 
 
 end

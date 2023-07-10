@@ -1,64 +1,64 @@
 class BlogsController < ApplicationController
-	  http_basic_authenticate_with name: "cai", password: "cai2021luanda", except: [:index, :show]
+  http_basic_authenticate_with name: "cai", password: "cai2021luanda", except: [:index, :show]
 
-	def index
-          @pagy,  @blogs = pagy(Blog.all.order("created_at DESC"))
+  def index
+    @pagy,  @blogs = pagy(Blog.all.order("created_at DESC"))
 
-              if params[:search]
+    if params[:search]
 
-          @blogs = Blog.search(params[:search]).order("created_at DESC")
-              end
-  
-	end
+      @blogs = Blog.search(params[:search]).order("created_at DESC")
+    end
 
-
-	def show
-		@blog = Blog.find(params[:id])
-	end
+  end
 
 
-	def edit
-		@blog = Blog.find(params[:id])
-	end
+  def show
+    @blog = Blog.find(params[:id])
+  end
 
-	def new
-		  @blog = Blog.new
-	end
+
+  def edit
+    @blog = Blog.find(params[:id])
+  end
+
+  def new
+    @blog = Blog.new
+  end
 
 
   def create
-  	@blog = Blog.new(blog_params)
-  	if @blog.save
-  	redirect_to @blog
-  else
-  	render 'new'
-  end
-end
-
-def update
-	  @blog = Blog.find(params[:id])
-
-  if @blog.update(blog_params)
-    redirect_to @blog
-  else
-    render 'edit'
+    @blog = Blog.new(blog_params)
+    if @blog.save
+      redirect_to @blog
+    else
+      render 'new'
+    end
   end
 
-	end
+  def update
+    @blog = Blog.find(params[:id])
 
-def destroy
-  @blog = Blog.find(params[:id])
-  @blog.destroy
+    if @blog.update(blog_params)
+      redirect_to @blog
+    else
+      render 'edit'
+    end
 
-  redirect_to blogs_path
-end
+  end
+
+  def destroy
+    @blog = Blog.find(params[:id])
+    @blog.destroy
+
+    redirect_to blogs_path
+  end
 
 
 
-private
+  private
 
-def blog_params
-	params.require(:blog).permit(:titulo, :texto, :avatar, :image_url)
+  def blog_params
+    params.require(:blog).permit(:titulo, :texto, :avatar, :image_url)
 
-end
+  end
 end
