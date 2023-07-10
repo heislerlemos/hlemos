@@ -1,6 +1,6 @@
 # coding: utf-8
 class SubscribersController < ApplicationController
-  http_basic_authenticate_with name: "cai", password: "cai2021luanda", except: [:index, :create]
+ # http_basic_authenticate_with name: "", password: "", except: [:index, :create]
 
   def index
     @subscriber =  Subscriber.new
