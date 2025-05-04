@@ -17,7 +17,7 @@ gem 'ipaddress', '~> 0.8.3'
 # or specify git master
 gem 'openssl', git: 'https://github.com/ruby/openssl'
 # or specify git master
-  gem 'pagy', '~> 5.10' # omit patch digit
+gem 'pagy', '~> 5.10' # omit patch digit
 gem 'httparty', '~> 0.18.1'
 gem 'puma', '~> 3.11'
 gem 'psych', '< 4'
@@ -37,8 +37,7 @@ gem "paperclip", "~> 6.0.0"
 gem 'pdfjs_viewer-rails'
 gem 'jquery-rails', '~> 4.4'
 #gem 'yarn', '~> 0.1.1'
- gem 'unicorn'
-
+gem 'unicorn'
 #gem 'covid19-rb', require: 'covid19'
 #gem 'json', '~> 1.8', '>= 1.8.3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -59,7 +58,7 @@ gem 'devise'
 gem 'hirb', '~> 0.7.3'
 # Use ActiveModel has_secure_password
 
-  gem 'covid19-rb', require: 'covid19', git: 'https://github.com/viccarrasco/covid19-rb'
+gem 'covid19-rb', require: 'covid19', git: 'https://github.com/viccarrasco/covid19-rb'
 
 # gem 'bcrypt', '~> 3.1.7'
 gem 'byebug', '~> 11.1', '>= 11.1.3'
@@ -78,13 +77,13 @@ group :development, :test do
   #gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'webdrivers'
-gem 'chromedriver-helper', '~> 1.0'
+  gem 'chromedriver-helper', '~> 1.0'
   gem 'capybara'
 
 end
 
 group :development do
-#    gem 'rspec-rails'
+  #    gem 'rspec-rails'
 
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -96,13 +95,13 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-#  gem 'capybara', '>= 2.15'
-# gem 'webdrivers'
-gem 'selenium-webdriver'
-#  gem 'selenium-webdriver'
+  #  gem 'capybara', '>= 2.15'
+  # gem 'webdrivers'
+  gem 'selenium-webdriver'
+  #  gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-#  gem 'chromedriver-helper'
-#    gem 'rspec-rails'
+  #  gem 'chromedriver-helper'
+  #    gem 'rspec-rails'
 
 end
 
