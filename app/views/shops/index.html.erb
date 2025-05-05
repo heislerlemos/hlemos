@@ -31,7 +31,7 @@
   <% end %>
 
 
-  <div class="columns">
+  <div class="columns is-multiline">
     <!--- Start of the collumn  -->
     <% @products.each do |product| %>
       <div class="column is-one-third">
@@ -47,10 +47,6 @@
 
           <div class="card-content">
             <div class="media">
-
-              <div class="media-left">
-                <br>
-              </div>
 
               <div class="media-content"> 
                 <%= form_for @order_item, remote: true  do |f| %>
@@ -79,14 +75,9 @@
 
 
       </div>
-      <!--- Start of the card  -->
-
+    <% end %>
   </div>
-  <!--- Start of the collum -->
-<% end %>
 </div>
 
-<!--- Start of the collumns multiline  -->
 
-<!-- end of container -->
 </div>
