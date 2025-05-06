@@ -1,5 +1,5 @@
 class OrderItemsController < ApplicationController
-
+#  protect_from_forgery with: :null_session
   def create
     @order = current_order
     @order_item  = @order.order_items.new(order_params)

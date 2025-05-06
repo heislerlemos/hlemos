@@ -132,7 +132,6 @@ GEM
     excon (0.99.0)
     execjs (2.8.1)
     ffi (1.15.5)
-    fiddle (1.1.0)
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
     globalid (1.1.0)
@@ -414,7 +413,6 @@ DEPENDENCIES
   devise
   dnsruby (~> 1.61, >= 1.61.5)
   excon
-  fiddle (= 1.1.0)
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
   hirb (~> 0.7.3)
   httparty (~> 0.18.1)
