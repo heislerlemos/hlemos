@@ -146,6 +146,7 @@ GEM
       concurrent-ruby (~> 1.0)
     io-like (0.3.1)
     ipaddress (0.8.3)
+    ipcalc (1.0.0)
     jar-dependencies (0.4.1)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
@@ -417,6 +418,7 @@ DEPENDENCIES
   hirb (~> 0.7.3)
   httparty (~> 0.18.1)
   ipaddress (~> 0.8.3)
+  ipcalc (~> 1.0)
   jbuilder (~> 2.5)
   jquery-rails (~> 4.4)
   link_with_icon

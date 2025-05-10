@@ -156,13 +156,13 @@
     <%= fa_icon "globe" %> DNS Check
   <% end %>
 
-  <%= link_to pdfjs.full_path(file: "/proposta.pdf"),  target: "_blank" do %>
+  <% link_to pdfjs.full_path(file: "/proposta.pdf"),  target: "_blank" do %>
 
-    <%= fa_icon "book" %> Documentação
+    <% fa_icon "book" %> Documentação
   <% end %>
 
-  <%= link_to  todo_lists_path do  %>
-    <%= fa_icon "calendar" %> Objectivos
+  <% link_to  todo_lists_path do  %>
+    <% fa_icon "calendar" %> Objectivos
 
 
   <% end %>

@@ -15,6 +15,7 @@ gem 'net-ssh', '7.0.0.beta1'
 gem 'ipaddress', '~> 0.8.3'
 # Gemfile
 # or specify git master
+gem 'ipcalc', '~> 1.0'
 gem 'openssl', git: 'https://github.com/ruby/openssl'
 # or specify git master
 gem 'pagy', '~> 5.10' # omit patch digit
