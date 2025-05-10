@@ -1,80 +1,71 @@
+<%= stylesheet_link_tag 'binarys', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 
 <div class="container">
 
-<section class="hero is-light">
+  <section class="hero is-light  box-shadow: 10px 10px;">
 
-  <div class="hero-body">
-         <p class="title">	 
-   Enter the ip for conversion
-	 </p>
-   
-<%= form_tag  binarys_path do |form| %>
+    <div class="hero-body">
+      <p class="title">	 
+      Enter the ip for conversion
+      </p>
+
+      <%= form_tag  binarys_path do |form| %>
+        <br>
+        <%= text_field_tag "hostname", @hostname, class: "input is-link" , style: "width: 30%;", required: 'required', placeholder: "Must be an ipv4 ip address" %>
+        <%= submit_tag "Search" , class: "button  is-info" %>
+      <% end %>
+
+    </div>
+
+  </section>
+
   <br>
-  <%= text_field_tag "hostname", @hostname, class: "input is-link" , style: "width: 30%;", required: 'required', placeholder: "Must be an ipv4 ip address" %>
-  <%= submit_tag "Search" , class: "button  is-info" %>
-<% end %>
-	  
- </div>
 
-</section>
+  <div class="columns is-multiline">
+    <div class="column is-four-fifths ">
+      <div class="card" >
+        <header class="card-header">
+          <p class="card-header-title"><p >The value in bits <hr> </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
 
-<br>
+            <div style="font-size: 20px;   font-weight: bold;">
+              <%=  @bits  %>
+            </div>
+            </p>
+          </div>
 
-<div class="columns is-multiline">
-	<div class="column is-two-fifths">
-		<div class="card">
- 			 <div class="card-content">
-    				<div class="content">
-					<p >The value in bits <hr> 
-                                        <div style="font-size: 20px;   font-weight: bold;">
-                                          <%=  @bits  %>
-                                        </div>
-                                        </p>
-    				</div>
- 			 </div>
-		</div>
-	</div>
-		<div class="column">
-		<div class="card">
- 			 <div class="card-content">
-    				<div class="content">
-                                  <p> The value in Mask <hr>
+        </div>
+      </div>
+    </div>
+    <div class="column is-two-thirds">
+      <div class="card ">
+        <div class="card-content">
+          <div class="content">
+            <p> The value in Mask <hr>
 
-                                        <div style="font-size: 20px;   font-weight: bold;">
-                                          <%=  @mask %>
-                                        </div>
-                                    </p>
-    				</div>
- 			 </div>
-		</div>
-  	</div>
-	<div class="column is-mobile">
-		<div class="card">
- 			 <div class="card-content">
-    				<div class="content">
-                                  <p> The value in ipv6 <hr>
+            <div style="font-size: 20px;   font-weight: bold;">
+              <%=  @mask %>
+            </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column is-two-thirds">
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <p> The value in ipv6 <hr>
 
-                                        <div style="font-size: 20px;   font-weight: bold;">
-					<%=  @ipv6 %> </p>
-                                        </div>
-                                        </div>
- 			 </div>
-		</div>
-  	</div>
+            <div style="font-size: 20px;   font-weight: bold;">
+              <%=  @ipv6 %> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  	<div class="column">
-		<div class="card">
- 			 <div class="card-content">
-    				<div class="content">
-                                  <p> Subnet Converter <hr>
-
-                                        <div style="font-size: 20px;   font-weight: bold;">
-					<%=   @ipsub   %> </p>
-                                        </div>
-                                        </div>
- 			 </div>
-		</div>
-  	</div>
-
-
-</div>
+  </div>

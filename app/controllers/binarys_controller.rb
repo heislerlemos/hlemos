@@ -12,7 +12,7 @@ class BinarysController < ApplicationController
         |i| bits.insert i, ' . ' 
       end
 
-      ipsubnet   = Ip.new @hostname
+     # ipsubnet   = Ip.new @hostname
       stored = [] 
       @bits = bits
       @mask = ip.netmask
@@ -20,10 +20,10 @@ class BinarysController < ApplicationController
 
 
 
-      32.downto(1) do |i|
-        print " " + ipsubnet.cidr(i)
-        stored.append(ipsubnet.cidr(i))
-      end
+      #32.downto(1) do |i|
+       # print " " + ipsubnet.cidr(i)
+       # stored.append(ipsubnet.cidr(i))
+     # end
 
       @ipsub =  stored 
 

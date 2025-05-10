@@ -10,7 +10,5 @@ Rails.application.config.assets.precompile += %w( stories.css )
 Rails.application.config.assets.precompile += %w( blogs.css )
 Rails.application.config.assets.precompile += %w( virus.css )
 Rails.application.config.assets.precompile += %w( subscribers.css )
-
-
-
+Rails.application.config.assets.precompile += %w( binarys.css )
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
