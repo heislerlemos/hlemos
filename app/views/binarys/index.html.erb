@@ -1,37 +1,42 @@
 <%= stylesheet_link_tag 'binarys', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-
 <div class="container">
 
-  <section class="hero is-light  box-shadow: 10px 10px;">
+  <section class="hero box-shadow: 10px 10px;" style="border-style:inset; border-radius:15px; ">
+    <center>
+      <div class="hero-body">
+        <p class="title">	 
+        Insirá o ip para conversão exemplo 192.168.30.2/24 
+        </p>
 
-    <div class="hero-body">
-      <p class="title">	 
-      Enter the ip for conversion
-      </p>
+        <%= form_tag  binarys_path do |form| %>
+          <br>
+          <%= text_field_tag "hostname", @hostname, class: "input is-link" , style: "width: 30%;", required: 'required', placeholder: "Must be an ipv4 ip address" %>
+          <%= submit_tag "Procurar" , class: "button  is-warning" %>
+        <% end %>
 
-      <%= form_tag  binarys_path do |form| %>
-        <br>
-        <%= text_field_tag "hostname", @hostname, class: "input is-link" , style: "width: 30%;", required: 'required', placeholder: "Must be an ipv4 ip address" %>
-        <%= submit_tag "Search" , class: "button  is-info" %>
-      <% end %>
-
-    </div>
-
+      </div>
+    </center>
   </section>
 
   <br>
 
-  <div class="columns is-multiline">
+  <div class="columns is-multiline is-centered">
     <div class="column is-four-fifths ">
       <div class="card" >
+
         <header class="card-header">
-          <p class="card-header-title"><p >The value in bits <hr> </p>
+          <p class="card-header-title is-centered">Conversão binaria </p>
+          <a class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i><%= fa_icon "angle-down"%></i>
+            </span>
+          </a>
         </header>
         <div class="card-content">
           <div class="content">
 
-            <div style="font-size: 20px;   font-weight: bold;">
+            <div style="font-size:20px;font-weight:bold;text-align:center">
               <%=  @bits  %>
             </div>
             </p>
@@ -40,28 +45,53 @@
         </div>
       </div>
     </div>
-    <div class="column is-two-thirds">
+
+
+    <div class="column is-half">
       <div class="card ">
+        <header class="card-header">
+          <p class="card-header-title is-centered">Conversão da máscara de subrede <p>
+          <a class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i><%= fa_icon "angle-down"%></i>
+            </span>
+          </a>
+        </header>
+
         <div class="card-content">
           <div class="content">
-            <p> The value in Mask <hr>
 
-            <div style="font-size: 20px;   font-weight: bold;">
+            <div style="font-size:20px;font-weight:bold;text-align:center">
               <%=  @mask %>
             </div>
-            </p>
+          </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="column is-two-thirds">
+
+
+    <div class="column is-half">
       <div class="card">
+        <header class="card-header">
+          <p class="card-header-title is-centered">Conversão para ipv6 </p>
+          <a class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i><%= fa_icon "angle-down"%></i>
+            </span>
+          </a>
+        </header>
+
+
+
+
+
         <div class="card-content">
           <div class="content">
-            <p> The value in ipv6 <hr>
+            <div style="font-size:20px;font-weight:bold;text-align:center">
 
-            <div style="font-size: 20px;   font-weight: bold;">
-              <%=  @ipv6 %> </p>
+              <%=  @ipv6  %>
+
             </div>
           </div>
         </div>

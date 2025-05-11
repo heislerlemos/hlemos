@@ -134,6 +134,8 @@ GEM
     ffi (1.15.5)
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
+    font-awesome-sass (6.7.2)
+      sassc (~> 2.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     hirb (0.7.3)
@@ -415,6 +417,7 @@ DEPENDENCIES
   dnsruby (~> 1.61, >= 1.61.5)
   excon
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
+  font-awesome-sass (~> 6.1)
   hirb (~> 0.7.3)
   httparty (~> 0.18.1)
   ipaddress (~> 0.8.3)

@@ -1,9 +1,23 @@
-// Place all the styles related to the Binarys controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
+@import "font-awesome.css";
 .card {
-  border-radius: 20px;
+    border-radius: 20px;
 
 }
+
+.card-header {
+    background: hsl(217, 71%, 53%);
+}
+
+
+.card-header-title {
+    color: white;
+
+}
+
+
+.icon {
+color: white;
+}
+
+
+
