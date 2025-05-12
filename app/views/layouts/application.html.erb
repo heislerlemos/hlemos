@@ -2,63 +2,63 @@
 
 <script>
   function opennavFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-  }
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+            x.className = "topnav";
+          }
+    }
 
 
 
   document.addEventListener('DOMContentLoaded', function () {
 
-    // Modals
+      // Modals
 
-    var rootEl = document.documentElement;
-    var allModals = getAll('.modal');
-    var modalButtons = getAll('.modal-button');
-    var modalCloses = getAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button');
+      var rootEl = document.documentElement;
+      var allModals = getAll('.modal');
+      var modalButtons = getAll('.modal-button');
+      var modalCloses = getAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button');
 
-    if (modalButtons.length > 0) {
-        modalButtons.forEach(function (el) {
-            el.addEventListener('click', function () {
-                var target = document.getElementById(el.dataset.target);
-                rootEl.classList.add('is-clipped');
-                target.classList.add('is-active');
+      if (modalButtons.length > 0) {
+          modalButtons.forEach(function (el) {
+              el.addEventListener('click', function () {
+                  var target = document.getElementById(el.dataset.target);
+                  rootEl.classList.add('is-clipped');
+                  target.classList.add('is-active');
+                });
             });
-        });
-    }
+        }
 
-    if (modalCloses.length > 0) {
-        modalCloses.forEach(function (el) {
-            el.addEventListener('click', function () {
-                closeModals();
+      if (modalCloses.length > 0) {
+          modalCloses.forEach(function (el) {
+              el.addEventListener('click', function () {
+                  closeModals();
+                });
             });
-        });
-    }
+        }
 
-    document.addEventListener('keydown', function (event) {
-        var e = event || window.event;
-        if (e.keyCode === 27) {
-            closeModals();
+      document.addEventListener('keydown', function (event) {
+          var e = event || window.event;
+          if (e.keyCode === 27) {
+              closeModals();
+            }
+        });
+
+      function closeModals() {
+          rootEl.classList.remove('is-clipped');
+          allModals.forEach(function (el) {
+              el.classList.remove('is-active');
+            });
+        }
+
+      // Functions
+
+      function getAll(selector) {
+          return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
         }
     });
-
-    function closeModals() {
-        rootEl.classList.remove('is-clipped');
-        allModals.forEach(function (el) {
-            el.classList.remove('is-active');
-        });
-    }
-
-    // Functions
-
-    function getAll(selector) {
-        return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
-    }
-});
 </script>
 
 <html>
@@ -66,7 +66,7 @@
     <title> Comunidade Angolana De Informatica </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-     <link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
+    <link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <%= javascript_pack_tag 'application' %>
@@ -74,48 +74,49 @@
     <meta name="msvalidate.01" content="0886CE95205FB195696229B14A3A6ACC" />
     <meta name="google-site-verification" content="-DmmOWiMrrYCM0NE0KGdfnZoYSt1YaA2zPzGJZi-kXw" />
   </head>
-  
-   <%= render template: "welcomes/header" %>
-   <br>
-   <br>
-   
+  <div class="header">  
+    <%= render template: "welcomes/header" %>
+  </div>
+<%  6.times do  %>
+ <br>
+<% end %>
   <body>
     <% flash.each do |type, msg| %>
-    <div class="modal is-active is-clipped">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-       <!-- Content ... -->
-       <div style="font-size: xx-large;   padding: 20px;
-  background-color: hsl(217, 71%, 53%);
-  border-radius: 5px;
-  color: hsl(0, 0%, 100%);
-text-align:center;
-  margin-bottom: 15px;">
-           <%= msg %>
-	   </div>
-    
+      <div class="modal is-active is-clipped">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <!-- Content ... -->
+          <div style="font-size: xx-large;   padding: 20px;
+                      background-color: hsl(217, 71%, 53%);
+                      border-radius: 5px;
+                      color: hsl(0, 0%, 100%);
+                      text-align:center;
+                      margin-bottom: 15px;">
+            <%= msg %>
+          </div>
+
+        </div>
+        <button class="modal-close is-large" aria-label="close" ></button>
       </div>
-    <button class="modal-close is-large" aria-label="close" ></button>
-    </div>
 
     <% end %>
 
 
 
 
- <div id="container">
-  <div id="main">
+    <div id="container">
+      <div id="main">
 
-    <%= yield%>
+        <%= yield%>
 
+      </div>
     </div>
-</div>
 
-    
-<footer id="footer">
-   <%= render template: "welcomes/footer" %>
-   </footer>
 
- </body>
+    <footer id="footer">
+      <%= render template: "welcomes/footer" %>
+    </footer>
+
+  </body>
 
 </html>

@@ -5,7 +5,11 @@ $footer-color: black;
 @import "font-awesome";
 @import "welcomes";
 
+.header {
+position: relative;
+z-index: 1000;
 
+}
   #search-form {
   display: inline;
 }
@@ -62,8 +66,6 @@ $footer-color: black;
 
 
 
-header {
-}
 
 * {
     margin: 0;
