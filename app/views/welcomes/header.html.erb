@@ -1,9 +1,4 @@
-
-
-
 <style>
-
-
 .topnav {
   overflow: hidden;
   background-color: transparent;
@@ -15,7 +10,7 @@
 .topnav a {
   float: left;
   display: block;
-  color: lightgrey;
+  color: hsl(0, 0%, 21%);
   text-align: center;
   padding: 10px 14px;
   text-decoration: none;
@@ -23,9 +18,10 @@
 
 }
 
+
 .topnav a:hover {
   border-bottom: 5px solid orange;
-  color: white;
+  color:hsl(204, 86%, 53%);
   border-radius: 5px;
 
 }
@@ -47,7 +43,7 @@
     display: flex;
     align-items: center;
     justify-content:center;
-    background-color:  hsl(0, 0%, 29%) ;
+    background-color:  transparent;
 
   }
 
@@ -172,12 +168,25 @@
   <%= link_to subscribers_show_path do %>
     <%= fa_icon "lock" %> Administrador
   <% end %>
+
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
-
   </div>
+
+  <% if  current_page?(welcomes_index_path) %>
+
+    <style>
+    .topnav a {
+      color:hsl(0, 0%, 96%);
+    } 
+
+    </style>
+
+  <% end %>
 
 
 
 </div>
+
+

@@ -36,10 +36,10 @@ get 'cards/show'
         get 'informations/index'
         get 'subscribers/show'
         resources :blogs
- root'welcomes#index'
- resources :blogs do
-  resources :comentarios
- end
-    mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
- 
+        root'welcomes#index'
+        resources :blogs do
+          resources :comentarios
+        end
+        mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
+
 end
