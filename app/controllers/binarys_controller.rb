@@ -1,7 +1,7 @@
 class BinarysController < ApplicationController
   def index
 
-    @hostname = "127.0.0.1".downcase
+    @hostname = "192.168.10.0/24".downcase
     submitted_hostname = params[:hostname]
 
     if submitted_hostname 
@@ -12,21 +12,13 @@ class BinarysController < ApplicationController
         |i| bits.insert i, ' . ' 
       end
 
-     # ipsubnet   = Ip.new @hostname
       stored = [] 
       @bits = bits
       @mask = ip.netmask
       @ipv6 = ip.to_ipv6
-
-
-
-      #32.downto(1) do |i|
-       # print " " + ipsubnet.cidr(i)
-       # stored.append(ipsubnet.cidr(i))
-     # end
-
       @ipsub =  stored 
-
+      @firsthost = ip.first.to_s
+      @lasthost = ip.last.to_s
     end
 
   end
