@@ -11,222 +11,152 @@
     <title>[Heisler] </title>
 
   </head>
+  <body>
+    <div id="myVideo">
 
- <div id="myVideo">
+      <%= video_tag "index.mp4", :controls => false, :loop => true, :autoplay => true %>
+    </div>
 
-    <%= video_tag "index.mp4", :controls => true, :loop => true, :autoplay => true %>
-  </div>
-  
- <div class="container">
+    <div class="container">
 
-    <div class="our-partner">
-      <div class="container">
-        <p class="title" style="color:white;"> A nossa comunidade fornece diversos serviços 
-        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-        </p>
-        <hr>
+      <div class="our-partner">
+        <div class="container">
+          <p class="title" style="color:white;"> A nossa comunidade fornece diversos serviços 
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          </p>
+          <hr>
 
-        <div class="our-partner-inner">
-          <div class="columns is-multiline " style="color:white;">
-
-
-
-            <div class="column is-2">
-
-              <p class="heading">Suporte </p>
-              <p class="title" style="color:white;"><%= fa_icon "users " %></p>
-
-            </div>
-
-            <div class="column is-2">
-              <p class="heading">Redes </p>
-              <p class="title" style="color:white;"><%= fa_icon "cloud " %></p>
-
-            </div>
-
-            <div class="column is-2">
-              <p class="heading">Formação TI</p>
-              <p class="title" style="color:white;"> <%= fa_icon "graduation-cap" %></p>
-            </div>
-            <div class="column is-3" >
-              <p class="heading">Administração de sistemas </p>
-              <p class="title" style="color:white;"><%= fa_icon "windows" %></p>
-
-            </div>
-
-            <div class="column is-3">
-
-              <p class="heading">Construção de websites </p>
-              <p class="title" style="color:white;"><%= fa_icon "code" %></p>
-
-            </div>
-            <br>
-            <br>
-            <br>
-            <div class="column is-12">
-              <section class="hero is-light">
-                <div class="hero-body">
-                  <p>
-                  A cai resolve os seus problemas de computador, internet e esclarece duvidas de informática, antes de comprar um novo equipamento entre em contacto com a cai que daremos uma nova vida a seu equipamento antigo, poupe dinheiro  entre em contacto  agora <i class="fa fa-exclamation-circle" aria-hidden="true"></i><br>
-
-                  <% 3.times do %>
-                    <br>
-                  <% end %>
-                  Estamos situados em Viana (Luanda Sul), perto do Ginga Shopping, na estrada principal Camama <i class="fa fa-home" aria-hidden="true"></i> <hr>
-                  <% 1.times do %>
-                    <br>
-                  <% end %>
-                  Seja nosso cliente agora livra-se dos problemas de computador <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-
-                  </p>
-                  <p class="subtitle">
-                  </p>
-                </div>
-              </section>
-            </div>
-            <div class="column is-12 ">
-              <section class="hero is-light">
-                <div class="hero-body">
-                  <p class="title">
-                  Liga já na nossa linha de apoio : 934 659 342 - 942 869  655 - 923 957 488 <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-
-                  </p>
-                </div>
-              </section>
-            </div>
-
-          </div>
-        </div>
-        <!-- columns end here --->
-      </div>
-
-      <br>
-      <!--- About us -->
-      <br>
-      <!--  Comenting the piture section   
-        <section class="hero is-light  ">
-        <div class="hero-body">
-        <p class="title">
-        Conheça a nossa equipa   
-        </p>
-
-        </div>
-        </section>
-
-        <br>
-        <br>
-        <div class="tile is-ancestor " style="background-color: lightgrey;">
-
-        <div class="tile is-parent">
-        <article class="tile is-child box">
-        <p class="title">Heisler </p>
-        <p class="subtitle">Técnico</p>
-
-        <figure class="image is-128x128">
-        <%= image_tag "heisler.png" , class: "is-rounded" %>
-
-        </figure>
-
-        </article>
-        </div>
-        <div class="tile is-parent">
+          <div class="our-partner-inner">
+            <div class="columns is-multiline " style="color:white;">
 
 
 
-        <article class="tile is-child box ">
-        <p class="title">Cassoma</p>
-        <p class="subtitle">Vendas</p>
+              <div class="column is-2">
 
-        <figure class="image is-128x128">
-        <%= image_tag "cassoma.png" , class: "is-rounded" %>
-
-        </figure>
-        </article>
-
-
-        </div>
-
-
-
-
-
-        <div class="tile is-parent">
-        <article class="tile is-child box">
-        <p class="title">Paulo</p>
-        <p class="subtitle">Técnico</p>
-
-        <figure class="image is-128x128">
-        <%= image_tag "paulo_2.png" , class: "is-rounded" %>
-        </figure>
-        <div class="content">
-
-        </div>
-        </article>
-        </div>
-
-
-        </div>
-        <br>
-        <br>
-
-      -->
-      <div class="tile is-ancestor">
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-light">
-
-            <article class="tile is-child box">
-
-
-              <br>
-              <p class="title">Visão</p>
-              <p class="subtitle">Ser uma das empresas de referência prestadora de serviços no mercado Angolano, elevando a qualidade, a fiabilidade e expanção geógrafica dos nossos serviços</p>
-              <div class="content">
-                <p class="title">Missão</p>
-                <p class="subtitle">Sofisticar os serviços aos clientes e tornar acessível a todos.</p>
-            </article>
-
-          </article>
-
-
-
+                <p class="heading">Suporte </p>
+                <p class="title" style="color:white;"><%= fa_icon "users " %></p>
 
               </div>
 
+              <div class="column is-2">
+                <p class="heading">Redes </p>
+                <p class="title" style="color:white;"><%= fa_icon "cloud " %></p>
+
+              </div>
+
+              <div class="column is-2">
+                <p class="heading">Formação TI</p>
+                <p class="title" style="color:white;"> <%= fa_icon "graduation-cap" %></p>
+              </div>
+              <div class="column is-3" >
+                <p class="heading">Administração de sistemas </p>
+                <p class="title" style="color:white;"><%= fa_icon "windows" %></p>
+
+              </div>
+
+              <div class="column is-3">
+
+                <p class="heading">Construção de websites </p>
+                <p class="title" style="color:white;"><%= fa_icon "code" %></p>
+
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="column is-12">
+                <section class="hero is-light">
+                  <div class="hero-body">
+                    <p>
+                    A cai resolve os seus problemas de computador, internet e esclarece duvidas de informática, antes de comprar um novo equipamento entre em contacto com a cai que daremos uma nova vida a seu equipamento antigo, poupe dinheiro  entre em contacto  agora <i class="fa fa-exclamation-circle" aria-hidden="true"></i><br>
+
+                    <% 3.times do %>
+                      <br>
+                    <% end %>
+                    Estamos situados em Viana (Luanda Sul), perto do Ginga Shopping, na estrada principal Camama <i class="fa fa-home" aria-hidden="true"></i> <hr>
+                    <% 1.times do %>
+                      <br>
+                    <% end %>
+                    Seja nosso cliente agora livra-se dos problemas de computador <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+
+                    </p>
+                    <p class="subtitle">
+                    </p>
+                  </div>
+                </section>
+              </div>
+              <div class="column is-12 ">
+                <section class="hero is-light">
+                  <div class="hero-body">
+                    <p class="title">
+                    Liga já na nossa linha de apoio : 934 659 342 - 942 869  655 - 923 957 488 <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+
+                    </p>
+                  </div>
+                </section>
+              </div>
+
+            </div>
+          </div>
+        <br>
         </div>
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-light">
+
+              <article class="tile is-child box">
+
+
+                <br>
+                <p class="title">Visão</p>
+                <p class="subtitle">Ser uma das empresas de referência prestadora de serviços no mercado Angolano, elevando a qualidade, a fiabilidade e expanção geógrafica dos nossos serviços</p>
+                <div class="content">
+                  <p class="title">Missão</p>
+                  <p class="subtitle">Sofisticar os serviços aos clientes e tornar acessível a todos.</p>
+              </article>
+
+            </article>
+
+
+
+
+                </div>
+
+          </div>
+        </div>
+
+
+        <% 7.times do %>
+          <br>
+        <% end %>
+
+        <section class="hero ">
+          <div class="slogresponse">
+            <div class="slogan" align="center">
+              Cai <hr>
+              na nossa 
+              <hr>
+              inovação 
+              <hr>
+
+            </div>
+
+
+
+            <div class="imageClass">
+              <%= image_tag "slogan.png" , style: "width: 500px; margin-left: 100px;"%>
+            </div>
+
+
+            <div class="clearfix"></div> 
+          </div>
+        </section>
+
+        <% 3.times do %>
+          <br>
+        <% end %>
+
       </div>
+  </body>
 
-
-      <% 7.times do %>
-        <br>
-      <% end %>
-
-      <section class="hero ">
-        <div class="slogresponse">
-          <div class="slogan" align="center">
-            Cai <hr>
-            na nossa 
-            <hr>
-            inovação 
-            <hr>
-
-          </div>
-
-
-
-          <div class="imageClass">
-            <%= image_tag "slogan.png" , style: "width: 500px; margin-left: 100px;"%>
-          </div>
-
-
-          <div class="clearfix"></div> 
-        </div>
-      </section>
-
-      <% 3.times do %>
-        <br>
-      <% end %>
-
-      </body>
-    </div>
 
 </html>
