@@ -5,11 +5,22 @@
       <br>
       <%= hidden_field_tag "empty" %>
 
-      <%= submit_tag "Speedtest" , class: "button  is-danger" %>
+      <%= submit_tag "Verificar Speedtest" , class: "button  is-danger is-large" %>
     <% end %>
 
-  <br>
-  <%= @output %>
+    <br>
+
+    <section class="hero is-success">
+      <div class="hero-body">
+
+        <div class="columns">
+          <div class="column">
+            <p class="title"> <%= @output  %> </p>
+          </div>
+        </div>
+
+        <p class="title"></p>
+      </div>
+    </section>
 
   </center>
-</div>

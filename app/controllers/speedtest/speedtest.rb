@@ -46,11 +46,11 @@ module Speedtest
 			@server_root = server[:url]
 			latency = server[:latency]
 			puts "Server #{@server_root}"
-			downRate = download
+			downRate =  download
 			puts "Download: #{pretty_speed downRate}"
 			upRate = upload
 			puts "Upload: #{pretty_speed upRate}"
-			{:server => @server_root, :latency => latency, :downRate => downRate, :upRate => upRate}
+			{:Servidor => @server_root, :Latencia => "#{pretty_speed latency}", :Download => "#{pretty_speed downRate}", :Upload => "#{pretty_speed upRate}"}        
 		end
 
 		def pretty_speed(speed)
