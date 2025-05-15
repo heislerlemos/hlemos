@@ -42,4 +42,6 @@ get 'cards/show'
         end
         mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
 
+
+
 end

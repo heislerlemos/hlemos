@@ -97,6 +97,7 @@
 
 
 <script>
+
   function myFunction() {
       var x = document.getElementById("myTopnav");
       if (x.className === "topnav") {
@@ -105,6 +106,7 @@
             x.className = "topnav";
           }
     }
+
 </script>
 
 
@@ -117,11 +119,15 @@
 
 <div class="topnav" id="myTopnav">
   <div class="container_long">
-    <%= link_to  welcomes_index_path  do %>
 
-      <%= image_tag "logo_v2.png" , width: "100"  %>
 
-    <% end %>
+    <div id="linkclick">
+      <%= link_to  welcomes_index_path  do %>
+
+        <%= image_tag "logo_v2.png" , width: "100"  %>
+
+      <% end %>
+    </div>
 
     <%= link_to  subscribers_path  do  %>
       <%= fa_icon "ticket" %> Portal do Cliente
@@ -174,12 +180,12 @@
   </a>
   </div>
 
-  <% if  current_page?(welcomes_index_path) %>
+  <% if  current_page?(root_path) || current_page?(welcomes_index_path) %>
 
     <style>
-    .topnav a {
-      color:hsl(0, 0%, 96%);
-    } 
+.topnav a {
+  color:hsl(0, 0%, 96%);
+} 
 
     </style>
 
