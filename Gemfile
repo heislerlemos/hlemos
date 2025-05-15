@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem "nokogiri"
+gem "mechanize"
+gem 'net-http-persistent', '~> 2.9.4'
+
 # heroku upgrade to heroku-22 
 #ruby '2.7.0'
 #ruby '3.0.0'
@@ -22,6 +26,7 @@ gem 'pagy', '~> 5.10' # omit patch digit
 gem 'httparty', '~> 0.18.1'
 gem 'puma', '~> 3.11'
 gem 'psych', '< 4'
+gem 'speedtest_net'
 #gem "mini_magick"
 gem 'will_paginate', '~> 3.1.0'
 # Use SCSS for stylesheets

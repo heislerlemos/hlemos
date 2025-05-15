@@ -1,0 +1,15 @@
+<div class="container">
+
+  <center>
+    <%= form_tag  speeds_path do |form| %>
+      <br>
+      <%= hidden_field_tag "empty" %>
+
+      <%= submit_tag "Speedtest" , class: "button  is-danger" %>
+    <% end %>
+
+  <br>
+  <%= @output %>
+
+  </center>
+</div>

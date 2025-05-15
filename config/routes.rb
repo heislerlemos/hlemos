@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  
+
+  get 'speeds/index'
   get 'binarys/index'
-resources :todo_lists do
-   resources :todo_items do
-    member do
-     patch :complete
+  resources :todo_lists do
+    resources :todo_items do
+      member do
+        patch :complete
+      end
     end
   end
-end
 
-get 'cards/show'
+  get 'cards/show'
   resources :products
   resources :shops, only:[:index, :show]
   resource :cards, only:[:show]
@@ -22,25 +23,27 @@ get 'cards/show'
   resources :subscribers
   get 'abouts/index'
   get 'websites/index'
-    get 'sistemas/index'
-        get 'aulas/index'
-            resource :aulas, only: [:index], controller: :aulas
-            get 'suportes/index'
+  get 'sistemas/index'
+  get 'aulas/index'
+  resource :aulas, only: [:index], controller: :aulas
+  get 'suportes/index'
 
-                get "suportes", to: "suportes#index"
-		post "suportes", to: "suportes#index"
+  get "suportes", to: "suportes#index"
+  post "suportes", to: "suportes#index"
+  get "speeds", to:"speeds#index"
+  post "speeds", to: "speeds#index"
 
-		get"binarys", to: "binarys#index"
-		post"binarys", to: "binarys#index"
-        get 'redes/index'
-        get 'informations/index'
-        get 'subscribers/show'
-        resources :blogs
-        root'welcomes#index'
-        resources :blogs do
-          resources :comentarios
-        end
-        mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
+  get"binarys", to: "binarys#index"
+  post"binarys", to: "binarys#index"
+  get 'redes/index'
+  get 'informations/index'
+  get 'subscribers/show'
+  resources :blogs
+  root'welcomes#index'
+  resources :blogs do
+    resources :comentarios
+  end
+  mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
 
 
 
