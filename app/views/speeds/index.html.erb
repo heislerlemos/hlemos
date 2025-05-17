@@ -1,26 +1,78 @@
-<div class="container">
+<style>
+#loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  display: none;
+}
 
-  <center>
-    <%= form_tag  speeds_path do |form| %>
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+#info {
+  display: none;
+}
+</style>
+
+
+<body>
+
+  <div class="container">
+
+    <center>
+      <%= form_tag  speeds_path do |form| %>
+        <br>
+        <%= hidden_field_tag "empty" %>
+
+        <%= submit_tag "Verificar Speedtest" , class: "button  is-danger is-large", onclick: "loadFunc()"  %>
+      <% end %>
       <br>
-      <%= hidden_field_tag "empty" %>
-
-      <%= submit_tag "Verificar Speedtest" , class: "button  is-danger is-large" %>
-    <% end %>
-
-    <br>
-
-    <section class="hero is-success">
-      <div class="hero-body">
-
-        <div class="columns">
-          <div class="column">
-            <p class="title"> <%= @output  %> </p>
-          </div>
-        </div>
-
-        <p class="title"></p>
+      <div id="info">
+      <p class="is-title"> Procurando informação do speedtest aguarde um momento por favor </p>
       </div>
-    </section>
+      <div id="loader">
+      </div>
+      <br>
 
-  </center>
+      <section class="hero is-success">
+        <div class="hero-body">
+
+          <div class="columns">
+            <div class="column">
+              <p class="title"> <%= @output  %> </p>
+            </div>
+          </div>
+
+          <p class="title"></p>
+        </div>
+      </section>
+
+    </center>
+
+
+  </div>
+
+
+</body>
+
+<script>
+
+  function loadFunc() {
+      document.getElementById("loader").style.display = "block";
+      document.getElementById("info").style.display = "block";
+ 
+    }
+
+</script>
