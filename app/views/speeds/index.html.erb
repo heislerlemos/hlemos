@@ -42,29 +42,25 @@
       <div id="info">
       <p class="is-title"> Procurando informação do speedtest aguarde um momento por favor </p>
       </div>
+      <br>
       <div id="loader">
       </div>
       <br>
 
+       <%= @erro %>  
       <section class="hero is-success">
         <div class="hero-body">
 
           <div class="columns">
             <div class="column">
-              <p class="title"> <%= @output  %> </p>
+              <p class="title"> <%= @output  %> </>
             </div>
           </div>
-
           <p class="title"></p>
         </div>
       </section>
-
     </center>
-
-
   </div>
-
-
 </body>
 
 <script>
@@ -72,7 +68,7 @@
   function loadFunc() {
       document.getElementById("loader").style.display = "block";
       document.getElementById("info").style.display = "block";
- 
+
     }
 
 </script>
