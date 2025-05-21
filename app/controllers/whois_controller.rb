@@ -1,14 +1,13 @@
 class WhoisController < ApplicationController
   def index
-  @hostname = "google.com".downcase
+  submit = params[:hostname]
 
-  if params[:hostname]
+  if submit
+  @hostname = submit 
   c = Whois::Client.new
   
-  @result = c.lookup(@hostname).to_s
-  
-
-  end
-
+  @result = c.lookup(@hostname)
+ 
+    end
   end
 end

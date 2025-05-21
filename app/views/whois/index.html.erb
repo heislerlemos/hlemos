@@ -1,8 +1,11 @@
+
+<center>
 <%= form_tag  whois_path do |form| %>
   <br>
   <%= text_field_tag "hostname", @hostname, class: "input is-link" , style: "width: 30%;", required: 'required', placeholder: "Must be an ipv4 ip address" %>
   <%= submit_tag "Procurar" , class: "button  is-warning" %>
 <% end %>
 
-<%= @result %>
+<p><%= @result %></p>
 
+</center>
