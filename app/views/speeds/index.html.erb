@@ -24,6 +24,8 @@
 #info {
   display: none;
 }
+
+
 </style>
 
 
@@ -36,40 +38,43 @@
         <br>
         <%= hidden_field_tag "empty" %>
 
-        <%= submit_tag "Verificar Speedtest" , class: "button  is-danger is-large", onclick: "loadFunc()"  %>
+        <%= submit_tag "Verificar Speedtest" , class: "button is-outlined is-large is-warning", onclick: "loadFunc()"  %>
       <% end %>
       <br>
       <div id="info">
-      <p class="is-title"> Procurando informação do speedtest aguarde um momento por favor </p>
+      <p class="is-title" style="color: lightblue; font-size: 40px;">Procurando informação do speedtest aguarde um momento por favor... </p>
       </div>
       <br>
       <div id="loader">
       </div>
       <br>
       
-       <%= @erro %> 
+      <p style="color: red;"> <%= @erro %> </p>
        <br>
-      <section class="hero">
+      <section class="hero is-light" style="border-radius: 8px; ">
         <div class="hero-body">
 
           <div class="columns">
             <div class="column">
-              <p class="title"> <%= @output  %> </p>
+              <p class="title" style="font-size: 40px;  "> <%= @output  %> </p>
             </div>
           </div>
           <p class="title"></p>
         </div>
       </section>
+     </div> 
     </center>
-  </div>
 </body>
+
+
+
+
 
 <script>
 
   function loadFunc() {
       document.getElementById("loader").style.display = "block";
       document.getElementById("info").style.display = "block";
-
     }
 
 </script>

@@ -36,11 +36,10 @@
 
 
 
-<br>
 
 <center>
 <div class="container">
-<section class="hero is-medium is-light">
+<section class="hero is-medium is-light" style="display:none;">
   <div class="hero-body">
     <p class="title">
 COMUNIDADE ANGOLANA DE INFORMATICA NS TOOL 
@@ -65,14 +64,13 @@ COMUNIDADE ANGOLANA DE INFORMATICA NS TOOL
   </div>
 </section>
 
-<br>
 
 <!-- Creating a unless method to display the styled container from the instance variable @nohost -->
 
 
 <% unless !@nohost  %>
 <div class="container">
-<section class="hero is-link">
+<section class="hero is-danger">
   <div class="hero-body">
     <p class="title">
    <%=  @nohost %>
@@ -84,139 +82,127 @@ COMUNIDADE ANGOLANA DE INFORMATICA NS TOOL
 <% else %>
 <% end %>
 
-
-
+</h1>
 <br>
-<div class="espaçamento">
-
-  </div>
- 
-  </h1>
-<br>
-<div class="title is-2">Check your dns  | Verifique o seu dns   </div>
+<div class="title is-1" style="font-size: 80px; text-shadow: 3px 3px grey;"> Verifique o seu dns   </div>
 
 <%= form_tag  suportes_path do |form| %>
   <br>
-  <%= text_field_tag "hostname", @hostname, class: "input is-link" , style: "width: 50%;", required: 'required', placeholder: "Host must contain suffix .com .net .ao .biz .org" %>
-  <%= submit_tag "Search" , class: "button  is-warning" %>
+  <%= text_field_tag "hostname", @hostname, class: "input is-warning" , style: "width: 20%; height: 54px;", required: 'required', placeholder: "Host must contain suffix .com .net .ao .biz .org" %>
+  <%= submit_tag "Procurar" , class: "button is-outlined is-large is-warning" %>
 <% end %>
 <br>
-<br>
-<div class="espaçamento">
-
-  </div>
 
 </center>
-<br>
 
 
 <div class="container">
- <div class="columns is-mobile is-multiline ">
-   <%  @output.each do |s| %>
-   
-<div class="column">
+  <div class="columns is-mobile is-multiline ">
+    <%  @output.each do |s| %>
 
-  <header class="card-header">
-    <p class="card-header-title">
-         Server 
+      <div class="column">
 
-    </p>
- 
-  </header>
-  <div class="card-content">
-    <div class="content">
-        <%= s.server %>
+        <header class="card-header">
+          <p class="card-header-title">
+          Server 
 
-    </div>
-  </div>
-</div>
+          </p>
 
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <%= s.server %>
 
-  <% end %>
-
-  
-<%  @queryoutput.each do |s| %>
-
-
- 
-
-
-  <div class="column">
-
-  <header class="card-header">
-    <p class="card-header-title">
-        Name Server
-
-    </p>
- 
-  </header>
-  <div class="card-content">
-    <div class="content">
-<%= s.domainname %>
-    </div>
-  </div>
-
- </div>
+          </div>
+        </div>
+      </div>
 
 
     <% end %>
 
-  
 
-<br>
-
-<% @queryoutputmx.each  do |s| %>
-
- 
-
-
-  <div class="column">
-
-  <header class="card-header">
-    <p class="card-header-title">
- Mail Server 
-
-    </p>
- 
-  </header>
-  <div class="card-content">
-    <div class="content">
-  <%= s.exchange %>
-
-    </div>
-    </div>
-
- </div>
-
-
-  <% end %>
+    <%  @queryoutput.each do |s| %>
 
 
 
 
 
-<% @queryoutputcn.each do |file| %>
+      <div class="column">
+
+        <header class="card-header">
+          <p class="card-header-title">
+          Name Server
+
+          </p>
+
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <%= s.domainname %>
+          </div>
+        </div>
+
+      </div>
 
 
-  <div class="column is-mobile">
+    <% end %>
 
-  <header class="card-header">
-    <p class="card-header-title">
-CNAME
 
-    </p>
- 
-  </header>
-  <div class="card-content">
-    <div class="content">
-   <%=  file.cname %>
-     </div>
-    </div>
 
- </div>
-<% end %>
+    <br>
 
-  <!-- end of column -->
- </div>
+    <% @queryoutputmx.each  do |s| %>
+
+
+
+
+      <div class="column">
+
+        <header class="card-header">
+          <p class="card-header-title">
+          Mail Server 
+
+          </p>
+
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <%= s.exchange %>
+
+          </div>
+        </div>
+
+      </div>
+
+
+    <% end %>
+
+
+
+
+
+    <% @queryoutputcn.each do |file| %>
+
+
+      <div class="column is-mobile">
+
+        <header class="card-header">
+          <p class="card-header-title">
+          CNAME
+
+          </p>
+
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <%=  file.cname %>
+          </div>
+        </div>
+
+      </div>
+    <% end %>
+
+    <!-- end of column -->
+  </div>
 </div>  
 </center>

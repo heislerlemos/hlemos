@@ -7,7 +7,7 @@ class SuportesController < ApplicationController
 
   def index
     # Default values
-    @hostname = "cai.co.ao".downcase
+    @hostname = "google.com".downcase
 
 
     @output = []
@@ -30,9 +30,6 @@ class SuportesController < ApplicationController
         ret = rec.query(@hostname, "CNAME")
         @queryoutputcn = ret.answer
 
-
-
-
         @output = resolver.single_resolvers
         # working on query
         @mxrecord = "MX"
@@ -51,10 +48,10 @@ class SuportesController < ApplicationController
 
         unless  @hostname.length < 15 
 
-          @nohost = "CNAME founded | Registo CNAME encontrado"
+          @nohost = "Registo CNAME encontrado"
         else
 
-          @nohost = "Can't find host | Certifique que o host encontra-se disponivel !"
+          @nohost = "Certifique que o host encontra-se disponivel !"
 
         end
 
@@ -69,12 +66,5 @@ class SuportesController < ApplicationController
 
     end
 
-
-
-
-
-
   end
-
-
 end

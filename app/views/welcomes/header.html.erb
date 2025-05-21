@@ -142,15 +142,8 @@
     <!-- this api no longer is available to use this feature -->
 
     <%= link_to speeds_index_path do  %>
-      <%= fa_icon "globe" %> Speedtest
+      <%= fa_icon "globe" %> Speedtest Check
     <% end %>
-
-    <div class="dont_show">
-      <%= link_to  shops_path  do  %>
-        <%= fa_icon "shopping-bag "  %> Loja 
-      <% end %>
-    </div>	    <% link_to "Sobre Nos",  informations_index_path  %>
-
   <%= link_to  binarys_index_path  do  %>
     <%= fa_icon "globe" %> Ip Check 
   <% end %>
@@ -171,8 +164,15 @@
 
   <% end %>
 
+    <div class="dont_show">
+      <%= link_to  shops_path  do  %>
+        <%= fa_icon "shopping-bag "  %> Loja 
+      <% end %>
+    </div>	    <% link_to "Sobre Nos",  informations_index_path  %>
+
+
   <%= link_to subscribers_show_path do %>
-    <%= fa_icon "lock" %> Administrador
+    <%= fa_icon "lock" %> Admin
   <% end %>
 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
