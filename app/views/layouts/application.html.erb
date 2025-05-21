@@ -74,12 +74,14 @@
     <meta name="msvalidate.01" content="0886CE95205FB195696229B14A3A6ACC" />
     <meta name="google-site-verification" content="-DmmOWiMrrYCM0NE0KGdfnZoYSt1YaA2zPzGJZi-kXw" />
   </head>
+
+
   <div class="header">  
     <%= render template: "welcomes/header" %>
   </div>
-<%  6.times do  %>
- <br>
-<% end %>
+  <%  6.times do  %>
+    <br>
+  <% end %>
   <body>
     <% flash.each do |type, msg| %>
       <div class="modal is-active is-clipped">
@@ -87,11 +89,11 @@
         <div class="modal-card">
           <!-- Content ... -->
           <div style="font-size: xx-large;   padding: 20px;
-                      background-color: hsl(217, 71%, 53%);
-                      border-radius: 5px;
-                      color: hsl(0, 0%, 100%);
-                      text-align:center;
-                      margin-bottom: 15px;">
+                       background-color: hsl(217, 71%, 53%);
+                       border-radius: 5px;
+                       color: hsl(0, 0%, 100%);
+                       text-align:center;
+                       margin-bottom: 15px;">
             <%= msg %>
           </div>
 

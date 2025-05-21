@@ -1,11 +1,19 @@
 
 <center>
+
+<div class="title is-1" style="color:#FFD700;font-size: 80px; text-shadow: 3px 3px tomato;"> Verifique o seu whois  </div>
+
+
+
 <%= form_tag  whois_path do |form| %>
   <br>
-  <%= text_field_tag "hostname", @hostname, class: "input is-link" , style: "width: 30%;", required: 'required', placeholder: "Must be an ipv4 ip address" %>
+  <%= text_field_tag "hostname", @hostname, class: "input is-warning" , style: "width: 30%;", required: 'required', placeholder: "Must be an ipv4 ip address" %>
   <%= submit_tag "Procurar" , class: "button  is-warning" %>
 <% end %>
-
-<p><%= @result %></p>
-
+<br>
+<div class="container">
+<p class="title">
+<%= @result  %>
+</p>
+</div>
 </center>

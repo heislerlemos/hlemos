@@ -5,9 +5,11 @@ class WhoisController < ApplicationController
   if submit
   @hostname = submit 
   c = Whois::Client.new
+  c.lookup(@hostname)
   
-  @result = c.lookup(@hostname)
- 
+  enc = c.lookup(@hostname).to_s
+  @result = enc.encode('ASCII-8BIT')
+    
     end
   end
 end
