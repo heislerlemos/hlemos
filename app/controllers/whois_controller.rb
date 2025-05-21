@@ -1,15 +1,14 @@
 class WhoisController < ApplicationController
   def index
-  submit = params[:hostname]
+    submit = params[:hostname]
 
-  if submit
-  @hostname = submit 
-  c = Whois::Client.new
-  c.lookup(@hostname)
-  
-  enc = c.lookup(@hostname).to_s
-  @result = enc.encode('ASCII-8BIT')
+    if submit
+      @hostname = submit       
+      c = Whois::Client.new
+      c.lookup(@hostname).to_s
+      @result = c.lookup(@hostname)
     
-    end
-  end
+
+   end
+ end
 end

@@ -39,6 +39,7 @@ Rails.application.routes.draw do
 
   get"binarys", to: "binarys#index"
   post"binarys", to: "binarys#index"
+
   get 'redes/index'
   get 'informations/index'
   get 'subscribers/show'
