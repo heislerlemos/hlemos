@@ -12,11 +12,12 @@ class SpeedsController < ApplicationController
         speed.run.each do |x,y|
           puts "#{x} =>  #{y}"
           value = "#{x} =>  #{y}"
-          stored.append(value)
+          stored = stored.append(value)
         end
 
         @output = stored
-      rescue Net::HTTP::Persistent::Error 
+
+      rescue Net::HTTP::Persistent::Error || Net::OpenTimeout 
         @erro =  'Erro de por favor volte a confirmar se o problema persistir verifique a configuração da  sua rede'
       end
     end
