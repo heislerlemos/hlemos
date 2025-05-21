@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'whois/index'
   get 'speeds/index'
   get 'binarys/index'
   resources :todo_lists do
@@ -32,6 +33,9 @@ Rails.application.routes.draw do
   post "suportes", to: "suportes#index"
   get "speeds", to:"speeds#index"
   post "speeds", to: "speeds#index"
+  
+  get "whois", to: "whois#index"
+  post "whois", to: "whois#index"
 
   get"binarys", to: "binarys#index"
   post"binarys", to: "binarys#index"
