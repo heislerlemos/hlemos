@@ -1,6 +1,9 @@
 
 # CAI (Comunidade Angola de Informática ) 
 
+Rails 6 will be upgraded to Rails 8...
+
+
 CAI (Comunidade Angola de Informática ) is a Africa/Angola IT platform with the goal to bring IT solution together and share to less fortune people that can't have access to these type of information 💻
 
 The app is in Portuguese
