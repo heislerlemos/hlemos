@@ -12,7 +12,8 @@ gem 'net-http-persistent', '~> 2.9.4'
 ruby '3.3.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 #gem 'rails', '~> 5.2.3'
-gem 'rails', '~> 6.0.3.2'
+#gem 'rails', '~> 6.0.3.2'
+gem "rails", "~> 7.0.0"
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'net-ping', '~> 1.7', '>= 1.7.8'
@@ -31,6 +32,7 @@ gem 'puma', '~> 3.11'
 gem 'psych', '< 4'
 gem 'speedtest_net'
 #gem "mini_magick"
+gem "sprockets-rails"
 gem 'will_paginate', '~> 3.1.0'
 # Use SCSS for stylesheets
 gem 'dnsruby', '~> 1.61', '>= 1.61.5'
