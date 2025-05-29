@@ -11,5 +11,7 @@ Rails.application.config.assets.version = "1.0"
 Rails.application.config.assets.precompile += %w( welcomes.css )
 Rails.application.config.assets.precompile += %w( index.mp4 )
 Rails.application.config.assets.precompile += %w( subscribers.css )
+Rails.application.config.assets.precompile += %w( blogs.css )
+Rails.application.config.assets.precompile += %w( binarys.css )
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )

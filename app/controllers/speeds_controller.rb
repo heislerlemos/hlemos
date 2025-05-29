@@ -1,6 +1,8 @@
 class SpeedsController < ApplicationController
+  begin
   require 'speedtest/speedtest'
-
+  rescue Zeitwerk::NameError
+  end  
   def index
     submit = params[:empty]
     if submit
