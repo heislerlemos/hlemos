@@ -8,16 +8,20 @@ gem 'net-http-persistent', '~> 2.9.4'
 # heroku upgrade to heroku-22 
 #ruby '2.7.0'
 #ruby '3.0.0'
-ruby '3.2.1'
+#ruby '3.2.1'
+ruby '3.3.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 #gem 'rails', '~> 5.2.3'
-gem 'rails', '~> 6.0.3.2'
+#gem 'rails', '~> 6.0.3.2'
+gem "rails", "~> 7.0.0"
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'net-ping', '~> 1.7', '>= 1.7.8'
 gem 'net-ssh', '7.0.0.beta1'
 gem 'ipaddress', '~> 0.8.3'
 # Gemfile
+gem 'concurrent-ruby', '1.3.4'
+gem 'sassc'
 # or specify git master
 gem 'ipcalc', '~> 1.0'
 gem 'openssl', git: 'https://github.com/ruby/openssl'
@@ -28,6 +32,7 @@ gem 'puma', '~> 3.11'
 gem 'psych', '< 4'
 gem 'speedtest_net'
 #gem "mini_magick"
+gem "sprockets-rails"
 gem 'will_paginate', '~> 3.1.0'
 # Use SCSS for stylesheets
 gem 'dnsruby', '~> 1.61', '>= 1.61.5'
@@ -37,6 +42,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'ahoy_matey'
 #gem 'covid19-rb'
+gem 'logger'
 gem 'rss', '~> 0.2.9'
 gem 'excon'
 gem "paperclip", "~> 6.0.0"

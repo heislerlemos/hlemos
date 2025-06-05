@@ -1,4 +1,2 @@
-#rvm use ruby-2.7.0
-#rvm use ruby-3.0.0
-rvm use ruby-3.2.1
+rvm use ruby-3.3.5
 rvm_silence_path_mismatch_check_flag=1

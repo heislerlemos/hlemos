@@ -1,15 +1,17 @@
+# Be sure to restart your server when you modify this file.
 
-Rails.application.config.assets.version = '1.0'
+# Version of your assets, change this if you want to expire all your assets.
+Rails.application.config.assets.version = "1.0"
+
+# Add additional assets to the asset load path.
+# Rails.application.config.assets.paths << Emoji.images_path
+
+# Precompile additional assets.
+# application.js, application.css, and all non-JS/CSS in the app/assets
 Rails.application.config.assets.precompile += %w( welcomes.css )
-Rails.application.config.assets.precompile += %w( aulas.css )
-Rails.application.config.assets.precompile += %w( websites.css )
-Rails.application.config.assets.precompile += %w( sistemas.css )
-Rails.application.config.assets.precompile += %w( suportes.css )
-Rails.application.config.assets.precompile += %w( redes.css )
-Rails.application.config.assets.precompile += %w( stories.css )
-Rails.application.config.assets.precompile += %w( blogs.css )
-Rails.application.config.assets.precompile += %w( virus.css )
-Rails.application.config.assets.precompile += %w( subscribers.css )
-Rails.application.config.assets.precompile += %w( binarys.css )
 Rails.application.config.assets.precompile += %w( index.mp4 )
-Rails.application.config.assets.paths << Rails.root.join('node_modules')
+Rails.application.config.assets.precompile += %w( subscribers.css )
+Rails.application.config.assets.precompile += %w( blogs.css )
+Rails.application.config.assets.precompile += %w( binarys.css )
+# folder are already added.
+# Rails.application.config.assets.precompile += %w( admin.js admin.css )
