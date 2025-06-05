@@ -64,6 +64,15 @@
 <html>
   <head>
     <title> Comunidade Angolana De Informatica </title>
+  
+
+    <!-- Fixed encoding when submiting the whois form  -->     
+    <% if current_page?(controller: "whois", action: "index") %>
+    <meta charset="ASCII-8BIT">
+    <% end %>
+
+
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
