@@ -1,106 +1,107 @@
-<div class="container">
-  <section class="hero is-link">
-  <div class="hero-body">
-    <p class="title">
-      Tickets dos clientes
-    </p>
-    <p class="subtitle">
-      A resposta rapida ao pedido do cliente é importante .
-    </p>
-  </div>
-</section>
-  <br>
+      <div class="container">
+        <section class="hero is-link">
+        <div class="hero-body">
+          <p class="title">
+            Tickets dos clientes
+          </p>
+          <p class="subtitle">
+            A resposta rapida ao pedido do cliente é importante .
+              </p>
+        </div>
+      </section>
+        <br>
 
-  
-       <%= form_tag(subscribers_show_path, :method => "get", id: "search-form") do %>
-       <%= text_field_tag :search, params[:search], placeholder: "Encontre o nome do cliente ", class: "input is-info" , style: "width: 50%;" %>
-       <%= submit_tag "Procurar",  class: "button is-info" %>
-       <% end %>
+        
+            <%= form_tag(subscribers_show_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Encontre o nome do cliente ", class: "input is-info" , style: "width: 50%;" %>
+            <%= submit_tag "Procurar",  class: "button is-info" %>
+            <% end %>
 
-       <% 4.times do %>
-       <br>
+            <% 4.times do %>
+            <br>
 
-       <% end %>
+            <% end %>
 
-       <div class="columns">
-	   <div class="column">
-	     <div class="card" style="width: 200px; background-color: hsl(141, 53%, 53%);">
-  <header class="card-header">
-    <p class="card-header-title" style="color: hsl(0, 0%, 96%);">
-     	Numero total de ticket's [ <%= @subscriber.count  %> ]
-
-    </p>
-  </header>
-</div>
-
-         </div>
-
+            <div class="columns">
+          <div class="column">
+            <div class="card" style="width: 200px; background-color: hsl(141, 53%, 53%);">
+        <header class="card-header">
+          <p class="card-header-title" style="color: hsl(0, 0%, 96%);">
+            Numero total de ticket's [ <%= @subscriber.count  %> ]
+           </p>
+        </header>
       </div>
 
-  
-<div class="columns is-multiline  is-mobile is-centered">
+              </div>
 
-<% @subscriber.each do |f| %>
+            </div>
 
+        
+      <div class="columns is-multiline  is-mobile is-centered">
 
-<div class="card">
-  <header class="card-header" style="background-color: hsl(0, 0%, 21%); color: white;">
-    <p class="card-header-title" style="color: white;">
-      
-	TICKET ID [  <%= f.id %> ]
+      <% @subscriber.each do |f| %>
 
-     
+       <div class="column is-half"> 
+      <div class="card">
 
-    </p>
-    <div  class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        <%= fa_icon("angle-down") %>
-      </span>
-    </div>
-  </header>
-  <div class="card-content" style="word-wrap: break-word; ">
-    <div class="content" >
-      <h6>Name </h6>
-      <%= f.name %>
-      <br>
-      <br>
-      
-       <h6>Numero de Telefone</h6>
-       <%= f.number %>
-       <br>
-       <br>
-       <h6>     Assunto : </h6>
-       <%= f.subject %>
-       <br>
-       <br>
-      <h6> Pedido: </h6>
-      <div id="coloring" style="color: black; font-size: 17px;" >
-	   <%= sanitize f.issue  %>
+        <header class="card-header" style="background-color: hsl(0, 0%, 21%); color: white;">
+          <p class="card-header-title" style="color: white;">
+            
+        TICKET ID [  <%= f.id %> ]
+
+          
+
+          </p>
+          <div  class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <%= fa_icon("angle-down") %>
+            </span>
+          </div>
+        </header>
+        <div class="card-content" style="word-wrap: break-word; ">
+          <div class="content" >
+            <h6>Name </h6>
+            <%= f.name %>
+                  <br>
+            <br>
+            
+            <h6>Numero de Telefone</h6>
+            <%= f.number %>
+            <br>
+            <br>
+            <h6>     Assunto : </h6>
+            <%= f.subject %>
+            <br>
+            <br>
+            <h6> Pedido: </h6>
+            <div id="coloring" style="color: black; font-size: 17px;" >
+          <%= sanitize f.issue  %>
+            </div>
+            <br>
+            <h6>Email</h6>
+            <%= f.email %>
+            <br>
+                  <br>
+            <section class="hero is-dark ">
+        <div class="hero-body">
+          <p class="title">
+            Tag
+          </p>
+          
+          <p class="subtitle">
+            <% f.source %>
+          </p>
+        </div>
       </div>
-      <br>
-      <h6>Email</h6>
-      <%= f.email %>
-      <br>
-      <br>
-      <section class="hero is-dark ">
-  <div class="hero-body">
-    <p class="title">
-      Tag
-    </p>
-    
-    <p class="subtitle">
-      <% f.source %>
-    </p>
-  </div>
-</section>
-      <br>
-     
-      <h6 style="color: white; background-color: hsl(217, 71%, 53%);" align="center">   <%= time_ago_in_words(f.created_at) %> </h6>
-      
-    </div>
-    </div>
-</div>
+      </section>
+            <br>
+          
+            <h6 style="color: white; background-color: hsl(217, 71%, 53%);" align="center">   <%= time_ago_in_words(f.created_at) %> </h6>
+            
+          </div>
+          </div>
+      </div>
 
-<% end %>
-</div>
-</div>
+      <% end %>
+      </div>
+      </div>
