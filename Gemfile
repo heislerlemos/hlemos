@@ -13,7 +13,8 @@ ruby '3.3.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 #gem 'rails', '~> 5.2.3'
 #gem 'rails', '~> 6.0.3.2'
-gem "rails", "~> 7.0.0"
+#gem "rails", "~> 7.0.0"
+gem "rails", "~>8.0.0"
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'net-ping', '~> 1.7', '>= 1.7.8'
@@ -32,12 +33,11 @@ gem 'puma', '~> 3.11'
 gem 'psych', '< 4'
 gem 'speedtest_net'
 #gem "mini_magick"
-gem "sprockets-rails"
 gem 'will_paginate', '~> 3.1.0'
 # Use SCSS for stylesheets
 gem 'dnsruby', '~> 1.61', '>= 1.61.5'
 gem 'webpacker', '~> 5.x'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 gem 'ahoy_matey'
@@ -63,10 +63,12 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
+gem 'therubyracer', :platform => :ruby
+#gem 'execjs'
 # gem 'redis', '~> 4.0'
 gem 'link_with_icon'
 gem 'devise'
-
+gem 'execjs'
 gem 'hirb', '~> 0.7.3'
 # Use ActiveModel has_secure_password
 
@@ -96,7 +98,6 @@ end
 
 group :development do
   #    gem 'rspec-rails'
-
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   #gem 'listen', '>= 3.0.5', '< 3.2'
@@ -121,3 +122,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
+
+gem "jsbundling-rails", "~> 1.3"
