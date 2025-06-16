@@ -6,8 +6,6 @@ class SpeedsController < ApplicationController
   def index
     submit = params[:empty]
     if submit
-
-      loading = "Estamos a verificar a connexao de speedtest por favor aguarde um momento"
       begin     
         stored = []
         speed = Speedtest::SpeedTest.new(ARGV)
@@ -20,7 +18,7 @@ class SpeedsController < ApplicationController
         @output = stored
 
       rescue Net::HTTP::Persistent::Error || Net::OpenTimeout 
-        @erro =  'Erro de por favor volte a confirmar se o problema persistir verifique a configuração da  sua rede'
+        @erro =  'Erro de speedtest por favor volte a confirmar se o problema persistir verifique a configuração da  sua rede'
       end
     end
   end
