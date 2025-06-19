@@ -48,6 +48,7 @@ gem 'excon'
 gem "paperclip", "~> 6.0.0"
 gem 'pdfjs_viewer-rails'
 gem 'jquery-rails', '~> 4.4'
+gem 'importmap-rails', '~> 1.1', '>= 1.1.5'
 #gem 'yarn', '~> 0.1.1'
 gem 'unicorn'
 #gem 'covid19-rb', require: 'covid19'
