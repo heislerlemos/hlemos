@@ -1,22 +1,46 @@
 
 <% @order_items.each do |item|%>
 <br>
-<h3><%= item.product.titulo  %> </h3>
-<h5><%= item.product.preco %> kz </h5>
-       <% item.total %>
-<%=  form_for item, remote: true  do |f| %>
+
+<table class="table">
+  <tr>
+    <th>Titulo</th>
+    <th>Preço</th>
+    <th>Total</th>
+    <th>Quantidade</th>
+  </tr>
+  <tr>
+    <td><%= item.product.titulo  %></td>
+    <td><%= item.product.preco %> Kz </td>
+    <td><%= item.total %> Kz</td>
+    <%=  form_for item, remote: true  do |f| %>
+    <td><%= f.number_field  :quantity, :value => item.quantity.to_i %>
+</td>
+
+  </tr>
+</table>
+
+
+
+
 
 
 <%= f.hidden_field :product_id, :value => item.product.id %>
-<%= f.number_field  :quantity, :value => item.quantity.to_i %>
+
 <br>
+
 <%= f.submit "Atualizar" , class: "button is-info" %>
-
 <%= link_to "Remover Item", order_item_path(item), method: :delete, remote: true , class: "button is-danger"  %>
-
+  <% end %>
 <% end %>
 
-<% end %>
+
+
+
+
+
+
+
 <br>
 <section class="hero is-link is-small">
   <div class="hero-body">
@@ -26,3 +50,5 @@
     </p>
   </div>
 </section>
+
+
