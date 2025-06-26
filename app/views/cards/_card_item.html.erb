@@ -1,39 +1,38 @@
+<%= stylesheet_link_tag 'cards', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<% @order_items.each do |item|%>
-<br>
 
-<table class="table">
+
+
+<table class="table is-bordered" >
+
   <tr>
     <th>Titulo</th>
     <th>Preço</th>
     <th>Total</th>
     <th>Quantidade</th>
+    <th>Id </th>
+    <th>Atualizar Qtd</th>
+    <th>Remover Prd </th>
   </tr>
+  <% @order_items.each do |item|%>
+
   <tr>
     <td><%= item.product.titulo  %></td>
     <td><%= item.product.preco %> Kz </td>
     <td><%= item.total %> Kz</td>
     <%=  form_for item, remote: true  do |f| %>
-    <td><%= f.number_field  :quantity, :value => item.quantity.to_i %>
-</td>
-
+    <td><%= f.number_field  :quantity, :value => item.quantity.to_i, :style => "width:25%;" , :class => "input" %></td>
+    <td><%= f.number_field :product_id, :value => item.product.id, :style => "width:25%;" , :class => "input", :readonly => "readonly" %></td>
+    <td><%= f.submit "Atualizar" , class: "button is-info  is-outlined" %></td>
+    <td><%= link_to "Remover Item", order_item_path(item), method: :delete, remote: true , class: "button is-danger  is-outlined"  %> </td>
   </tr>
-</table>
 
-
-
-
-
-
-<%= f.hidden_field :product_id, :value => item.product.id %>
-
-<br>
-
-<%= f.submit "Atualizar" , class: "button is-info" %>
-<%= link_to "Remover Item", order_item_path(item), method: :delete, remote: true , class: "button is-danger"  %>
-  <% end %>
+    <% end %>
 <% end %>
 
+
+
+</table>
 
 
 
