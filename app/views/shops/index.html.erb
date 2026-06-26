@@ -1,9 +1,8 @@
-<%= stylesheet_link_tag "welcomes", :media => "all" %>
+<%= stylesheet_link_tag "shops", :media => "all" %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <div class="container">
   <!--- start of container --->
-
   <section class="hero is-link">
     <div class="hero-body">
       <p class="title">
@@ -39,7 +38,7 @@
         <div class="card">
 
           <div class="card-image">
-            <figure class="image is-4by3">
+            <figure class="image is-4by3"> 
               <%= image_tag product.imagelink  %>
             </figure>
           </div>
@@ -53,8 +52,9 @@
                   <%= f.number_field :quantity, :value => 1 , :min => 1 , class: "input is-info  " , style: "width: 50px;" %>
                   <%= f.submit "+" , class: 'button is-success' %> 
                 <% end %>
-
-                <p class="title is-3"><%= product.titulo  %></p>
+                  <p class="title is-3">
+                  <%= content_tag :span, truncate(product.titulo, length: 20), title: product.titulo %>
+                  </p>
                 <p class="subtitle is-5"><%= product.preco %> Mil KZ</p>
 
               </div>

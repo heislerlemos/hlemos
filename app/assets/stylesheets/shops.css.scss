@@ -1,0 +1,13 @@
+// Place all the styles related to the Shops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//
+.truncate-text {
+  display: inline-block;
+  max-width: 150px; /* Adjust width constraint */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
