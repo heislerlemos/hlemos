@@ -1,12 +1,14 @@
 # coding: utf-8
 
-#1
+# fixing order error 
+
+ Order.create(id: 1)
+
 
 
 # alterar " characher necessario 
-40.times do 
 
-blogs = Blog.create(titulo: " Trabalhos da Treta: Uma Teoria (2018)", texto: "A definição é primeiro uma.
+Blog.create(titulo: " Trabalhos da Treta: Uma Teoria (2018)", texto: "A definição é primeiro uma.
 
 Um trabalho é uma treta se a pessoa que o faz acredita assim, porque #é seguro assumir que o trabalhador sabe melhor# e porque de outra forma seria demasiado complexo para avaliar.
 
@@ -23,56 +25,14 @@ Muitas vezes os dois são opostos, como quanto mais útil o trabalho tende a ser
 Os flunkies existem principalmente para fazer alguém parecer ou sentir-se importante.
 
 Por exemplo, os rececionistas (que muitas vezes não têm nada para fazer) estão lá para sinalizar a importância de uma empresa .
-
-Os goons são #necessários# porque o outro lado também os tem. 
-
-Fazem coisas para promover os interesses daqueles que os empregam, mas o efeito global do seu trabalho pode ser considerado prejudicial para a humanidade no seu conjunto.
-
-Os lobistas e as pessoas de relações públicas enquadram-se nessa categoria. 
-
-Os goons sofrem muitas vezes porque têm de ser manipuladores, agressivos ou desonestos.
-
-Os sapadores são funcionários cujos postos de trabalho só existem #devido a uma falha ou falha nas organizações; que estão lá para resolver um problema que não deveria existir. 
-
-Graeber ilustra-o dando o exemplo de um empregador que tem uma fuga no telhado, mas em vez de consertá-lo, colocará um balde debaixo da fuga e contratará alguém para despejar regularmente a água.
-
-Os tapers de conduta estão muitas vezes zangados por fazerem trabalho de merda.
-
-Os box tickers são contratados para permitir que uma organização possa afirmar que está a fazer algo que realmente não está a fazer. 
-
-Por exemplo, auditores e consultores são muitas vezes box tickers: escrevem #relatórios de merda# para fazer uma organização parecer boa. 
-
-Há muitos postos de trabalho administrativos e bancários que também se enquadram nessa categoria;
-
-Os taskmasters podem ser divididos em dois grupos: o primeiro inclui aqueles que atribuem trabalho a outros e são superiores desnecessários; o segundo grupo é, na verdade, mais prejudicial porque criam tarefas de treta para outros fazerem e gerarem tretas extra. 
-
-Taskmasters podem secretamente achar os seus trabalhos inúteis, mas eles são menos propensos a admiti-lo . 
-
-A maioria dos #trabalhos de merda# são uma combinação de várias destas categorias.
-
-Também os trabalhos não-tretas podem ter elementos de treta incorporados neles.
-
-Nos trabalhos não-tretas, cada vez mais se desperdiça tempo em tarefas de merda: marcar caixas, justificar o seu trabalho, enviar e-mails a superiores e colegas. 
-
-Tanto quanto metade de qualquer trabalho pode ser assim #tretas#.
-
-Geralmente, consideramos o número de postos de trabalho antes da sua qualidade e utilidade.
-
-As nossas estatísticas e métricas não medem tretas.
-
-A nossa política pública ignora-a.
-
- Na verdade, as nossas culturas ainda dependem de #uma tradição teológica de valorizar o trabalho como um dever sagrado#.
-
-O poder de classe e a lealdade de classe têm muito a ver com o facto de, quando se trata de emprego, o valor social e o salário estarem inversamente correlacionados. 
-
-Muitas pessoas reconhecem a relação inversa e também sentem que é assim que deve ser.
-
-Como os antigos estoicos, acreditam que a virtude deve ser a sua própria recompensa.
-
 Estes argumentos têm sido muitas vezes feitos sobre os professores: #não se gostaria que as pessoas motivadas principalmente pela ganância ensinassem crianças#.
-", image_url: "https://www.thetimes.co.uk/imageserver/image/methode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2F37994660-52a1-11e8-9871-a6b7d2d44e9e.jpg?crop=2667%2C1500%2C0%2C0")
+                    ",  image_url: "https://www.thetimes.co.uk/imageserver/image/methode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2F37994660-52a1-11e8-9871-a6b7d2d44e9e.jpg?crop=2667%2C1500%2C0%2C0")
 
- end
-                   
+
+
+Product.create(titulo: "ASR 1000 Series Routers",   preco: 500,   imagelink: "https://info.pivitglobal.com/hubfs/blob-4.jpeg")
+Product.create(titulo: "RADWIN 2000",   preco: 100,   imagelink: "https://amboya.com/wp-content/uploads/2023/04/Radwin-Point-To-Point.png")
+Product.create(titulo: "AULA S99 Gaming Keyboard", preco: 26, imagelink: "https://m.media-amazon.com/images/I/61r9aziJGFL._AC_SX300_SY300_QL70_FMwebp_.jpg")
+Product.create(titulo: "Lenovo ThinkPad T14 G6 ", preco: 1198, imagelink: "https://m.media-amazon.com/images/I/71raaxw3cML._AC_SX466_.jpg")
+Product.create(titulo: "Garmin Forerunner 165,", preco: 199, imagelink: "https://m.media-amazon.com/images/I/61m+fKy7wzL._AC_SL1500_.jpg")
 
