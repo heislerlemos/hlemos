@@ -1,0 +1,156 @@
+/*
+ *= require trix
+ *= require actiontext
+*/
+
+$footer-color: black;
+
+@import "bulma";
+@import "font-awesome";
+@import "welcomes";
+
+.header {
+position: relative;
+z-index: 1000;
+
+}
+  #search-form {
+  display: inline;
+}
+
+  .menu #active {
+    border: solid black;
+    border-radius: 1px;
+      box-shadow: 5px 10px;
+
+}
+
+
+
+
+.our-partner {
+    padding: 0 80px;
+    position: relative;
+
+}
+
+.our-partner h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+
+}
+
+.our-partner hr {
+    border: none;
+    height: 4px;
+    width: 600px;
+    background-color: orange
+
+}
+
+.our-partner-inner {
+    margin-top: 50px;
+}
+
+.our-partner-inner a {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    margin-right: 25px;
+    border: 1px solid #cacaca;
+    border-radius: 20px;
+    box-shadow: 0 5px 0 #cacaca;
+    
+}
+
+.our-partner-inner img {
+    width:100%;
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+
+}
+
+
+
+#container {
+    min-height: 90%;
+}
+
+
+#main {
+  padding-bottom: 100px;
+
+}
+
+
+#footer {
+ position: relative;
+ clear: both;
+}
+
+
+
+
+.container .card {
+    width: 50%;
+}
+
+
+
+
+#content  {
+    background-size: cover;
+    text-align: left;
+    max-width: 150%;
+    float: left;
+
+    
+}
+
+#content a {
+    font-size: 15px;
+    text-align: center;
+}
+
+.wave {
+
+  /**  width: 100%;
+    position: relative;
+    opacity: 1;    
+    bottom: -40px;**/
+    display: none;
+}
+
+
+.container .card {
+    width: 100%;
+}
+
+
+
+
+@media( max-width: 468px) {
+
+
+.wave {
+
+    display: none;
+}
+
+}
+

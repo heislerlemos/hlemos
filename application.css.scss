@@ -1,4 +1,4 @@
-/*
+application.css/*
  *= require trix
  *= require actiontext
 */
@@ -89,6 +89,9 @@ html, body {
 
 #container {
     min-height: 90%;
+
+
+
 }
 
 
@@ -107,8 +110,9 @@ html, body {
 
 
 .container .card {
-    width: 40%;
-}
+    width: 50%;
+    
+  }
 
 
 
