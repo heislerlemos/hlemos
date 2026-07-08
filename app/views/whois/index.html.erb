@@ -9,9 +9,13 @@
   <% end %>
   <br>
   <div class="container">
-    <p>
-    <%=  @forceencod  %>
-    </p>
+    <h1> Data de criação : </h1> <%=  @criado  %> <hr>
+    <h1> Esta disponivel : </h1> <%= @disponivel %><hr>
+    <h1> Esta registado  : </h1> <%= @datadecriacao %><hr>
+    <h1> Registrador : </h1> <%=  @registar %> <hr>
+    <h1> Data que expira : </h1> <%= @expires %><hr>
+    <h1> Dominio : </h1> <%= @dominio %><hr>
+    <h1> Nameserver: </h1> <%= @nameserver %><hr>
     <br>
     <p class="title" style="font-size:40px;color:tomato;">
     <%= @error %>

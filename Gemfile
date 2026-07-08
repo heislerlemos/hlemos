@@ -23,6 +23,7 @@ gem 'ipaddress', '~> 0.8.3'
 # Gemfile
 gem 'concurrent-ruby', '1.3.4'
 gem 'sassc'
+gem 'whois-parser'
 # or specify git master
 gem 'ipcalc', '~> 1.0'
 gem 'openssl', git: 'https://github.com/ruby/openssl'

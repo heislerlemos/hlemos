@@ -4,14 +4,18 @@ class WhoisController < ApplicationController
     submit = params[:hostname]
     if submit
       begin
-      @hostname = submit 
-      c = Whois::Client.new
-      c.lookup(@hostname)
-      result = c.lookup(@hostname).to_s
-      @forceencod = result.force_encoding "ASCII-8BIT" 
-
+        @hostname = submit 
+        c =Whois.whois(@hostname)
+        parser = c.parser
+        @criado = parser.created_on
+        @disponivel = parser.available?
+        @datadecriacao = parser.registered?
+        @dominio = parser.domain 
+        @registar = parser.registrar
+        @expires = parser.expires_on
+        @nameserver = parser.nameservers
       rescue Whois::NoInterfaceError, Encoding::CompatibilityError, Whois::ServerNotFound 
-      @error =  'Whois não foi encontrado  por favor procure por outro'
+        @error =  'Whois não foi encontrado  por favor procure por outro'
       end
     end
   end
