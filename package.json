@@ -23,6 +23,6 @@
         "webpack-dev-server": "^3"
     },
   "scripts": {
-    "build": "yarn build"
+    "build": "webpack --config webpack.config.js"
   }
 }
