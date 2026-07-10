@@ -6,3 +6,4 @@
 //= link_tree ../../../vendor/javascript .js
 //= link turbolinks.js
 //= require turbolinks
+//= link_tree ../builds
