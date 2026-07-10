@@ -23,8 +23,8 @@
         "webpack-dev-server": "^3"
     },
     "scripts": {
-    "build": "babel src -d lib",
-    "test": "jest"
+        "build": "yarn install && yarn build"
+
   }
 
 }
