@@ -21,5 +21,10 @@
     "devDependencies": {
         "@babel/plugin-proposal-private-methods": "^7.18.6",
         "webpack-dev-server": "^3"
-    }
+    },
+    "scripts": {
+    "build": "babel src -d lib",
+    "test": "jest"
+  }
+
 }
