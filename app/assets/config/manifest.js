@@ -4,3 +4,5 @@
 //= link turbolinks.js
 //= require turbolinks
 //= link_tree ../builds
+//= link application.js
+
