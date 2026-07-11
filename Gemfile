@@ -74,7 +74,7 @@ gem 'execjs'
 gem 'hirb', '~> 0.7.3'
 # Use ActiveModel has_secure_password
 
-gem 'covid19-rb', require: 'covid19', git: 'https://github.com/viccarrasco/covid19-rb'
+#gem 'covid19-rb', require: 'covid19', git: 'https://github.com/viccarrasco/covid19-rb'
 
 # gem 'bcrypt', '~> 3.1.7'
 gem 'byebug', '~> 11.1', '>= 11.1.3'
