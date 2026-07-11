@@ -17,5 +17,5 @@
    },
     "devDependencies": {
         "@babel/plugin-proposal-private-methods": "^7.18.6"
-    },
+    }
 }
