@@ -1,4 +1,5 @@
-# coding: utf-8
+=begin
+
 class VirusController < ApplicationController
   def index
   	   response = HTTParty.get('http://api.thevirustracker.com')
@@ -65,4 +66,4 @@ else
   end
   end
 end
-
+=end
