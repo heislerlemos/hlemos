@@ -16,7 +16,7 @@
         "ujs": "^0.34.1"
    },
     "devDependencies": {
-        "@babel/plugin-proposal-private-methods": "^7.18.6",
+        "@babel/plugin-proposal-private-methods": "^7.18.6"
     },
     "scripts": {
         "build": "webpack --config webpack.config.js"
