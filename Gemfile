@@ -37,7 +37,7 @@ gem 'speedtest_net'
 gem 'will_paginate', '~> 3.1.0'
 # Use SCSS for stylesheets
 gem 'dnsruby', '~> 1.61', '>= 1.61.5'
-gem 'webpacker', '~> 5.x'
+#gem 'webpacker', '~> 5.x'
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -125,4 +125,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 
-gem "jsbundling-rails", "~> 1.3"
+#gem "jsbundling-rails", "~> 1.3"
