@@ -81,7 +81,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-#  <<: *default
+  <<: *default
 #  database: hlemos_production
 #  username: hlemos
 #  password: <%= ENV['HLEMOS_DATABASE_PASSWORD'] %>
@@ -89,4 +89,4 @@ adapter: postgresql
   encoding: unicode
   # Pools define maximum concurrent database connections per dyno instance
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: <%= ENV['DATABASE_URL'] %>
+url: <%= ENV['DATABASE_URL'] %>
