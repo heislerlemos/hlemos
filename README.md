@@ -1,10 +1,7 @@
 
 <img src="app/assets/images/logo_v2.png" width="300" >
 <img src="app/assets/images/mobile.jpg" width="550" >
-
-
-#Website
-[CAI](https://cai-3f3e0578499d.herokuapp.com/)
+[Comunidade Angola de Informática](https://cai-3f3e0578499d.herokuapp.com/)
 
 
 # Manual
