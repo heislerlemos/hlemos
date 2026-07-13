@@ -1,8 +1,5 @@
 
-<img src="app/assets/images/logo_v2.png" width="350" style="  
-  display: block;
-  margin: auto;
-  width: 50%;">
+<img src="app/assets/images/logo_v2.png" width="300" >
 # CAI (Comunidade Angola de Informática ) 
 
 ![](app/assets/images/mobile.jpg)
