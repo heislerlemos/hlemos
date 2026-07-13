@@ -1,5 +1,8 @@
-<div align="center">
-<img src="app/assets/images/logo_v2.png" width="350">
+
+<img src="app/assets/images/logo_v2.png" width="350" style="  
+  display: block;
+  margin: auto;
+  width: 50%;">
 # CAI (Comunidade Angola de Informática ) 
 
 ![](app/assets/images/mobile.jpg)
@@ -8,8 +11,6 @@
 
 #Website
 [CAI](https://cai-3f3e0578499d.herokuapp.com/)
-
-</div>
 
 
 # Manual
