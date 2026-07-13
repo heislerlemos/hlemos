@@ -1,6 +1,7 @@
+<div align="center">
 <img src="app/assets/images/logo_v2.png" width="250">
 # CAI (Comunidade Angola de Informática ) 
-
+</div>
 ![](app/assets/images/mobile.jpg)
 
 
