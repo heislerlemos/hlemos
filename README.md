@@ -1,9 +1,6 @@
 
 <img src="app/assets/images/logo_v2.png" width="300" >
-# CAI (Comunidade Angola de Informática ) 
-
 <img src="app/assets/images/mobile.jpg" width="550" >
-
 
 
 #Website
