@@ -2,7 +2,7 @@
 <img src="app/assets/images/logo_v2.png" width="300" >
 # CAI (Comunidade Angola de Informática ) 
 
-<img src="app/assets/images/mobile.jpg" width="250" >
+<img src="app/assets/images/mobile.jpg" width="350" >
 
 
 
