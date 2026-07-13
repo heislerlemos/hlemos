@@ -1,5 +1,5 @@
 <div align="center">
-<img src="app/assets/images/logo_v2.png" width="250">
+<img src="app/assets/images/logo_v2.png" width="350">
 # CAI (Comunidade Angola de Informática ) 
 
 ![](app/assets/images/mobile.jpg)
