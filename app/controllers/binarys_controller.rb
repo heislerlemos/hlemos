@@ -1,7 +1,8 @@
 class BinarysController < ApplicationController
   def index
 
-    @hostname = "192.168.10.0/24".downcase
+    #@hostname = "192.168.10.0/24".downcase
+    @hostname = []
     submitted_hostname = params[:hostname]
 
     if submitted_hostname 

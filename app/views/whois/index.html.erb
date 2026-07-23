@@ -1,5 +1,4 @@
 <center>
-
   <div class="title is-1" style="color:#FFD700;font-size: 80px; text-shadow: 3px 3px tomato;"> Verifique o seu whois  </div>
 
   <%= form_tag  whois_path do |form| %>
@@ -7,19 +6,22 @@
     <%= text_field_tag "hostname", @hostname, class: "input is-warning" , style: "width: 30%;", required: 'required', placeholder: "Must be an ipv4 ip address" %>
     <%= submit_tag "Procurar" , class: "button  is-warning" %>
   <% end %>
-  <br>
-  <div class="container">
-    <h1> Data de criação : </h1> <%=  @criado  %> <hr>
-    <h1> Esta disponivel : </h1> <%= @disponivel %><hr>
-    <h1> Esta registado  : </h1> <%= @datadecriacao %><hr>
-    <h1> Registrador : </h1> <%=  @registar %> <hr>
-    <h1> Data que expira : </h1> <%= @expires %><hr>
-    <h1> Dominio : </h1> <%= @dominio %><hr>
-    <h1> Nameserver: </h1> <%= @nameserver %><hr>
+  <% if @hostname %>
     <br>
-    <p class="title" style="font-size:40px;color:tomato;">
-    <%= @error %>
-    </p>
-  </div>
+    <div class="container">
+      <h1> Data de criação : </h1> <%=  @criado  %> <hr>
+      <h1> Esta disponivel : </h1> <%= @disponivel %><hr>
+      <h1> Esta registado  : </h1> <%= @datadecriacao %><hr>
+      <h1> Registrador : </h1> <%=  @registar %> <hr>
+      <h1> Data que expira : </h1> <%= @expires %><hr>
+      <h1> Dominio : </h1> <%= @dominio %><hr>
+      <h1> Nameserver: </h1> <%= @nameserver %><hr>
+      <br>
+      <p class="title" style="font-size:40px;color:tomato;">
+      <%= @error %>
+      </p>
+    </div>
+  <% else %>
+  <% end %>
 
 </center>
